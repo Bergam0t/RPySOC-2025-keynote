@@ -1,0 +1,248 @@
+---
+title: "Reusable by Default: Reflections on Building Sustainable Open Tools and Knowledge for Healthcare"
+format:
+  revealjs:
+    theme: dark
+---
+
+
+::: notes
+
+I want you to picture a scene.
+
+You've been asked to do something pretty complex, pretty quickly. It also sounds like something someone else will have worked on before. It's got that sense of 'this isn't just an "us" problem'.
+
+So you go out and ask around on - say, the NHS-R Slack - if this is something someone else has worked on.
+
+And you get the response - "yes!".
+
+(but it was at my previous job and I wasn't allowed to share the code, so I don't have it anymore. But you could try asking so-and-so, and here's a bit of a rough guide of what we did. )
+
+And then someone else chimes in...
+
+"yes! I've got a repository. Here's the link. It's been a while since I've used it, though."
+
+[open repo image. The repository has loads of folders and files with no obvious naming convention. It's not clear where you should go. There are no tests. The readme just says 'coming soon'. The last commit was 2 years ago.]
+
+Is this much more useful to you than the other one?
+
+
+:::
+
+
+
+## Today
+
+::: notes
+
+Today I'm going to
+
+:::
+
+
+
+## About Me
+
+::: notes
+
+But who am I to come in here and tell you to do this?
+
+We'll rewind a bit. I've been writing code a while now. I got my first taste of coding about 13 years ago. We were simulating the population dynamics of lizards in base R - before the tidyverse came along and changed our world (image of Hadley Wickham?).
+(RETURN TO THIS LATER - HOW TIDYVERSE CHANGED EVERYTHING)
+
+I got a job completely unrelated to code... or so I thought. Then I saw what people in the organisation were doing with it.
+
+So I spend between Christmas and New Year of 2014 working my way through udemy courses on R, and from then, I was hooked. Python followed, with me squeezing it into my day job in every way I could manage.
+
+This culminated in me doing a health data science MSc.
+
+And this is where I started to meet some really cool and inspiring people.
+
+(Simon W-M, Lee Coulson, NHS E demand and capacity team, Tom Monks)
+
+And I ended up in a trust!
+
+And, bright eyed and eager, I turned up to my first NHS-R conference in 2022 - and I think it's fair to say my mind was a little bit blown (and it's the most immense privilege to be here talking to you like this today).
+
+:::
+
+
+
+## My time in the NHS
+
+::: notes
+
+I worked in a trust with some brilliant people, but I was still pretty new to all of this.
+
+One of my biggest frustrations was being asked questions that I just didn't know the right way to answer... but I was sure someone out there would have thought about this before.
+
+These generally came under a few categories.
+- What's going to happen to our demand?
+- What's going to happen to our waiting lists?
+- Are we going to meet target x?
+
+And then there were also lots of *better* questions I wanted to be able to answer.
+
+- What can we do to fix this?
+- Who aren't we serving?
+
+And you can't look at that list and tell me we don't all have these same questions.
+
+We have different systems, and different pathways, but I'm far from the first person to be standing up here yelling about having the same problems and repeated solutions.
+
+And it actually makes me a little mad because we shouldn't, in 2025, be experiencing a postcode lottery of whether our trust has a data science team, and advanced analytics capabilities. I know if I was treated in trust X it's by a team who are making advanced predictions of bed demand, and
+:::
+
+
+## And now
+
+::: notes
+
+And that brings me to where I am now, on the HSMA programme.
+
+I knew these better techniques were there, and I wanted to share them with as many people as possible, and joining the HSMA teaching team was the way to do that.
+
+And so now I get to work with amazing people from across over a hundred trusts, and say for sure - we do all have a lot of the same problems. Even this year, we had multiple projects registered trying to solve the same thing - but despite our best efforts, separately.
+
+And one project stuck with me...
+
+It was a brilliant project with a lot of impact, and the next year, we had a group wanting to do the same thing, and maybe build on it a bit.
+
+So they went to use the code (which was available!)...
+
+And then they started again.
+
+It wasn't bad code. It just wasn't designed to be reusable.
+
+:::
+
+
+
+
+
+## Hello World
+
+::: notes
+
+What do you tend to do every time you start a new script?
+
+:::
+
+:::: {.columns}
+
+::: {.column width='50%'}
+
+```{=python}
+import pandas as pd
+import plotly.express as px
+```
+
+:::
+
+::: {.column width='50%'}
+
+```{=r}
+
+```
+W
+:::
+
+::::
+
+
+## Or even...
+
+::: {.column width='50%'}
+
+```{=r}
+library(NHSRplotthedots)
+```
+
+:::
+
+
+## What else do they have in common?
+
+::: notes
+
+[show some screenshots of a really clear readme]
+
+:::
+
+
+
+
+
+## What does the shift need to be?
+
+Shared
+Licenced
+Documented
+Tested
+Advertised
+
+And packaged?
+
+
+::: notes
+Shared = on GitHub
+Licenced = an appropriate licence so people can reuse it without getting into trouble
+Documented = clear documentation on how to use it
+Tested = Actual tests with a framework
+Advertised = let people know it exists
+Packaged or parameterisable = installable code OR code that is designed to allow people to input their own data in some way
+:::
+
+
+
+## The endless search
+
+Since I joined the NHS, I've been trying to
+
+::: notes
+
+Conferences, LinkedIn, starring Github repos, working out who to follow.
+
+:::
+
+
+
+## My final call
+
+::: notes
+
+We don't just need to get things into packages.
+
+We need to get them out there into the hands of the people who need them.
+
+There are so many parts to that puzzle slowly going together, but I still don't feel like I have that 'magic book' that I felt must exist when I started my NHS journey.
+
+So I've begun to write that
+
+
+
+:::
+
+
+## Circling back
+
+::: notes
+
+Now let's go back to your plea at the beginning.
+
+Someone comes back to you with
+
+"Yes! I had that problem and I made a package. You can install it from PyPi. Here's a link to the repo in case you want to check out that it's not doing anything dodgy, and here's documentation."
+
+And show that same repo, but this time it's a package, with a pypi badge, and test coverage, and an issue tracker.
+
+:::
+
+
+## Circling back - part 2
+
+::: notes
+
+Let's take it a step further
+
+:::
