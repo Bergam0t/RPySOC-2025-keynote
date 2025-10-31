@@ -179,6 +179,9 @@ Shared
 Licenced
 Documented
 Tested
+Versioned
+Maintained
+Collaborative
 Advertised
 
 And packaged?
@@ -189,6 +192,9 @@ Shared = on GitHub
 Licenced = an appropriate licence so people can reuse it without getting into trouble
 Documented = clear documentation on how to use it
 Tested = Actual tests with a framework
+Versioned = Make actual versions so you know what you're getting into with updates
+Maintained = You
+Collaborative = designed for collaboration, with issues and a code of conduct
 Advertised = let people know it exists
 Packaged or parameterisable = installable code OR code that is designed to allow people to input their own data in some way
 :::
@@ -197,12 +203,22 @@ Packaged or parameterisable = installable code OR code that is designed to allow
 
 ## The endless search
 
-Since I joined the NHS, I've been trying to
 
 ::: notes
 
-Conferences, LinkedIn, starring Github repos, working out who to follow.
+Since I joined the NHS, I've been trying to find all the good stuff
 
+Conferences, LinkedIn, starring Github repos, working out who to follow on GitHub. Attending HaCORN and HaCORD special interest groups and NHS-R and HSMA showcases and local networks and ApHA stuff and reading NHS-R and Pycom and watching webinars and talking to academics and the strategy unit and ...
+
+There just isn't enough time (and brainspace) for us all to be constantly trying to do this.
+
+[image of "how to tie your shoelaces" and "cool project that might be the solution you're looking for one day" competing for space in a brain]
+
+And we have pockets of it.
+- the HSMA website
+- the NHS-R website and books
+
+But every time there's something
 :::
 
 
@@ -217,9 +233,7 @@ We need to get them out there into the hands of the people who need them.
 
 There are so many parts to that puzzle slowly going together, but I still don't feel like I have that 'magic book' that I felt must exist when I started my NHS journey.
 
-So I've begun to write that
-
-
+So I've begun to write that.
 
 :::
 
