@@ -52,7 +52,7 @@ filters:
   - editable
 ---
 
-## Picture a Scene
+# Picture a Scene
 
 ![](assets/2025-11-03-13-49-13.png){.absolute width=496.167px height=715.742px left=708.543px top=25.6955px}
 
@@ -66,7 +66,7 @@ So you go out and ask around on - say, the NHS-R Slack - if this is something so
 
 :::
 
-### It starts well... {.slide-title-hidden}
+## It starts well... {.slide-title-hidden}
 
 ::: {.r-stack}
 
@@ -91,7 +91,7 @@ And you get the response - "yes!".
 
 :::
 
-### But it's not your only hope {.slide-title-hidden}
+## But it's not your only hope {.slide-title-hidden}
 
 ![](assets/2025-11-03-14-22-37.png){.fragment .absolute width=405.877px height=736.718px left=793.123px top=17px}
 
@@ -103,7 +103,7 @@ And then someone else chimes in...
 
 :::
 
-### Or maybe it is {.slide-title-hidden}
+## Or maybe it is {.slide-title-hidden}
 
 ![](assets/2025-11-03-14-15-43a.png){.editable}
 
@@ -114,11 +114,11 @@ And then someone else chimes in...
 
 :::
 
-### ... or not. {.slide-title-hidden}
+## ... or not. {.slide-title-hidden}
 
 ![](assets/2025-11-03-14-50-21.png){.editable}
 
-### Any hope? {.slide-title-hidden}
+## Any hope? {.slide-title-hidden}
 
 ::: {.r-stack}
 
@@ -127,6 +127,214 @@ And then someone else chimes in...
 ![](assets/2025-11-03-14-46-46.png){.fragment .absolute width=405.877px height=736.718px left=793.123px top=17px}
 :::
 
+# A step back...
+
+
+
+::: notes
+
+Who the hell am I?
+
+Sammi Rosser. I had my first taste of coding about 14 years ago, and have been coding in earnest for about 10 years now. These days it's mostly Python, but I'm a big fan of R too.
+
+I have an MSc in health data science, and after two years working as a data analyst and then data scientist in a mental health trust, I joined the Health Service Modelling Associates programme.
+
+So now I get to teach people all the really fun, interesting and impactful things they can do with code, and I get to meet loads of amazing people across different organisations. 9 months of the programme, people work on projects.
+
+People have been doing amazing things with their projects, and this has been true of HSMA for years. And last year, I was revamping our website to try and help our students come up with ideas around 'what sorts of projects can I do?'.
+
+But even where the code was shared, we just weren't getting people reusing it as much as I would have liked.
+
+:::
+
+:::
+
+And looking at them, I kept seeing the same things that trip up a lot of people newer to coding and open source
+
+These are issues not unique to our projects and students - these are things you see time and time again in open source projects, but they're resolvable if you get into some good habits.
+
+And they're the things that can really help level up your projects.
+
+:::
+
+
+# The Ladder of 'Reusable by Default'
+
+## LICENCE
+
+
+:::{.incremental}
+
+::: editable
+
+- LICENCE or LICENCE.md = special file
+- If you don't have one, I **cannot** reuse your code
+  - [default law = no rights to use, modify, etc.](https://choosealicense.com/no-permission/)
+- If you create it via Github, it helps you choose one and make the file!
+- MIT is a pretty decent option
+- [ChooseALicence](https://choosealicense.com/) helps if you're unsure
+
+:::
+
+:::
+
+![](assets/2025-11-03-16-23-21.png)
+
+![](assets/2025-11-03-16-23-56.png)
+
+![](assets/2025-11-03-16-24-44.png)
+
+![](assets/2025-11-03-16-25-11.png)
+
+![](assets/2025-11-03-16-38-21.png)
+
+::: notes
+
+A licence is the first and most fundamental step towards reusability.
+
+Chuck one in there from the start.
+
+:::
+
+## README.md
+
+:::{.incremental}
+
+::: editable
+
+- README.md = special file
+- Always have one in your repo root
+
+:::
+
+:::
+
+::: notes
+README.md is a special file because Github will display it.
+
+Use it to tell me how to run your code, what inputs I need, etc. - all the key important stuff I need to know if I want to run it myself. What's in all those flders
+
+:::
+
+## Bonus - README of me
+
+::: {.incremental}
+
+- make a repo with a name that's your GitHub username
+- just make a README.md file in there and commit it
+- use it to tell me all the cool stuff you're working on and why I should care
+
+:::
+
+![](assets/2025-11-03-16-40-25.png)
+
+
+::: notes
+
+As someone trying to employ coders, I won't penalise you for not having one, but it'll certainly help me understand your work above and beyond pinned repositories
+
+:::
+
+## Docstrings
+
+:::: {.columns}
+
+::: {.column width='50%'}
+
+![](assets/2025-11-03-17-23-32.png)
+
+:::
+
+::: {.column width='50%'}
+
+- for Python, [numpydoc](https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard) = best (IMO)
+- for R, [roxygen]() and [docstring]()
+- If you're allowed, AI tools can do great first drafts
+- Also IDE extensions for setting up a template
+
+
+:::
+
+::::
+
+
+::: notes
+
+Docstrings are the easiest way to level up your code - for you and others.
+
+They're basically super-comments that the tools you write your code in - your IDE, like RStudio or VSCode, will display.
+
+In python, lots of formats - choose one you like and stay consistent
+
+In R, roxygen2 and the 'docstring' package
+
+:::
+
+
+## Documentation
+
+- [pdoc](https://pdoc.dev/), [sphinx](), or [quartodoc]()
+- quartodoc is my favourite because it plays nicely with all of Quarto's other features
+  - see some examples of how I've set it up: example 1, example 2, example 3
+
+## Documentation - quartodoc auto-generated function dictionary
+
+![](assets/2025-11-03-17-16-11.png)
+
+## Documentation - quartodoc function breakdown
+
+![](assets/2025-11-03-17-17-34.png)
+
+::: notes
+
+:::
+
+## Free hosting
+
+- Free quick and easy hosting with
+  - [Github Pages](https://docs.github.com/en/pages) - for any site
+  - [Quartopub](https://quartopub.com/) - for Quarto sites
+
+
+## Free hosting side note: personal site
+
+- Make a repository called `yourusername.github.io`
+- Use one of Quarto's [about page templates](https://quarto.org/docs/websites/website-about.html)
+- Make yourself a quick and easy personal site and host for free
+  - if you feel like it, spend about a tenner for a custom URL
+
+```{=html}
+<iframe width="1200" height="500" src="https://sammirosser.com/" title="Personal Site Example"></iframe>
+```
+
+## Automatic Linting
+
+- I will not be reading your code if it's written like this...
+
+TODO: Add gif of a very long line
+
+- Safe linters are available for all good languages and IDEs
+  - Install [Ruff](https://docs.astral.sh/ruff/) for Python
+  - Install [styler](https://styler.r-lib.org/index.html) for R in RStudio
+  - Activate [air](https://positron.posit.co/migrate-rstudio-code.html) for R code in Positron
+  - Use [lintquarto](https://github.com/lintquarto/lintquarto) for Python code in Quarto docs
+- Format on save = never deal with this again
+
+::: notes
+
+And it just helps save time - which you can use on other parts of this list!
+
+:::
+
+
+## Folder structure
+
+- Changing the way you structure your code in your repo makes automated documentation and packaging just work more easily
+
+
+::: notes
+I had to completely restructure something recently and it was a colossal pain
+:::
 
 
 
@@ -134,15 +342,16 @@ And then someone else chimes in...
 
 
 
+# A mindset shift - packaging your code
 
-### Last chance...
+## Last chance...
 
 Remember our plea from the start?
 
 ![](assets/2025-11-03-13-49-13.png){.absolute width=496.167px height=715.742px left=708.543px top=25.6955px}
 
 
-### The utopia
+## The utopia
 
 ::: {.r-stack}
 
@@ -155,52 +364,66 @@ Remember our plea from the start?
 :::
 
 
+## DRY, parameterise and functionise your code
 
-
-
-
-
-
-
-
-## Today
 
 ::: notes
-
-Today I'm going to
 
 :::
 
 
 
-## About Me
+## What do you do every time you start a new script?
+
+:::: {.columns}
+
+::: {.column width='50%'}
+
+
+```{=python}
+import pandas as pd
+import plotly.express as px
+```
+
+:::
+
+::: {.column width='50%'}
+
+
+```{=r}
+library(tidyr)
+library(ggplot2)
+```
+
+:::
+
+::::
+
+## Or maybe...
+
+```{=r}
+library(NHSRPlotTheDots)
+```
+
+
 
 ::: notes
 
-But who am I to come in here and tell you to do this?
+I think it's easy to see packages as something for 'other people'
 
-We'll rewind a bit. I've been writing code a while now. I got my first taste of coding about 13 years ago. We were simulating the population dynamics of lizards in base R - before the tidyverse came along and changed our world (image of Hadley Wickham?).
-(RETURN TO THIS LATER - HOW TIDYVERSE CHANGED EVERYTHING)
+For 'advanced coders'
 
-I got a job completely unrelated to code... or so I thought. Then I saw what people in the organisation were doing with it.
-
-So I spend between Christmas and New Year of 2014 working my way through udemy courses on R, and from then, I was hooked. Python followed, with me squeezing it into my day job in every way I could manage.
-
-This culminated in me doing a health data science MSc.
-
-And this is where I started to meet some really cool and inspiring people.
-
-(Simon W-M, Lee Coulson, NHS E demand and capacity team, Tom Monks)
-
-And I ended up in a trust!
-
-And, bright eyed and eager, I turned up to my first NHS-R conference in 2022 - and I think it's fair to say my mind was a little bit blown (and it's the most immense privilege to be here talking to you like this today).
+But it's like any other coding task
 
 :::
 
 
+## Getting started with packages
 
-## My time in the NHS
+
+
+
+# The Final Hurdle
 
 ::: notes
 
@@ -222,82 +445,45 @@ And you can't look at that list and tell me we don't all have these same questio
 
 We have different systems, and different pathways, but I'm far from the first person to be standing up here yelling about having the same problems and repeated solutions.
 
-And it actually makes me a little mad because we shouldn't, in 2025, be experiencing a postcode lottery of whether our trust has a data science team, and advanced analytics capabilities. I know if I was treated in trust X it's by a team who are making advanced predictions of bed demand, and
-:::
+And it actually makes me a little mad because we shouldn't, in 2025, be experiencing a postcode lottery of whether our trust has a data science team, and advanced analytics capabilities. I know if I was treated in trust X it's by a team who are making advanced predictions of demand, and I'm going to be seen in a more timely manner.
+
+Since I joined the NHS, I've been trying to find all the good stuff
+
+Conferences, LinkedIn, starring over 1300 Github repos, working out which individuals and organisations to follow on GitHub. Attending HaCORN and HaCORN special interest groups and NHS-R and HSMA showcases and local networks and ApHA stuff and reading NHS-R and Pycom and watching webinars and subscribing to newsletters and talking to academics and the strategy unit and ...
 
 
-## And now
+## It's just not sustainable!
 
-::: notes
-
-And that brings me to where I am now, on the HSMA programme.
-
-I knew these better techniques were there, and I wanted to share them with as many people as possible, and joining the HSMA teaching team was the way to do that.
-
-And so now I get to work with amazing people from across over a hundred trusts, and say for sure - we do all have a lot of the same problems. Even this year, we had multiple projects registered trying to solve the same thing - but despite our best efforts, separately.
-
-And one project stuck with me...
-
-It was a brilliant project with a lot of impact, and the next year, we had a group wanting to do the same thing, and maybe build on it a bit.
-
-So they went to use the code (which was available!)...
-
-And then they started again.
-
-It wasn't bad code. It just wasn't designed to be reusable.
-
-:::
-
-
-
-
-
-## Hello World
+![](assets/2025-11-03-18-10-29.png)
 
 ::: notes
 
-What do you tend to do every time you start a new script?
+There just isn't enough time (and brainspace) for us all to be constantly trying to do this.
 
-:::
+And that's just locked in my head. How many of us are trying to do the same thing and build up knowledge that would be better externalised?
 
-:::: {.columns}
+We don't just need to get things into packages.
 
-::: {.column width='50%'}
-
-```{=python}
-import pandas as pd
-import plotly.express as px
-```
-
-:::
-
-::: {.column width='50%'}
-
-```{=r}
-
-```
-W
-:::
-
-::::
+We need to get them out there into the hands of the people who need them.
 
 
-## Or even...
+And we have pockets of it.
+- the HSMA website
+- the fabulous NHS-R website and books
+- maybe things I can't see (like AnalystX)
 
-::: {.column width='50%'}
+There are so many parts to that puzzle slowly going together, but I still don't feel like I have that 'magic book' that I felt must exist when I started my NHS journey.
 
-```{=r}
-library(NHSRplotthedots)
-```
+So I've begun to write that.
 
 :::
 
 
-## What else do they have in common?
+## The Healthcare Services Analytics & Decision Science Atlas
 
 ::: notes
 
-[show some screenshots of a really clear readme]
+
 
 :::
 
@@ -305,18 +491,25 @@ library(NHSRplotthedots)
 
 
 
-## What does the shift need to be?
 
-Shared
-Licenced
-Documented
-Tested
-Versioned
-Maintained
-Collaborative
-Advertised
 
-And packaged?
+
+
+# Acknowledgements
+
+[Slack chat mockups generated from chatmockup.com](https://chatmockup.com/)
+
+All images and icons generated with DALL-E3 or ChatGPT-5
+
+
+
+
+
+
+
+
+
+
 
 
 ::: notes
@@ -329,66 +522,4 @@ Maintained = You
 Collaborative = designed for collaboration, with issues and a code of conduct
 Advertised = let people know it exists
 Packaged or parameterisable = installable code OR code that is designed to allow people to input their own data in some way
-:::
-
-
-
-## The endless search
-
-
-::: notes
-
-Since I joined the NHS, I've been trying to find all the good stuff
-
-Conferences, LinkedIn, starring Github repos, working out who to follow on GitHub. Attending HaCORN and HaCORD special interest groups and NHS-R and HSMA showcases and local networks and ApHA stuff and reading NHS-R and Pycom and watching webinars and talking to academics and the strategy unit and ...
-
-There just isn't enough time (and brainspace) for us all to be constantly trying to do this.
-
-[image of "how to tie your shoelaces" and "cool project that might be the solution you're looking for one day" competing for space in a brain]
-
-And we have pockets of it.
-- the HSMA website
-- the NHS-R website and books
-
-But every time there's something
-:::
-
-
-
-## My final call
-
-::: notes
-
-We don't just need to get things into packages.
-
-We need to get them out there into the hands of the people who need them.
-
-There are so many parts to that puzzle slowly going together, but I still don't feel like I have that 'magic book' that I felt must exist when I started my NHS journey.
-
-So I've begun to write that.
-
-:::
-
-
-## Circling back
-
-::: notes
-
-Now let's go back to your plea at the beginning.
-
-Someone comes back to you with
-
-"Yes! I had that problem and I made a package. You can install it from PyPi. Here's a link to the repo in case you want to check out that it's not doing anything dodgy, and here's documentation."
-
-And show that same repo, but this time it's a package, with a pypi badge, and test coverage, and an issue tracker.
-
-:::
-
-
-## Circling back - part 2
-
-::: notes
-
-Let's take it a step further
-
 :::
