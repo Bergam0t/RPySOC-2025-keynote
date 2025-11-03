@@ -1,10 +1,60 @@
 ---
 title: "Reusable by Default: Reflections on Building Sustainable Open Tools and Knowledge for Healthcare"
+author:
+    name: Sammi Rosser
+    affiliation: Health Service Modelling Associates Programme, NIHR PenARC, University of Exeter
+execute:
+  eval: true
+  echo: false
 format:
   revealjs:
-    theme: dark
+    css: styles.css
+    embed-resources: false # necessary for stlite-quarto embedding to work
+    output-file: index.html
+    view-distance: 100
+    height: 800
+    width: 1250
+    preview-links: true
+    controls: false
+    controls-layout: edges
+    transition: fade
+    plotly-connected: true
+    background-transition: fade
+    preload-iframes: true
+    logo: "assets/Chalky HSMA-07-wide white logo.png"
+    footer-logo-link: "https://hsma.co.uk"
+    # background-image: "assets/hsma_bg_1.png"
+    background-image: "banner_hq.png"
+    # background-size: cover
+    theme: [default, custom.scss]
+    title-slide-attributes:
+        data-background-image: banner.png
+    include-in-header:
+      - text: |
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><link href='https://fonts.googleapis.com/css?family=Lexend' rel='stylesheet'>
+    verticator:
+      themetag: 'h1'
+      color: ''
+      inversecolor: ''
+      skipuncounted: false
+      clickable: true
+      position: 'auto'
+      offset: '3vmin'
+      autogenerate: true
+      tooltip: false
+      scale: 1
+    revealjs-plugins:
+      - verticator
+      - fullscreen
+      - editable
+filters:
+  - reveal-header
+  - editable
 ---
 
+## Picture a Scene
+
+![](assets/2025-11-03-13-49-13.png){.absolute width=496.167px height=715.742px left=708.543px top=25.6955px}
 
 ::: notes
 
@@ -14,20 +64,102 @@ You've been asked to do something pretty complex, pretty quickly. It also sounds
 
 So you go out and ask around on - say, the NHS-R Slack - if this is something someone else has worked on.
 
+:::
+
+### It starts well... {.slide-title-hidden}
+
+::: {.r-stack}
+
+![](assets/2025-11-03-13-48-19.png){.fragment .absolute width=405.877px height=736.718px left=793.123px top=17px}
+
+![](assets/2025-11-03-13-59-38.png){.fragment .absolute width=405.877px height=736.718px left=793.123px top=17px}
+
+![](assets/2025-11-03-14-02-47.png){.fragment .absolute width=405.877px height=736.718px left=793.123px top=17px}
+
+![](assets/2025-11-03-14-03-22.png){.fragment .absolute width=405.877px height=736.718px left=793.123px top=17px}
+
+![](assets/2025-11-03-14-04-19.png){.fragment .absolute width=405.877px height=736.718px left=793.123px top=17px}
+
+:::
+
+::: notes
+
 And you get the response - "yes!".
 
 (but it was at my previous job and I wasn't allowed to share the code, so I don't have it anymore. But you could try asking so-and-so, and here's a bit of a rough guide of what we did. )
+
+
+:::
+
+### But it's not your only hope {.slide-title-hidden}
+
+![](assets/2025-11-03-14-22-37.png){.fragment .absolute width=405.877px height=736.718px left=793.123px top=17px}
+
+::: notes
 
 And then someone else chimes in...
 
 "yes! I've got a repository. Here's the link. It's been a while since I've used it, though."
 
+:::
+
+### Or maybe it is {.slide-title-hidden}
+
+![](assets/2025-11-03-14-15-43a.png){.editable}
+
+
+::: notes
+
 [open repo image. The repository has loads of folders and files with no obvious naming convention. It's not clear where you should go. There are no tests. The readme just says 'coming soon'. The last commit was 2 years ago.]
 
-Is this much more useful to you than the other one?
+:::
 
+### ... or not. {.slide-title-hidden}
+
+![](assets/2025-11-03-14-50-21.png){.editable}
+
+### Any hope? {.slide-title-hidden}
+
+::: {.r-stack}
+
+![](assets/2025-11-03-14-45-01.png){.fragment .absolute width=405.877px height=736.718px left=793.123px top=17px}
+
+![](assets/2025-11-03-14-46-46.png){.fragment .absolute width=405.877px height=736.718px left=793.123px top=17px}
+:::
+
+
+
+
+
+
+
+
+
+### Last chance...
+
+Remember our plea from the start?
+
+![](assets/2025-11-03-13-49-13.png){.absolute width=496.167px height=715.742px left=708.543px top=25.6955px}
+
+
+### The utopia
+
+::: {.r-stack}
+
+![](assets/2025-11-03-14-55-33.png){.absolute width=496.167px height=715.742px left=708.543px top=25.6955px}
+
+![](assets/2025-11-03-14-56-10.png){.absolute width=496.167px height=715.742px left=708.543px top=25.6955px}
+
+![](assets/2025-11-03-14-56-37.png){.absolute width=496.167px height=715.742px left=708.543px top=25.6955px}
 
 :::
+
+
+
+
+
+
+
 
 
 
