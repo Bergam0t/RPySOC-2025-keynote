@@ -48,17 +48,24 @@ format:
       - fullscreen
       - editable
 filters:
+  - autofade.lua
   - reveal-header
   - editable
 ---
 
 # Picture a Scene
 
-![](assets/2025-11-03-13-49-13.png){.absolute width=496.167px height=715.742px left=708.543px top=25.6955px}
-
 ::: notes
 
 I want you to picture a scene.
+
+:::
+
+## The usual ask {.slide-title-hidden}
+
+![](assets/2025-11-03-13-49-13.png){.editable}
+
+::: notes
 
 You've been asked to do something pretty complex, pretty quickly. It also sounds like something someone else will have worked on before. It's got that sense of 'this isn't just an "us" problem'.
 
@@ -129,45 +136,107 @@ And then someone else chimes in...
 
 # A step back...
 
+:::: {.columns}
+
+::: {.column width='50%'}
+
+:::{.fragment}
+
+![](assets/2025-11-04-15-59-01.png){.editable}
+
+:::
+
+:::
+
+::: {.column width='50%'}
+
+:::{.fragment}
+
+![](assets/2025-11-04-15-52-09.png){.editable}
+
+:::
+
+:::
+
+::::
+
+:::: {.columns}
+
+::: {.column width='50%'}
+
+![](assets/2025-11-04-16-03-59.png){.editable}
+
+:::
+
+::: {.column width='50%'}
+
+![](assets/2025-11-04-15-53-22.png){.editable}
+
+:::
+
+::::
+
 
 
 ::: notes
 
 Who the hell am I?
 
-Sammi Rosser. I had my first taste of coding about 14 years ago, and have been coding in earnest for about 10 years now. These days it's mostly Python, but I'm a big fan of R too.
+Sammi Rosser. I had my first taste of coding about 14 years ago, simulating the population dynamics of side blotched lizards in base R, but I've been coding in earnest for about 10 years now. These days it's mostly Python, but I'm a big fan of R too.
 
-I have an MSc in health data science, and after two years working as a data analyst and then data scientist in a mental health trust, I joined the Health Service Modelling Associates programme.
+I have an MSc in health data science, and spent two years working as a data analyst and then data scientist in a mental health trust, coming to my first NHS-R conference in 2022 and just being completely in awe of all the amazing things people were doing.
 
-So now I get to teach people all the really fun, interesting and impactful things they can do with code, and I get to meet loads of amazing people across different organisations. 9 months of the programme, people work on projects.
+But my passion is sharing the joy of code with other people - so I joined the Health Service Modelling Associates programme in 2023. So now I get to teach people all the really fun, interesting and impactful things they can do with code, and I get to meet loads of amazing people across different organisations. 9 months of the programme, people work on projects.
 
-People have been doing amazing things with their projects, and this has been true of HSMA for years. And last year, I was revamping our website to try and help our students come up with ideas around 'what sorts of projects can I do?'.
+People have been doing amazing things with their projects, and this has been true of HSMA for years. And last year, I was revamping our website to try and help our students come up with ideas around 'what sorts of projects can I do?'. And I was looking at all this code that's been written by our community and shared over the years
 
-But even where the code was shared, we just weren't getting people reusing it as much as I would have liked.
-
-:::
+But even where the code was shared, we just weren't getting people reusing it as much as I would have liked. Even when they had the same problem, people would end up starting from scratch each time.
 
 :::
+
+## My own github journey
+
+![](assets/2025-11-04-16-09-49.png)
+
+![](assets/2025-11-04-16-10-31.png)
+
+::: notes
 
 And looking at them, I kept seeing the same things that trip up a lot of people newer to coding and open source
 
 These are issues not unique to our projects and students - these are things you see time and time again in open source projects, but they're resolvable if you get into some good habits.
 
-And they're the things that can really help level up your projects.
+And they're the things that can really help level up your projects. Many of them aren't that time consuming - and they will save you time in the future.
 
 :::
 
 
-# The Ladder of 'Reusable by Default'
+# The Tapestry of 'Reusable by Default'
+
+::: notes
+So I want to take you through my tapestry of 'reusable by default'
+:::
+
+## This is the why - find the 'how' on my website
+
+::: notes
+
+In this talk, I want to convince you of why you should bother with each of these things.
+
+I don't have time to take you through all the details of the how - but head to my website and you can find a blog post with all of the juicy details.
+
+:::
 
 ## LICENCE
 
+:::{.fragment .editable}
+If you don't have a Licence, I can't reuse your code!
+:::
 
-:::{.incremental}
-
-::: editable
-
-- LICENCE or LICENCE.md = special file
+::: notes
+- A licence is the first and most fundamental step towards reusability.
+- Once you know a few of them, you can chuck one in there from the start.
+- LICENCE or LICENCE.md = special file that will be displayed by github
 - If you don't have one, I **cannot** reuse your code
   - [default law = no rights to use, modify, etc.](https://choosealicense.com/no-permission/)
 - If you create it via Github, it helps you choose one and make the file!
@@ -176,43 +245,33 @@ And they're the things that can really help level up your projects.
 
 :::
 
-:::
+:::{.rstack}
 
-![](assets/2025-11-03-16-23-21.png)
+![](assets/2025-11-04-16-16-57.png){.fragment}
 
-![](assets/2025-11-03-16-23-56.png)
+![](assets/2025-11-03-16-23-21.png){.fragment}
 
-![](assets/2025-11-03-16-24-44.png)
+![](assets/2025-11-03-16-23-56.png){.fragment}
 
-![](assets/2025-11-03-16-25-11.png)
+![](assets/2025-11-03-16-24-44.png){.fragment}
 
-![](assets/2025-11-03-16-38-21.png)
+![](assets/2025-11-03-16-25-11.png){.fragment}
 
-::: notes
-
-A licence is the first and most fundamental step towards reusability.
-
-Chuck one in there from the start.
+![](assets/2025-11-03-16-38-21.png){.fragment}
 
 :::
 
-## README.md
+## README
 
-:::{.incremental}
-
-::: editable
-
-- README.md = special file
-- Always have one in your repo root
-
+:::{.fragment .editable}
+If you don't have a README, your code will be left on the shelf
 :::
 
-:::
 
 ::: notes
 README.md is a special file because Github will display it.
 
-Use it to tell me how to run your code, what inputs I need, etc. - all the key important stuff I need to know if I want to run it myself. What's in all those flders
+Use it to tell me how to run your code, what inputs I need, etc. - all the key important stuff I need to know if I want to run it myself. What's in all those folders?
 
 :::
 
@@ -418,12 +477,31 @@ But it's like any other coding task
 :::
 
 
-## Getting started with packages
+
+
+# Summary - The Tapestry of Reusable by Default
 
 
 
 
 # The Final Hurdle
+
+## Those same old questions
+
+:::{.incremental}
+- What will our demand look like next year?
+- How long will our waiting lists be?
+- Will we meet target x?
+:::
+
+## The better questions
+
+:::{.incremental}
+- What do we need and where to be able to **meet** the demand?
+- Who aren't we serving?
+:::
+
+
 
 ::: notes
 
@@ -447,29 +525,97 @@ We have different systems, and different pathways, but I'm far from the first pe
 
 And it actually makes me a little mad because we shouldn't, in 2025, be experiencing a postcode lottery of whether our trust has a data science team, and advanced analytics capabilities. I know if I was treated in trust X it's by a team who are making advanced predictions of demand, and I'm going to be seen in a more timely manner.
 
+:::
+
+## The challenge
+
+::: {.fragment}
+![](assets/2025-11-04-16-55-57.png){.editable}
+:::
+
+::: {.fragment}
+![](assets/2025-11-04-16-56-54.png){.editable}
+:::
+
+::: {.fragment}
+![](assets/2025-11-04-16-57-36.png){.editable}
+:::
+
+::: {.fragment}
+![](assets/2025-11-04-16-59-12.png){.editable}
+:::
+
+:::{.fragment}
+![](assets/2025-11-04-17-00-25.png){.editable}
+:::
+
+:::{.fragment}
+![](assets/2025-11-04-16-59-48.png){.editable}
+:::
+
+:::{.fragment}
+![](assets/2025-11-04-17-02-13.png){.editable}
+:::
+
+:::{.fragment}
+![](assets/2025-11-04-17-02-13.png){.editable}
+:::
+
+:::{.fragment}
+![](assets/2025-11-04-17-02-53.png){.editable}
+:::
+
+:::{.fragment}
+![](assets/2025-11-04-17-05-03.png){.editable}
+:::
+
+:::{.fragment}
+![](assets/2025-11-04-17-08-00.png){.editable}
+:::
+
+:::{.fragment}
+![](assets/2025-11-04-17-06-44.png){.editable}
+:::
+
+:::{.fragment}
+![](assets/2025-11-04-17-08-57.png){.editable}
+:::
+
+:::{.fragment}
+![](assets/2025-11-04-17-10-30.png){.editable}
+:::
+
+::: notes
+
 Since I joined the NHS, I've been trying to find all the good stuff
 
-Conferences, LinkedIn, starring over 1300 Github repos, working out which individuals and organisations to follow on GitHub. Attending HaCORN and HaCORN special interest groups and NHS-R and HSMA showcases and local networks and ApHA stuff and reading NHS-R and Pycom and watching webinars and subscribing to newsletters and talking to academics and the strategy unit and ...
+NHS R conference, HACA conference, SWAIH conference, SWAIH South West Hub, LinkedIn, starring over 1300 Github repos, working out which individuals and organisations to follow on GitHub. Attending HaCORN and HaCORN special interest groups and NHS-R webinars and HSMA showcases and ApHA stuff and reading NHS-R and Pycom and subscribing to newsletters and talking to academics and the strategy unit and ...
+
+:::
 
 
 ## It's just not sustainable!
 
-![](assets/2025-11-03-18-10-29.png)
+![](assets/2025-11-03-18-10-29.png){.editable}
 
 ::: notes
 
 There just isn't enough time (and brainspace) for us all to be constantly trying to do this.
 
-And that's just locked in my head. How many of us are trying to do the same thing and build up knowledge that would be better externalised?
+And that's just locked in my head.
+
+How many of us are trying to do the same thing and build up knowledge that would be better externalised?
+
+And I'm not saying that we get rid of any of these things because each and every one of them is wonderful and a necessary part of this huge puzzle that is modern analytics in the NHS - but
 
 We don't just need to get things into packages.
 
 We need to get them out there into the hands of the people who need them.
 
-
 And we have pockets of it.
-- the HSMA website
+- the HSMA website, which you can filter down to projects with shard code
 - the fabulous NHS-R website and books
+- bits and pieces on github
 - maybe things I can't see (like AnalystX)
 
 There are so many parts to that puzzle slowly going together, but I still don't feel like I have that 'magic book' that I felt must exist when I started my NHS journey.
@@ -481,21 +627,37 @@ So I've begun to write that.
 
 ## The Healthcare Services Analytics & Decision Science Atlas
 
+```{=html}
+<iframe width="1200" height="500" src="https://atlas.hsma.co.uk/packages_projects_tools/packages_projects_tools" title="HSMA Decision Support Atlas"></iframe>
+```
+
 ::: notes
 
 
 
 :::
 
+## What's next
+
+
+::: notes
+
+I can't do this alone!
+
+:::
 
 
 
+# The end
+
+## Get in touch
+
+[{{< fa brands linkedin >}} Add Me On LinkedIn](https://www.linkedin.com/in/sammijaderosser/)
+
+[{{< fa brands github >}} Follow Me On GitHub](https://github.com/Bergam0t)
 
 
-
-
-
-# Acknowledgements
+## Acknowledgements
 
 [Slack chat mockups generated from chatmockup.com](https://chatmockup.com/)
 
