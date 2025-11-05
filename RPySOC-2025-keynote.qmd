@@ -75,13 +75,13 @@ So you go out and ask around on - say, the NHS-R Slack - if this is something so
 
 ::: {.r-stack}
 
-![](assets/2025-11-03-13-48-19.png){.fragment .editable}
+![](assets/2025-11-03-13-48-19.png){.fragment fig-align="center" height="700px"}
 
-![](assets/2025-11-03-13-59-38.png){.fragment .absolute width=405.877px height=736.718px left=793.123px top=17px}
+![](assets/2025-11-03-13-59-38.png){.fragment  fig-align="center" height="700px"}
 
-![](assets/2025-11-03-14-02-47.png){.fragment .absolute width=405.877px height=736.718px left=793.123px top=17px}
+![](assets/2025-11-03-14-02-47.png){.fragment  fig-align="center" height="700px"}
 
-![](assets/2025-11-03-14-03-22.png){.fragment .absolute width=405.877px height=736.718px left=793.123px top=17px}
+![](assets/2025-11-03-14-03-22.png){.fragment  fig-align="center" height="700px"}
 
 :::
 
@@ -96,7 +96,7 @@ And you get the response - "yes!".
 
 ## {.slide data-menu-title="But wait! Another reply."}
 
-![](assets/2025-11-03-14-22-37.png){.fragment .absolute width=405.877px height=736.718px left=793.123px top=17px}
+![](assets/2025-11-03-14-22-37.png){.fragment fig-align="center" height="700px"}
 
 ::: notes
 
@@ -124,9 +124,10 @@ And then someone else chimes in...
 
 ::: {.r-stack}
 
-![](assets/2025-11-03-14-45-01.png){.fragment .absolute width=405.877px height=736.718px left=793.123px top=17px}
+![](assets/2025-11-03-14-45-01.png){.fragment fig-align="center" height="700px" .fade-in-then-out}
 
-![](assets/2025-11-03-14-46-46.png){.fragment .absolute width=405.877px height=736.718px left=793.123px top=17px}
+![](assets/anyone-here-tumbleweed.gif){.fragment}
+
 :::
 
 ::: notes
@@ -139,13 +140,17 @@ And I will fully admit I've been the people on both sides of this conversation. 
 
 :::: {.r-stack}
 
-![](assets/2025-11-04-16-09-49.png){.fragment .fade-in-then-out height="350px"}
+:::{.fragment .fade-in-then-out}
+<h1>Who am I to come here and talk about this?</h1>
+:::
 
-![](assets/2025-11-04-15-52-09.png){.fragment .fade-in-then-out height="700px"}
+![](assets/2025-11-04-16-09-49.png){.fragment .fade-in-then-out height="350px" fig-align="center"}
 
-![](assets/2025-11-04-16-03-59.png){.fragment .fade-in-then-out height="700px"}
+![](assets/2025-11-04-15-52-09.png){.fragment .fade-in-then-out height="700px" fig-align="center"}
 
-![](assets/2025-11-05-09-55-03.png){.fragment .fade-in-then-out height="650px"}
+![](assets/2025-11-04-16-03-59.png){.fragment .fade-in-then-out height="700px" fig-align="center"}
+
+![](assets/2025-11-05-09-55-03.png){.fragment .fade-in-then-out height="650px" fig-align="center"}
 
 ::: {.fragment}
 
@@ -179,11 +184,11 @@ And I get to meet loads of amazing people across different organisations. 9 mont
 
 ## {.slide data-menu-title="What's not happening?"}
 
-![](assets/2025-11-05-10-16-53.png){height="600px"}
+![](assets/2025-11-05-10-16-53.png){height="600px" fig-align="center"}
 
-::: aside
+<br>
+
 <https://hsma.co.uk/previous_projects/projects_with_code>
-:::
 
 ::: notes
 And last year, I was revamping our website to try and help our students come up with ideas around 'what sorts of projects can I do?'. And I was looking at all this code that's been written by our community and shared over the years
@@ -194,11 +199,21 @@ But even people within the HSMA community, even when they had the same problem, 
 
 :::
 
-## Same few things - same quick(ish) solutions {.center}
+## {.slide data-menu-title="My argument"}
 
-::: {.fragment .fade-in-then-semi-out .r-fit-text}
-Simple things - big impact
+::: {.fragment .fade-in-then-semi-out}
+Same few simple(ish) things
 :::
+
+::: {.fragment .fade-in-then-semi-out}
+Not that time consuming if you make them a habit
+:::
+
+
+::: {.fragment .fade-in-then-semi-out}
+Big impact and overall time saving
+:::
+
 
 ::: notes
 
@@ -212,13 +227,17 @@ And that's the main thing I want to talk you through today - if we're going to r
 
 :::
 
+## The utopia we want to reach {.center}
+
+![](assets/2025-11-05-15-07-08.png)
+
 
 # The Tapestry of 'Reusable by Default'
 
-![](assets/Tapestry%20of%20reusability%20Blank.svg)
+![](assets/tor_blank.svg){fig-align="center"}
 
 ::: notes
-So I want to take you through my tapestry of 'reusable by default'
+So I want to take you through my tapestry of 'reusable by default'. Or it might be a quilt.
 :::
 
 ## The aim
@@ -1001,6 +1020,16 @@ I can't do this alone!
 
 # Get in touch
 
+:::: {.columns}
+
+::: {.column width='40%'}
+
+![](assets/2025-11-04-15-53-22.png)
+
+:::
+
+::: {.column width='57%'}
+
 <br>
 
 [<i class="fa-brands fa-linkedin"></i> Add Me On LinkedIn - Sammi Rosser](https://www.linkedin.com/in/sammijaderosser/)
@@ -1016,6 +1045,10 @@ I can't do this alone!
 <br>
 
 [<i class="fa-solid fa-envelope"></i> Email me - hi@sammirosser.com](mailto:hi@sammirosser.com)
+
+:::
+
+::::
 
 # Acknowledgements
 
