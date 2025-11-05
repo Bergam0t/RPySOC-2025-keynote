@@ -19,7 +19,7 @@ format:
     plotly-connected: true
     background-transition: fade
     preload-iframes: true
-    logo: "assets/Chalky HSMA-07-wide white logo.png"
+    # logo: "assets/Chalky HSMA-07-wide white logo.png"
     footer-logo-link: "https://hsma.co.uk"
     # background-image: "assets/hsma_bg_1.png"
     background-image: "banner_hq.png"
@@ -40,7 +40,7 @@ format:
       offset: '3vmin'
       autogenerate: true
       tooltip: false
-      scale: 1
+      scale: 0.7
     revealjs-plugins:
       - verticator
       - fullscreen
@@ -81,8 +81,6 @@ So you go out and ask around on - say, the NHS-R Slack - if this is something so
 
 ![](assets/2025-11-03-14-02-47.png){.fragment  fig-align="center" height="700px"}
 
-![](assets/2025-11-03-14-03-22.png){.fragment  fig-align="center" height="700px"}
-
 :::
 
 ::: notes
@@ -96,7 +94,7 @@ And you get the response - "yes!".
 
 ## {.slide data-menu-title="But wait! Another reply."}
 
-![](assets/2025-11-03-14-22-37.png){.fragment fig-align="center" height="700px"}
+![](assets/2025-11-03-14-22-37.png){fig-align="center" height="700px"}
 
 ::: notes
 
@@ -126,7 +124,7 @@ And then someone else chimes in...
 
 ![](assets/2025-11-03-14-45-01.png){.fragment fig-align="center" height="700px" .fade-in-then-out}
 
-![](assets/anyone-here-tumbleweed.gif){.fragment}
+![](assets/anyone-here-tumbleweed.gif){.fragment fig-align="center"}
 
 :::
 
@@ -149,6 +147,24 @@ And I will fully admit I've been the people on both sides of this conversation. 
 ![](assets/2025-11-04-15-52-09.png){.fragment .fade-in-then-out height="700px" fig-align="center"}
 
 ![](assets/2025-11-04-16-03-59.png){.fragment .fade-in-then-out height="700px" fig-align="center"}
+
+![](assets/Chalky%20HSMA-04-wide.png){.fragment .fade-in-then-out height="400px" fig-align="center"}
+
+:::::{.fragment .fade-in-then-out}
+
+:::: {.columns}
+
+::: {.column width='50%'}
+![](assets/dan_muppet_profile.png){height="400px" fig-align="center"}
+:::
+
+::: {.column width='50%'}
+![](assets/sammi_muppet_profile.png){height="500px" fig-align="center"}
+:::
+
+::::
+
+:::::
 
 ![](assets/2025-11-05-09-55-03.png){.fragment .fade-in-then-out height="650px" fig-align="center"}
 
@@ -186,8 +202,6 @@ And I get to meet loads of amazing people across different organisations. 9 mont
 
 ![](assets/2025-11-05-10-16-53.png){height="600px" fig-align="center"}
 
-<br>
-
 <https://hsma.co.uk/previous_projects/projects_with_code>
 
 ::: notes
@@ -199,19 +213,30 @@ But even people within the HSMA community, even when they had the same problem, 
 
 :::
 
-## {.slide data-menu-title="My argument"}
+## What am I advocating?{.center}
+
+<br>
 
 ::: {.fragment .fade-in-then-semi-out}
-Same few simple(ish) things
+I keep seeing the same few simple(ish) things holding great repositories back
 :::
 
+<br>
+
 ::: {.fragment .fade-in-then-semi-out}
-Not that time consuming if you make them a habit
+Not that time consuming to fix if you build a few habit
 :::
 
+<br>
 
 ::: {.fragment .fade-in-then-semi-out}
-Big impact and overall time saving
+Big impact on reusability
+:::
+
+<br>
+
+::: {.fragment .fade-in-then-semi-out}
+On balance - a time saving
 :::
 
 
@@ -229,18 +254,27 @@ And that's the main thing I want to talk you through today - if we're going to r
 
 ## The utopia we want to reach {.center}
 
-![](assets/2025-11-05-15-07-08.png)
+:::{.r-stack}
 
+![](assets/2025-11-05-15-07-08.png){height="550px"}
+
+![](assets/2025-11-05-16-25-21.png){.fragment height="550px"}
+
+![](assets/2025-11-05-16-26-11.png){.fragment height="550px"}
+
+:::
+
+<https://statsrhian.github.io/nhsrpysoc-reusable/>
 
 # The Tapestry of 'Reusable by Default'
 
-![](assets/tor_blank.svg){fig-align="center"}
+![](assets/tor_blank.svg){fig-align="center" height="700px"}
 
 ::: notes
 So I want to take you through my tapestry of 'reusable by default'. Or it might be a quilt.
 :::
 
-## The aim
+## My Proposals
 
 ::: {.fragment .fade-in-then-semi-out}
 - Let's make these as natural as breathing
@@ -281,6 +315,8 @@ In this talk, I want to convince you of why you should bother with each of these
 I don't have time to take you through all the details of the how - but head to my website and you can find a blog post with all of the juicy details.
 
 :::
+
+## Ready? {.center}
 
 ## {.slide data-menu-title="GitHub"}
 
@@ -438,11 +474,11 @@ So a readme doesn't need to be long - but please don't just leave me with a one 
 ::: {.column width='67%'}
 
 ::: {.fragment .fade-in-then-semi-out}
-- Docstrings are super-comments that power
+- Docstrings are super-comments
 :::
 
-::: {.fragment .fade-in-then-semi-out}
-- Docstrings are super-comments
+::: {.fragment}
+![](assets/numpy_docstring_demo.gif)
 :::
 
 :::
@@ -462,14 +498,17 @@ In R, roxygen2 and the 'docstring' package
 
 :::
 
-## Docstrings bring the information about a function or class to where you need it
+## And you write them like this (in <i class="fa-brands fa-python"></i>)
 
-![](assets/numpy_docstring_demo.gif)
+:::{.r-stack}
 
+![](assets/2025-11-05-12-09-00.png){.fragment .fade-in-then-out height="550px"}
 
-## And you write them like this
+![](assets/2025-11-05-12-09-00-Copy.png){.fragment .fade-in-then-out height="550px"}
 
-![](assets/2025-11-05-12-09-00.png)
+![](assets/2025-11-05-12-09-00-Copy-Copy.png){.fragment height="550px"}
+
+:::
 
 ::: {.fragment}
 Allowed to use AI? Rope it in!
@@ -488,40 +527,61 @@ Allowed to use AI? Rope it in!
 
 ::: {.column width='67%'}
 
+::: {.fragment .fade-in-then-semi-out}
+Those docstrings you just wrote?
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+Combine them with [pdoc](https://pdoc.dev/), [sphinx](https://www.sphinx-doc.org/en/master/), [quartodoc](https://machow.github.io/quartodoc/get-started/overview.html) (for <i class="fa-brands fa-python"></i>)
+
+Or [pkgdown](https://r-pkgs.org/website.html) (for <i class="fa-brands fa-r-project"></i>)
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+Voila - website with all your code documented
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+You can host your documentation for free with just a few clicks
+:::
+
 :::
 
 ::::
 
-
-::: notes
-The next step on from
-:::
-
-## Quartodoc generates a function dictionary
+## They generate a dictionary
 
 ![](assets/2025-11-03-17-16-11.png)
 
-## Quartodoc also breaks down your functions nicely
+(this is Quartodoc)
+
+## And display your docstrings
 
 ![](assets/2025-11-03-17-17-34.png)
+
+(this is Quartodoc)
 
 ::: notes
 
 :::
 
-## You can host your documentation for free with just a few clicks
-
 ## A plea...
 
-- I will not be reading your code if it's written like this...
+I will not be reading your code if it's written like this...
+
+:::: {.columns}
+
+::: {.column width='90%'}
 
 ```python
 df=pd.read_csv("sales.csv").dropna(subset=["price","quantity"]).assign(total=lambda d:d["price"]*d["quantity"]).query("total>1000").groupby(["region","category"],as_index=False).agg({"total":"sum","quantity":"mean"}).sort_values("total",ascending=False).rename(columns={"total":"total_sales","quantity":"avg_quantity"}).reset_index(drop=True).head(10)
 
 ```
-<br><br>
+<br>
 
 ::: {.fragment .fade-in-then-semi-out}
+
+But I will if it looks like this
 
 ```python
 df = (
@@ -540,6 +600,9 @@ df = (
 
 :::
 
+:::
+
+::::
 
 ## {.slide data-menu-title="Auto linting"}
 
@@ -610,17 +673,16 @@ This is one thing I wish I'd done years ago
 - Auto documentation and packaging **will just work**
 :::
 
-::: {.fragment .fade-in-then-semi-out}
-- Pros and cons of python options [here](packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/)
-- Consider structuring resuable parts of analysis scripts within an [R package structure](https://r-pkgs.org/whole-game.html)
-:::
-
 :::
 
 ::::
 
 ::: notes
 I had to completely restructure something recently and it was a colossal pain
+
+- Pros and cons of python options [here](packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/)
+
+- Consider structuring resuable parts of analysis scripts within an [R package structure](https://r-pkgs.org/whole-game.html)
 :::
 
 
@@ -635,6 +697,26 @@ I had to completely restructure something recently and it was a colossal pain
 :::
 
 ::: {.column width='67%'}
+
+::: {.fragment .fade-in-then-semi-out}
+- Automated tests are small scripts that check your code (still) works as expected
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+- They give you and others confidence in your code
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+- Overall, they save you heaps of time
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+- [pytest](https://docs.pytest.org/en/stable/) in <i class="fa-brands fa-python"></i>
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+- [testthat](https://testthat.r-lib.org/) in <i class="fa-brands fa-r-project"></i>
+:::
 
 :::
 
@@ -658,16 +740,31 @@ I had to completely restructure something recently and it was a colossal pain
 :::
 
 ::: {.fragment .fade-in-then-semi-out}
-- Helps **you** to keep track - helps others understand what's left to happen
+- Helps **you** to keep track of what you haven't done yet
+
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+- Helps others understand what's left to happen
 :::
 
 ::::
 
 :::::
 
+## Issues {.center}
 
+![](assets/2025-11-05-15-18-24.png)
+
+## Projects {.center}
+
+![](assets/2025-11-05-15-19-34.png){height="300px"}
 
 # A mindset shift
+
+## Where are we now?
+
+![](assets/tor_all_except.svg){fig-align="center" height="800px"}
 
 ## Last chance...
 
@@ -676,25 +773,26 @@ Remember our plea from the start?
 ![](assets/2025-11-03-13-49-13.png){.absolute width=496.167px height=715.742px left=708.543px top=25.6955px}
 
 
-## The utopia
+## {.slide data-menu-title="Our Hero"}
 
 ::: {.r-stack}
 
-![](assets/2025-11-03-14-55-33.png){.fragment .absolute width=496.167px height=715.742px left=708.543px top=25.6955px}
+![](assets/2025-11-03-14-55-33.png){.fragment fig-align="center" height="700px"}
 
-![](assets/2025-11-03-14-56-10.png){.fragment .absolute width=496.167px height=715.742px left=708.543px top=25.6955px}
+![](assets/2025-11-03-14-56-10.png){.fragment fig-align="center" height="700px"}
 
-![](assets/2025-11-03-14-56-37.png){.fragment .absolute width=496.167px height=715.742px left=708.543px top=25.6955px}
+![](assets/2025-11-03-14-56-37.png){.fragment fig-align="center" height="700px"}
 
 :::
 
 
-## What do you do every time you start a new script?
+## What do you do every time you start a new script? {.center}
 
 :::: {.columns}
 
-::: {.column width='50%'}
+::: {.column width='45%'}
 
+:::{.fragment}
 
 ```python
 import pandas as pd
@@ -703,8 +801,11 @@ import plotly.express as px
 
 :::
 
-::: {.column width='50%'}
+:::
 
+::: {.column width='45%'}
+
+:::{.fragment}
 
 ```r
 library(tidyr)
@@ -713,14 +814,23 @@ library(ggplot2)
 
 :::
 
+:::
+
 ::::
 
-## Or maybe...
+## Or maybe... {.center}
+
+:::: {.columns}
+
+::: {.column width='90%'}
 
 ```r
 library(NHSRPlotTheDots)
 ```
 
+:::
+
+::::
 
 
 ::: notes
@@ -747,9 +857,34 @@ And the things we've talked about mean you're basically there!
 
 ::: {.column width='67%'}
 
+::: {.fragment .fade-in-then-semi-out}
+- We need to start identifying the bits of the work we do that we can turn into reusable elements
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+- Look for patterns and repetition
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+- Write more functions
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+- Think how to accept elements as arguments instead of hard coding them
+:::
+
 :::
 
 ::::
+
+::: notes
+
+What about that special kind of plot you've created?
+
+Or something that takes input data, chooses the best forecasting model, does the forecast and churns out predictions and intervals?
+
+:::
+
 
 
 ## An animation of a model for a workshop...
@@ -760,6 +895,7 @@ And the things we've talked about mean you're basically there!
 
 ::: {.column width='30%'}
 
+<br>
 Became `vidigi`
 
 :::
@@ -773,7 +909,13 @@ Became `vidigi`
 ::::
 :::::
 
-## An annoying task...
+::: notes
+This moved away from hard coding the input data and expecting certain column names.
+
+And split it into three separate key functions for tranforming log data into snapshots, adding icons and animation positions, and making the animation, instead of one long script.
+:::
+
+## An annoying, repetitive, error-prone task...
 
 ::::: {.fragment}
 
@@ -781,17 +923,34 @@ Became `vidigi`
 
 ::: {.column width='20%'}
 
+<br>
 Became the stlitepack package
 
 :::
 
 ::: {.column width='70%'}
 
+```python
+from stlitepack import pack
+
+pack(
+  "app.py",
+  requirements="requirements.txt",
+  title="My App"
+)
+```
+
 :::
 
 ::::
 
 :::::
+
+::: notes
+
+This involved copying a load of code and keeping it up to date in multiple places and knowing loads of weird logic... so now it's just a function.
+
+:::
 
 ## A desire to better visualise patient journeys internally...
 
@@ -800,6 +959,7 @@ Became the stlitepack package
 :::: {.columns}
 
 ::: {.column width='30%'}
+<br>
 Became an R-powered PowerBI Theograph Visual
 :::
 
@@ -821,14 +981,17 @@ Became an R-powered PowerBI Theograph Visual
 :::: {.columns}
 
 ::: {.column width='30%'}
-Became another R-powered PowerBI visual that made better reporting possible
+<br>
+Became another R-powered PowerBI visual that made better reporting possible...
+
+Because the NHSRplotthedots team made a great package in the first place!
 :::
 
 ::: {.column width='67%'}
 
-![](assets/2025-11-05-14-07-12.png){height="300px"}
+![](assets/2025-11-05-14-07-12.png){height="250px"}
 
-![](assets/2025-11-05-14-06-39.png){height="300px"}
+![](assets/2025-11-05-14-06-39.png){height="250px"}
 
 :::
 
@@ -836,19 +999,21 @@ Became another R-powered PowerBI visual that made better reporting possible
 
 :::::
 
-:::{.fragment}
+::: notes
 
-And I could only build it because of the nhsrplotthedots team's package!
+And many hands can make light work
 
+Contribute to other packages too!
+
+But, in a way, writing your own is less scary
 :::
-
 
 # Summary
 
-##
+## {.slide data-menu-title="Key Points"}
 
 ::: {.fragment .fade-in-then-semi-out}
-- You don't always know what will be worth sharing and reusing
+- You don't always know what will be worth sharing and reusing when you start
 :::
 
 <br><br>
@@ -869,9 +1034,13 @@ But these steps
 - **Unlock** possibilities
 :::
 
-## These are the steps that make it possible {.center}
+::: {.fragment}
+- **Accelerate your learning**
+:::
 
-![](assets/Tapestry%20of%20reusability.svg)
+## These pieces set the stage
+
+![](assets/tor.svg){fig-align="center" height="800px"}
 
 # The Final Hurdle
 
@@ -887,64 +1056,60 @@ And it actually makes me a little mad because we shouldn't, in 2025, be experien
 
 :::
 
-## The challenge {.center}
+## The challenge
 
 :::: {.r-stack}
 
 ::: {.fragment .fade-right .fade-in-then-out}
-![](assets/2025-11-04-16-55-57.png)
+![](assets/2025-11-04-16-55-57.png){height="300px" fig-align="center"}
 :::
 
 ::: {.fragment .fade-left .fade-in-then-out}
-![](assets/2025-11-04-16-56-54.png)
+![](assets/2025-11-04-16-56-54.png){height="300px" fig-align="center"}
 :::
 
 ::: {.fragment .fade-up .fade-in-then-out}
-![](assets/2025-11-04-16-57-36.png)
+![](assets/2025-11-04-16-57-36.png){height="300px" fig-align="center"}
 :::
 
 ::: {.fragment .fade-down .fade-in-then-out}
-![](assets/2025-11-04-16-59-12.png)
+![](assets/2025-11-04-16-59-12.png){height="300px" fig-align="center"}
 :::
 
 ::: {.fragment .fade-right .fade-in-then-out}
-![](assets/2025-11-04-17-00-25.png)
+![](assets/2025-11-04-17-00-25.png){height="250px" fig-align="center"}
 :::
 
 ::: {.fragment .fade-up .fade-in-then-out}
-![](assets/2025-11-04-16-59-48.png)
+![](assets/2025-11-04-16-59-48.png){height="250px" fig-align="center"}
 :::
 
 ::: {.fragment .fade-left .fade-in-then-out}
-![](assets/2025-11-04-17-02-13.png)
-:::
-
-:::{.fragment .fade-down .fade-in-then-out}
-![](assets/2025-11-04-17-02-13.png)
+![](assets/2025-11-04-17-02-13.png){height=600px" fig-align="center"}
 :::
 
 :::{.fragment .fade-right .fade-in-then-out}
-![](assets/2025-11-04-17-02-53.png)
+![](assets/2025-11-04-17-02-53.png){height="600px" fig-align="center"}
 :::
 
 :::{.fragment .fade-left .fade-in-then-out}
-![](assets/2025-11-04-17-05-03.png)
+![](assets/2025-11-04-17-05-03.png){height="500px" fig-align="center"}
 :::
 
 :::{.fragment .grow .fade-in-then-out}
-![](assets/2025-11-04-17-08-00.png)
+![](assets/2025-11-04-17-08-00.png){height="300px" fig-align="center"}
 :::
 
-:::{.fragment}
-![](assets/2025-11-04-17-06-44.png)
+:::{.fragment .fade-right .fade-in-then-out}
+![](assets/2025-11-04-17-06-44.png){height="300px" fig-align="center"}
 :::
 
-:::{.fragment}
-![](assets/2025-11-04-17-08-57.png)
+:::{.fragment .fade-left .fade-in-then-out}
+![](assets/2025-11-04-17-08-57.png){height="600px" fig-align="center"}
 :::
 
-:::{.fragment}
-![](assets/2025-11-04-17-10-30.png)
+:::{.fragment .fade-down .fade-in-then-out}
+![](assets/2025-11-04-17-10-30.png){height="600px" fig-align="center"}
 :::
 
 ::::
@@ -996,6 +1161,8 @@ So I've begun to write that.
 <iframe width="1200" height="600" src="https://atlas.hsma.co.uk/packages_projects_tools/packages_projects_tools" title="HSMA Decision Support Atlas"></iframe>
 ```
 
+<a href="https://atlas.hsma.co.uk" style="color: #FFFFFFFF; font-weight: bold; font-size: 1.2em">atlas.hsma.co.uk</a>
+
 ::: notes
 
 
@@ -1006,7 +1173,7 @@ So I've begun to write that.
 
 :::{.fragment}
 
-![](assets/2025-11-04-21-23-31.png){fig-align="center"}
+![](assets/2025-11-04-21-23-31.png){fig-align="center" height="600px"}
 
 :::
 
@@ -1022,33 +1189,39 @@ I can't do this alone!
 
 :::: {.columns}
 
-::: {.column width='40%'}
+::: {.column width='35%'}
 
-![](assets/2025-11-04-15-53-22.png)
+![](assets/sammi_muppet_profile.png)
 
 :::
 
-::: {.column width='57%'}
+::: {.column width='62%'}
+
+<i class="fa-brands fa-linkedin"></i> Add Me On [LinkedIn - Sammi Rosser](https://www.linkedin.com/in/sammijaderosser/)
 
 <br>
 
-[<i class="fa-brands fa-linkedin"></i> Add Me On LinkedIn - Sammi Rosser](https://www.linkedin.com/in/sammijaderosser/)
+<i class="fa-brands fa-github"></i> Follow Me On GitHub - [Bergam0t](https://github.com/Bergam0t)
 
 <br>
 
-[<i class="fa-brands fa-github"></i> Follow Me On GitHub - Bergam0t](https://github.com/Bergam0t)
+<i class="fa-solid fa-globe"></i> Watch other talks @ [sammirosser.com](https://sammirosser.com)
 
 <br>
 
-[<i class="fa-solid fa-globe"></i> Check out my other talks @ sammirosser.com](https://sammirosser.com)
+<i class="fa-solid fa-envelope"></i> Email me - [hi@sammirosser.com](mailto:hi@sammirosser.com)
 
 <br>
 
-[<i class="fa-solid fa-envelope"></i> Email me - hi@sammirosser.com](mailto:hi@sammirosser.com)
+<i class="fa-solid fa-envelope"></i> Check out HSMA - [hsma.co.uk](https://www.hsma.co.uk)
 
 :::
 
 ::::
+
+::: notes
+Thanks to Dan, all of our HSMAs, and the UKRI funded STARS team for their work on reusability in healthcare simulation models
+:::
 
 # Acknowledgements
 
@@ -1057,3 +1230,9 @@ I can't do this alone!
 Images generated with DALL-E3 or ChatGPT-5
 
 Hex stickers built on Canva (all images used via Canva Pro subscription)
+
+The [STARS](https://www.tandfonline.com/doi/full/10.1080/17477778.2024.2347882) project team for their work on reusability
+
+Huge thanks to Dan and all of our
+
+And many thanks to the NIHR/PenARC for funding us!
