@@ -4,9 +4,6 @@ subtitle: "<br>Reflections on Building Sustainable Open Tools<br>and Knowledge f
 author:
     name: Sammi Rosser
     affiliation: Health Service Modelling Associates Programme, NIHR PenARC, University of Exeter
-execute:
-  eval: true
-  echo: false
 format:
   revealjs:
     css: styles.css
@@ -113,7 +110,6 @@ And then someone else chimes in...
 
 ![](assets/2025-11-03-14-15-43a.png){.absolute width=1213.64px height=656.942px left=20.8477px top=46.467px}
 
-
 ::: notes
 
 [open repo image. The repository has loads of folders and files with no obvious naming convention. It's not clear where you should go. There are no tests. The readme just says 'coming soon'. The last commit was 2 years ago.]
@@ -121,7 +117,6 @@ And then someone else chimes in...
 :::
 
 ## {.slide data-menu-title="... or not."}
-
 
 ![](assets/2025-11-03-14-50-21.png){.absolute width=1218.51px height=230.779px left=24.3045px top=134.142px}
 
@@ -142,7 +137,7 @@ And I will fully admit I've been the people on both sides of this conversation. 
 
 # {.slide data-menu-title="Who am I to come here and talk about this?"}
 
-::: {.r-stack}
+:::: {.r-stack}
 
 ![](assets/2025-11-04-16-09-49.png){.fragment .fade-in-then-out height="350px"}
 
@@ -160,7 +155,7 @@ And I will fully admit I've been the people on both sides of this conversation. 
 
 :::
 
-:::
+::::
 
 ::: notes
 
@@ -199,9 +194,13 @@ But even people within the HSMA community, even when they had the same problem, 
 
 :::
 
-## Same few things - same quick(ish) solutions
+## Same few things - same quick(ish) solutions {.center}
 
+::: {.fragment .fade-in-then-semi-out .r-fit-text}
+Simple things - big impact
 :::
+
+::: notes
 
 And looking at them, I kept seeing the same things that trip up a lot of people newer to coding and open source
 
@@ -250,7 +249,7 @@ And I want these things to start becoming as natural as breathing in each of you
 <iframe width="1000" height="550" src="https://sammirosser.com/talks/2511_nhsrpycom/2511_nhsrpycom.html" title="Talk Page"></iframe>
 ```
 
-::: aside
+:::{.aside}
 
 [sammirosser.com](https://sammirosser.com/talks/2511_nhsrpycom/2511_nhsrpycom.html)
 
@@ -266,17 +265,17 @@ I don't have time to take you through all the details of the how - but head to m
 
 ## {.slide data-menu-title="GitHub"}
 
-:::: {.columns}
+::::: {.columns}
 
-::: {.column width='30%'}
+:::: {.column width='30%'}
 
 ![](assets/tor_github.svg)
 
 (or any online repository hosting)
 
-:::
+::::
 
-::: {.column width='70%'}
+:::: {.column width='70%'}
 
 :::{.fragment .fade-in-then-semi-out}
 - On GitHub > emailed/Slacked
@@ -286,6 +285,7 @@ I don't have time to take you through all the details of the how - but head to m
 - Point your managers to
     - the [NHS-R Statement on Tools](https://tools.nhsrcommunity.com/statement-on-using-tools-git.html) - 17 NHS orgs, but I know there are more!
     - the [NHS England Open Code Statistics](https://nhsengland.github.io/open-health-statistics/) - over 2000 open repos
+:::
 
 :::{.fragment .fade-in-then-semi-out}
 - Not ready to use it in full? Drag and Drop.
@@ -295,9 +295,9 @@ I don't have time to take you through all the details of the how - but head to m
 - Borrow repo templates from other people!
 :::
 
-:::
-
 ::::
+
+:::::
 
 ::: notes
 
@@ -305,19 +305,42 @@ Other services exist, but the party is happening over on GitHub
 
 :::
 
-## LICENCE
+## {.slide data-menu-title="LICENCE"}
 
-:::{.fragment .editable}
-If you don't have a Licence, I can't reuse your code!
+::::: {.columns}
+
+:::: {.column width='30%'}
+
+![](assets/tor_licence.svg)
+
+::::
+
+:::: {.column width='70%'}
+
+::: {.fragment .fade-in-then-semi-out}
+- If you don't have a licence, I can't use your code!
 :::
 
-## {.slide data-menu-title="The usual ask"}
-
-::: {.rstack}
-
-![](assets/2025-11-04-16-16-57.png){.fragment}
-
+::: {.fragment .fade-in-then-semi-out}
+- Yes, even if you emailed it to me (unless you were clear)
 :::
+
+::: {.fragment .fade-in-then-semi-out}
+- It's one 'special' file (LICENCE or LICENCE.md) GitHub Recognises
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+- Once you settle on one, it's a two second job
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+- Sites exist to help you pick ([choosealicense.com/](https://choosealicense.com/))
+  - MIT & GPL3 are a good place to start
+:::
+
+::::
+
+:::::
 
 ::: notes
 - A licence is the first and most fundamental step towards reusability.
@@ -331,58 +354,77 @@ If you don't have a Licence, I can't reuse your code!
 
 :::
 
+## {.slide data-menu-title="README.md"}
 
+:::: {.columns}
 
-## README
-
-:::{.fragment .editable}
-If you don't have a README, your code will be left on the shelf
+::: {.column width='30%'}
+![](assets/tor_readme.svg)
 :::
 
+::: {.column width='67%'}
+
+::: {.fragment .fade-in-then-semi-out}
+If you don't have a readme, you could be taking **hours** of each persons' time
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+README.md is a special file GitHub will display
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+- Tell me **how to use it**
+  - installing environment
+  - what to run and how
+  - data format required
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+- Tell me **why I should bother**
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+- Tell me **how it's doing what it's doing**
+:::
+
+:::
+
+::::
 
 ::: notes
 README.md is a special file because Github will display it.
 
 Use it to tell me how to run your code, what inputs I need, etc. - all the key important stuff I need to know if I want to run it myself. What's in all those folders?
 
-:::
+You might notice I don't talk about environments today - and that's not because it's not important, but because plenty of other people have spoken on that matter. So here I'm almost assuming you're doing that, and expecting it to be in your readme.
 
-## Bonus - README of me
+The 'why should I bother' is the bit I actually see being missed out the most. What will I get out of this?
 
-::: {.incremental}
+But also the 'what' - is this a simulation? A forecasting library? For long term planning or short term operational use? It's often so unclear and just a couple of sentences clear that up straight away.
 
-- make a repo with a name that's your GitHub username
-- just make a README.md file in there and commit it
-- use it to tell me all the cool stuff you're working on and why I should care
+So a readme doesn't need to be long - but please don't just leave me with a one liner and 10 folders each with 6 notebooks in (and this is a real scenario I've encountered), because then rea
 
 :::
 
-![](assets/2025-11-03-16-40-25.png)
-
-
-::: notes
-
-As someone trying to employ coders, I won't penalise you for not having one, but it'll certainly help me understand your work above and beyond pinned repositories
-
-:::
-
-## Docstrings
+## {.slide data-menu-title="docstrings"}
 
 :::: {.columns}
 
-::: {.column width='50%'}
+::: {.column width='30%'}
 
-![](assets/2025-11-03-17-23-32.png)
+![](assets/tor_docstrings.svg)
 
 :::
 
-::: {.column width='50%'}
+::: {.column width='67%'}
 
-- for Python, [numpydoc](https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard) = best (IMO)
-- for R, [roxygen]() and [docstring]()
-- If you're allowed, AI tools can do great first drafts
-- Also IDE extensions for setting up a template
+::: {.fragment .fade-in-then-semi-out}
+- Docstrings are super-comments that power
+:::
 
+::: {.fragment .fade-in-then-semi-out}
+- Docstrings are super-comments
+:::
 
 :::
 
@@ -401,10 +443,35 @@ In R, roxygen2 and the 'docstring' package
 
 :::
 
+## Docstrings bring the information about a function or class to where you need it
 
-## Documentation {.}
+![](assets/numpy_docstring_demo.gif)
 
-![](assets/Documentation.svg){height="600px"}
+
+## And you write them like this
+
+![](assets/2025-11-05-12-09-00.png)
+
+::: {.fragment}
+Allowed to use AI? Rope it in!
+:::
+
+
+## {.slide data-menu-title="documentation"}
+
+:::: {.columns}
+
+::: {.column width='30%'}
+
+![](assets/tor_documentation.svg)
+
+:::
+
+::: {.column width='67%'}
+
+:::
+
+::::
 
 
 ::: notes
@@ -423,21 +490,69 @@ The next step on from
 
 :::
 
-## Free hosting
+## You can host your documentation for free with just a few clicks
 
-
-
-## Free hosting side note: personal site
-
-```{=html}
-<iframe width="1200" height="500" src="https://sammirosser.com/" title="Personal Site Example"></iframe>
-```
-
-## Automatic Linting
+## A plea...
 
 - I will not be reading your code if it's written like this...
 
-TODO: Add gif of a very long line
+```python
+df=pd.read_csv("sales.csv").dropna(subset=["price","quantity"]).assign(total=lambda d:d["price"]*d["quantity"]).query("total>1000").groupby(["region","category"],as_index=False).agg({"total":"sum","quantity":"mean"}).sort_values("total",ascending=False).rename(columns={"total":"total_sales","quantity":"avg_quantity"}).reset_index(drop=True).head(10)
+
+```
+<br><br>
+
+::: {.fragment .fade-in-then-semi-out}
+
+```python
+df = (
+    pd.read_csv("sales.csv")
+    .dropna(subset=["price", "quantity"])
+    .assign(total=lambda d: d["price"] * d["quantity"])
+    .query("total>1000")
+    .groupby(["region", "category"], as_index=False)
+    .agg({"total": "sum", "quantity": "mean"})
+    .sort_values("total", ascending=False)
+    .rename(columns={"total": "total_sales", "quantity": "avg_quantity"})
+    .reset_index(drop=True)
+    .head(10)
+)
+```
+
+:::
+
+
+## {.slide data-menu-title="Auto linting"}
+
+:::: {.columns}
+
+::: {.column width='30%'}
+
+![](assets/tor_auto_linter.svg){height="600px"}
+
+:::
+
+::: {.column width='67%'}
+
+::: {.fragment .fade-in-then-semi-out}
+- Install a linter like [ruff](https://docs.astral.sh/ruff/) for python
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+- R equivalents exist in [RStudio](https://styler.r-lib.org/index.html) and [Positron](https://positron.posit.co/migrate-rstudio-code.html)
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+- Set it to format on save = **never faff with formatting again!**
+:::
+
+:::
+
+::::
+
+::: notes
+
+And it just helps save time - which you can use on other parts of this list!
 
 - Safe linters are available for all good languages and IDEs
   - Install [Ruff](https://docs.astral.sh/ruff/) for Python
@@ -446,25 +561,94 @@ TODO: Add gif of a very long line
   - Use [lintquarto](https://github.com/lintquarto/lintquarto) for Python code in Quarto docs
 - Format on save = never deal with this again
 
-::: notes
-
-And it just helps save time - which you can use on other parts of this list!
-
+This is one thing I wish I'd done years ago
 :::
 
 
-## Folder structure
+## {.slide data-menu-title="Folder Structure"}
 
-- Changing the way you structure your code in your repo makes automated documentation and packaging just work more easily
+:::: {.columns}
 
+::: {.column width='30%'}
+![](assets/tor_folder_structure.svg)
+:::
+
+::: {.column width='67%'}
+
+::: {.fragment .fade-in-then-semi-out}
+- Choosing a future-proof folder structure from the start saves effort down the line
+:::
+
+:::{.fragment .fade-in-then-semi-out}
+- Avoid putting your script files in the repository root
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+- It costs very little once you get used to it
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+- Auto documentation and packaging **will just work**
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+- Pros and cons of python options [here](packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/)
+- Consider structuring resuable parts of analysis scripts within an [R package structure](https://r-pkgs.org/whole-game.html)
+:::
+
+:::
+
+::::
 
 ::: notes
 I had to completely restructure something recently and it was a colossal pain
 :::
 
 
+## {.slide data-menu-title="Tests"}
 
-# A mindset shift - packaging your code
+:::: {.columns}
+
+::: {.column width='30%'}
+
+![](assets/tor_tests.svg)
+
+:::
+
+::: {.column width='67%'}
+
+:::
+
+::::
+
+
+## {.slide data-menu-title="Issues & Projects"}
+
+::::: {.columns}
+
+:::: {.column width='30%'}
+
+![](assets/tor_issues_and_projects.svg)
+
+::::
+
+:::: {.column width='67%'}
+
+::: {.fragment .fade-in-then-semi-out}
+- GitHub has fantastic **free** project tracking tools built in
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+- Helps **you** to keep track - helps others understand what's left to happen
+:::
+
+::::
+
+:::::
+
+
+
+# A mindset shift
 
 ## Last chance...
 
@@ -477,11 +661,11 @@ Remember our plea from the start?
 
 ::: {.r-stack}
 
-![](assets/2025-11-03-14-55-33.png){.absolute width=496.167px height=715.742px left=708.543px top=25.6955px}
+![](assets/2025-11-03-14-55-33.png){.fragment .absolute width=496.167px height=715.742px left=708.543px top=25.6955px}
 
-![](assets/2025-11-03-14-56-10.png){.absolute width=496.167px height=715.742px left=708.543px top=25.6955px}
+![](assets/2025-11-03-14-56-10.png){.fragment .absolute width=496.167px height=715.742px left=708.543px top=25.6955px}
 
-![](assets/2025-11-03-14-56-37.png){.absolute width=496.167px height=715.742px left=708.543px top=25.6955px}
+![](assets/2025-11-03-14-56-37.png){.fragment .absolute width=496.167px height=715.742px left=708.543px top=25.6955px}
 
 :::
 
@@ -493,8 +677,7 @@ Remember our plea from the start?
 ::: {.column width='50%'}
 
 
-```{=python}
-#| echo: true
+```python
 import pandas as pd
 import plotly.express as px
 ```
@@ -504,8 +687,7 @@ import plotly.express as px
 ::: {.column width='50%'}
 
 
-```{=r}
-#| echo: true
+```r
 library(tidyr)
 library(ggplot2)
 ```
@@ -516,8 +698,7 @@ library(ggplot2)
 
 ## Or maybe...
 
-```{=r}
-#| echo: true
+```r
 library(NHSRPlotTheDots)
 ```
 
@@ -531,34 +712,149 @@ For 'advanced coders'
 
 But it's like any other coding task
 
+And the things we've talked about mean you're basically there!
+
 :::
 
+## {.slide data-menu-title="Package Mindset"}
 
+:::: {.columns}
+
+::: {.column width='30%'}
+
+![](assets/tor_package_mindset.svg)
+
+:::
+
+::: {.column width='67%'}
+
+:::
+
+::::
+
+
+## An animation of a model for a workshop...
+
+::::: {.fragment}
+
+:::: {.columns}
+
+::: {.column width='30%'}
+
+Became `vidigi`
+
+:::
+
+::: {.column width='67%'}
+
+![](assets/vidigi.gif)
+
+:::
+
+::::
+:::::
+
+## An annoying task...
+
+::::: {.fragment}
+
+:::: {.columns}
+
+::: {.column width='20%'}
+
+Became the stlitepack package
+
+:::
+
+::: {.column width='70%'}
+
+:::
+
+::::
+
+:::::
+
+## A desire to better visualise patient journeys internally...
+
+:::::{.fragment}
+
+:::: {.columns}
+
+::: {.column width='30%'}
+Became an R-powered PowerBI Theograph Visual
+:::
+
+::: {.column width='65%'}
+
+![](assets/2025-11-05-13-48-29.png)
+
+:::
+
+::::
+
+:::::
+
+
+## A need for limit recalculation in PowerBI SPC charts...
+
+:::::{.fragment}
+
+:::: {.columns}
+
+::: {.column width='30%'}
+Became another R-powered PowerBI visual that made better reporting possible
+:::
+
+::: {.column width='67%'}
+
+![](assets/2025-11-05-14-07-12.png){height="300px"}
+
+![](assets/2025-11-05-14-06-39.png){height="300px"}
+
+:::
+
+::::
+
+:::::
+
+:::{.fragment}
+
+And I could only build it because of the nhsrplotthedots team's package!
+
+:::
 
 
 # Summary
 
-![](assets/Tapestry%20of%20reusability.svg){.absolute width=442.5px height=78px left=20px top=118px}
+##
 
+::: {.fragment .fade-in-then-semi-out}
+- You don't always know what will be worth sharing and reusing
+:::
+
+<br><br>
+
+::: {.fragment .fade-in-then-semi-out}
+But these steps
+:::
+
+::: {.fragment}
+- Make **your** life easier
+:::
+
+::: {.fragment}
+- Make your **teams'** life easier
+:::
+
+::: {.fragment}
+- **Unlock** possibilities
+:::
+
+## These are the steps that make it possible {.center}
+
+![](assets/Tapestry%20of%20reusability.svg)
 
 # The Final Hurdle
-
-## Those same old questions
-
-:::{.incremental}
-- What will our demand look like next year?
-- How long will our waiting lists be?
-- Will we meet target x?
-:::
-
-## The better questions
-
-:::{.incremental}
-- What do we need and where to be able to **meet** the demand?
-- Who aren't we serving?
-:::
-
-
 
 ::: notes
 
@@ -566,81 +862,74 @@ I worked in a trust with some brilliant people, but I was still pretty new to al
 
 One of my biggest frustrations was being asked questions that I just didn't know the right way to answer... but I was sure someone out there would have thought about this before.
 
-These generally came under a few categories.
-- What's going to happen to our demand?
-- What's going to happen to our waiting lists?
-- Are we going to meet target x?
-
-And then there were also lots of *better* questions I wanted to be able to answer.
-
-- What can we do to fix this?
-- Who aren't we serving?
-
-And you can't look at that list and tell me we don't all have these same questions.
-
 We have different systems, and different pathways, but I'm far from the first person to be standing up here yelling about having the same problems and repeated solutions.
 
 And it actually makes me a little mad because we shouldn't, in 2025, be experiencing a postcode lottery of whether our trust has a data science team, and advanced analytics capabilities. I know if I was treated in trust X it's by a team who are making advanced predictions of demand, and I'm going to be seen in a more timely manner.
 
 :::
 
-## The challenge
+## The challenge {.center}
 
-::: {.fragment}
-![](assets/2025-11-04-16-55-57.png){.absolute width=530px height=78px left=20px top=118px}
+:::: {.r-stack}
+
+::: {.fragment .fade-right .fade-in-then-out}
+![](assets/2025-11-04-16-55-57.png)
 :::
 
-::: {.fragment}
-![](assets/2025-11-04-16-56-54.png){.absolute width=0px height=0px left=0px top=110px}
+::: {.fragment .fade-left .fade-in-then-out}
+![](assets/2025-11-04-16-56-54.png)
 :::
 
-::: {.fragment}
-![](assets/2025-11-04-16-57-36.png){.absolute width=287.245px height=122.183px left=40px top=137.37px}
+::: {.fragment .fade-up .fade-in-then-out}
+![](assets/2025-11-04-16-57-36.png)
 :::
 
-::: {.fragment}
-![](assets/2025-11-04-16-59-12.png){.absolute width=199.909px height=204.103px left=1007.65px top=22.2182px}
+::: {.fragment .fade-down .fade-in-then-out}
+![](assets/2025-11-04-16-59-12.png)
 :::
 
-:::{.fragment}
-![](assets/2025-11-04-17-00-25.png){.absolute width=163.009px height=96.5184px left=748.107px top=46.6067px}
+::: {.fragment .fade-right .fade-in-then-out}
+![](assets/2025-11-04-17-00-25.png)
 :::
 
-:::{.fragment}
-![](assets/2025-11-04-16-59-48.png){.absolute width=484.75px height=185.691px left=370px top=226px}
+::: {.fragment .fade-up .fade-in-then-out}
+![](assets/2025-11-04-16-59-48.png)
 :::
 
-:::{.fragment}
-![](assets/2025-11-04-17-02-13.png){.absolute width=0px height=0px left=40px top=118px}
+::: {.fragment .fade-left .fade-in-then-out}
+![](assets/2025-11-04-17-02-13.png)
 :::
 
-:::{.fragment}
-![](assets/2025-11-04-17-02-13.png){.absolute width=0px height=0px left=40px top=118px}
+:::{.fragment .fade-down .fade-in-then-out}
+![](assets/2025-11-04-17-02-13.png)
 :::
 
-:::{.fragment}
-![](assets/2025-11-04-17-02-53.png){.absolute width=0px height=0px left=40px top=118px}
+:::{.fragment .fade-right .fade-in-then-out}
+![](assets/2025-11-04-17-02-53.png)
 :::
 
-:::{.fragment}
-![](assets/2025-11-04-17-05-03.png){.absolute width=0px height=0px left=40px top=118px}
+:::{.fragment .fade-left .fade-in-then-out}
+![](assets/2025-11-04-17-05-03.png)
 :::
 
-:::{.fragment}
-![](assets/2025-11-04-17-08-00.png){.absolute width=0px height=0px left=40px top=118px}
-:::
-
-:::{.fragment}
-![](assets/2025-11-04-17-06-44.png){.absolute width=0px height=0px left=40px top=118px}
-:::
-
-:::{.fragment}
-![](assets/2025-11-04-17-08-57.png){.absolute width=0px height=0px left=40px top=118px}
+:::{.fragment .grow .fade-in-then-out}
+![](assets/2025-11-04-17-08-00.png)
 :::
 
 :::{.fragment}
-![](assets/2025-11-04-17-10-30.png){.absolute width=0px height=0px left=40px top=118px}
+![](assets/2025-11-04-17-06-44.png)
 :::
+
+:::{.fragment}
+![](assets/2025-11-04-17-08-57.png)
+:::
+
+:::{.fragment}
+![](assets/2025-11-04-17-10-30.png)
+:::
+
+::::
+
 
 ::: notes
 
@@ -651,9 +940,9 @@ NHS R conference, HACA conference, SWAIH conference, SWAIH South West Hub, Linke
 :::
 
 
-## It's just not sustainable!
+## {.slide data-menu-title="It's just not sustainable!"}
 
-![](assets/2025-11-03-18-10-29.png){.absolute width=0px height=0px left=40px top=118px}
+![](assets/2025-11-03-18-10-29.png){fig-align="center"}
 
 ::: notes
 
@@ -685,7 +974,7 @@ So I've begun to write that.
 ## The Healthcare Services Analytics & Decision Science Atlas
 
 ```{=html}
-<iframe width="1200" height="500" src="https://atlas.hsma.co.uk/packages_projects_tools/packages_projects_tools" title="HSMA Decision Support Atlas"></iframe>
+<iframe width="1200" height="600" src="https://atlas.hsma.co.uk/packages_projects_tools/packages_projects_tools" title="HSMA Decision Support Atlas"></iframe>
 ```
 
 ::: notes
@@ -694,9 +983,13 @@ So I've begun to write that.
 
 :::
 
-## What's next
+## What next? {.center}
 
-![](assets/2025-11-04-21-23-31.png)
+:::{.fragment}
+
+![](assets/2025-11-04-21-23-31.png){fig-align="center"}
+
+:::
 
 ::: notes
 
@@ -706,9 +999,7 @@ I can't do this alone!
 
 
 
-# The end
-
-## Get in touch
+# Get in touch
 
 <br>
 
@@ -726,31 +1017,10 @@ I can't do this alone!
 
 [<i class="fa-solid fa-envelope"></i> Email me - hi@sammirosser.com](mailto:hi@sammirosser.com)
 
-## Acknowledgements
+# Acknowledgements
 
 [Slack chat mockups generated from chatmockup.com](https://chatmockup.com/)
 
-All images and icons generated with DALL-E3 or ChatGPT-5
+Images generated with DALL-E3 or ChatGPT-5
 
-
-
-
-
-
-
-
-
-
-
-
-::: notes
-Shared = on GitHub
-Licenced = an appropriate licence so people can reuse it without getting into trouble
-Documented = clear documentation on how to use it
-Tested = Actual tests with a framework
-Versioned = Make actual versions so you know what you're getting into with updates
-Maintained = You
-Collaborative = designed for collaboration, with issues and a code of conduct
-Advertised = let people know it exists
-Packaged or parameterisable = installable code OR code that is designed to allow people to input their own data in some way
-:::
+Hex stickers built on Canva (all images used via Canva Pro subscription)

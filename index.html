@@ -31,6 +31,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #f8f8f2;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #f8f8f2; } /* Normal */
+    code span.al { color: #f07178; } /* Alert */
+    code span.an { color: #d4d0ab; } /* Annotation */
+    code span.at { color: #00e0e0; } /* Attribute */
+    code span.bn { color: #d4d0ab; } /* BaseN */
+    code span.bu { color: #abe338; } /* BuiltIn */
+    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #abe338; } /* Char */
+    code span.cn { color: #ffd700; } /* Constant */
+    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
+    code span.cv { color: #ffd700; } /* CommentVar */
+    code span.do { color: #f8f8f2; } /* Documentation */
+    code span.dt { color: #ffa07a; } /* DataType */
+    code span.dv { color: #d4d0ab; } /* DecVal */
+    code span.er { color: #f07178; text-decoration: underline; } /* Error */
+    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
+    code span.fl { color: #d4d0ab; } /* Float */
+    code span.fu { color: #ffa07a; } /* Function */
+    code span.im { color: #abe338; } /* Import */
+    code span.in { color: #d4d0ab; } /* Information */
+    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
+    code span.op { color: #ffa07a; } /* Operator */
+    code span.ot { color: #00e0e0; } /* Other */
+    code span.pp { color: #dcc6e0; } /* Preprocessor */
+    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
+    code span.sc { color: #abe338; } /* SpecialChar */
+    code span.ss { color: #abe338; } /* SpecialString */
+    code span.st { color: #abe338; } /* String */
+    code span.va { color: #00e0e0; } /* Variable */
+    code span.vs { color: #abe338; } /* VerbatimString */
+    code span.wa { color: #dcc6e0; } /* Warning */
   </style>
   <link rel="stylesheet" href="RPySOC-2025-keynote_files/libs/revealjs/dist/theme/quarto-c1fd4dcabb93c69d4b5438e7c561ecda.css">
   <link rel="stylesheet" href="styles.css">
@@ -334,14 +400,27 @@ Sammi Rosser
 <aside><div>
 <p><a href="https://hsma.co.uk/previous_projects/projects_with_code" class="uri">https://hsma.co.uk/previous_projects/projects_with_code</a></p>
 </div></aside></section>
-<section id="same-few-things---same-quickish-solutions" class="slide level2">
+<section id="same-few-things---same-quickish-solutions" class="slide level2 center">
 <h2>Same few things - same quick(ish) solutions</h2>
-<p>:::</p>
+<div class="fragment fade-in-then-semi-out r-fit-text">
+<p>Simple things - big impact</p>
+</div>
+<aside class="notes">
 <p>And looking at them, I kept seeing the same things that trip up a lot of people newer to coding and open source</p>
 <p>These are issues not unique to our projects and students - these are things you see time and time again in open source projects, but they’re resolvable if you get into some good habits.</p>
 <p>And they’re the things that can really help level up your projects. Many of them aren’t that time consuming - and they will save you time in the future.</p>
 <p>And that’s the main thing I want to talk you through today - if we’re going to reach the utopia that people in previous years have talked about - like Rhian Davies’s fantastic talk from last year - what are some of the practical things we can all start doing by default?</p>
-<p>:::</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section></section>
 <section>
 <section id="the-tapestry-of-reusable-by-default" class="title-slide slide level1 center">
@@ -399,7 +478,7 @@ Sammi Rosser
 </section>
 <section id="this-is-the-why---find-the-how-on-my-website" class="slide level2 center">
 <h2>This is the ‘why’ - find the ‘how’ on my website</h2>
-<iframe width="1000" height="600" src="https://sammirosser.com/talks/2511_nhsrpycom/2511_nhsrpycom.html" title="Talk Page"></iframe>
+<iframe width="1000" height="550" src="https://sammirosser.com/talks/2511_nhsrpycom/2511_nhsrpycom.html" title="Talk Page"></iframe>
 
 <aside class="notes">
 <p>In this talk, I want to convince you of why you should bother with each of these things.</p>
@@ -438,6 +517,7 @@ Sammi Rosser
 <li>the <a href="https://nhsengland.github.io/open-health-statistics/">NHS England Open Code Statistics</a> - over 2000 open repos</li>
 </ul></li>
 </ul>
+</div>
 <div class="fragment fade-in-then-semi-out">
 <ul>
 <li>Not ready to use it in full? Drag and Drop.</li>
@@ -448,8 +528,8 @@ Sammi Rosser
 <li>Borrow repo templates from other people!</li>
 </ul>
 </div>
-</div>
-</div><aside class="notes">
+</div></div>
+<aside class="notes">
 <p>Other services exist, but the party is happening over on GitHub</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -461,16 +541,43 @@ Sammi Rosser
           width: 1px!important;
           overflow: hidden!important;
           display:block!important;
-      }</style></aside><section id="licence" class="slide level2">
-<h2>LICENCE</h2>
-<div class="fragment editable">
-<p>If you don’t have a Licence, I can’t reuse your code!</p>
-</div>
-</section><section id="section-9" class="slide level2" data-menu-title="The usual ask">
+      }</style></aside>
+</section>
+<section id="section-9" class="slide level2" data-menu-title="LICENCE">
 <h2></h2>
-<div class="rstack">
-<p><img data-src="assets/2025-11-04-16-16-57.png" class="fragment"></p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><img data-src="assets/tor_licence.svg"></p>
+</div><div class="column" style="width:70%;">
+<div class="fragment fade-in-then-semi-out">
+<ul>
+<li>If you don’t have a licence, I can’t use your code!</li>
+</ul>
 </div>
+<div class="fragment fade-in-then-semi-out">
+<ul>
+<li>Yes, even if you emailed it to me (unless you were clear)</li>
+</ul>
+</div>
+<div class="fragment fade-in-then-semi-out">
+<ul>
+<li>It’s one ‘special’ file (LICENCE or LICENCE.md) GitHub Recognises</li>
+</ul>
+</div>
+<div class="fragment fade-in-then-semi-out">
+<ul>
+<li>Once you settle on one, it’s a two second job</li>
+</ul>
+</div>
+<div class="fragment fade-in-then-semi-out">
+<ul>
+<li>Sites exist to help you pick (<a href="https://choosealicense.com/">choosealicense.com/</a>)
+<ul>
+<li>MIT &amp; GPL3 are a good place to start</li>
+</ul></li>
+</ul>
+</div>
+</div></div>
 <aside class="notes">
 <ul>
 <li>A licence is the first and most fundamental step towards reusability.</li>
@@ -495,14 +602,47 @@ Sammi Rosser
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section><section id="readme" class="slide level2">
-<h2>README</h2>
-<div class="fragment editable">
-<p>If you don’t have a README, your code will be left on the shelf</p>
+</section>
+<section id="section-10" class="slide level2" data-menu-title="README.md">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><img data-src="assets/tor_readme.svg"></p>
+</div><div class="column" style="width:67%;">
+<div class="fragment fade-in-then-semi-out">
+<p>If you don’t have a readme, you could be taking <strong>hours</strong> of each persons’ time</p>
 </div>
+<div class="fragment fade-in-then-semi-out">
+<p>README.md is a special file GitHub will display</p>
+</div>
+<div class="fragment fade-in-then-semi-out">
+<ul>
+<li>Tell me <strong>how to use it</strong>
+<ul>
+<li>installing environment</li>
+<li>what to run and how</li>
+<li>data format required</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment fade-in-then-semi-out">
+<ul>
+<li>Tell me <strong>why I should bother</strong></li>
+</ul>
+</div>
+<div class="fragment fade-in-then-semi-out">
+<ul>
+<li>Tell me <strong>how it’s doing what it’s doing</strong></li>
+</ul>
+</div>
+</div></div>
 <aside class="notes">
 <p>README.md is a special file because Github will display it.</p>
 <p>Use it to tell me how to run your code, what inputs I need, etc. - all the key important stuff I need to know if I want to run it myself. What’s in all those folders?</p>
+<p>You might notice I don’t talk about environments today - and that’s not because it’s not important, but because plenty of other people have spoken on that matter. So here I’m almost assuming you’re doing that, and expecting it to be in your readme.</p>
+<p>The ‘why should I bother’ is the bit I actually see being missed out the most. What will I get out of this?</p>
+<p>But also the ‘what’ - is this a simulation? A forecasting library? For long term planning or short term operational use? It’s often so unclear and just a couple of sentences clear that up straight away.</p>
+<p>So a readme doesn’t need to be long - but please don’t just leave me with a one liner and 10 folders each with 6 notebooks in (and this is a real scenario I’ve encountered), because then rea</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -514,39 +654,23 @@ Sammi Rosser
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section><section id="bonus---readme-of-me" class="slide level2">
-<h2>Bonus - README of me</h2>
-<ul>
-<li class="fragment">make a repo with a name that’s your GitHub username</li>
-<li class="fragment">just make a README.md file in there and commit it</li>
-<li class="fragment">use it to tell me all the cool stuff you’re working on and why I should care</li>
-</ul>
-
-<img data-src="assets/2025-11-03-16-40-25.png" class="r-stretch"><aside class="notes">
-<p>As someone trying to employ coders, I won’t penalise you for not having one, but it’ll certainly help me understand your work above and beyond pinned repositories</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section><section id="docstrings" class="slide level2">
-<h2>Docstrings</h2>
+</section>
+<section id="section-11" class="slide level2" data-menu-title="docstrings">
+<h2></h2>
 <div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="assets/2025-11-03-17-23-32.png"></p>
-</div><div class="column" style="width:50%;">
+<div class="column" style="width:30%;">
+<p><img data-src="assets/tor_docstrings.svg"></p>
+</div><div class="column" style="width:67%;">
+<div class="fragment fade-in-then-semi-out">
 <ul>
-<li>for Python, <a href="https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard">numpydoc</a> = best (IMO)</li>
-<li>for R, <a href="">roxygen</a> and <a href="">docstring</a></li>
-<li>If you’re allowed, AI tools can do great first drafts</li>
-<li>Also IDE extensions for setting up a template</li>
+<li>Docstrings are super-comments that power</li>
 </ul>
+</div>
+<div class="fragment fade-in-then-semi-out">
+<ul>
+<li>Docstrings are super-comments</li>
+</ul>
+</div>
 </div></div>
 <aside class="notes">
 <p>Docstrings are the easiest way to level up your code - for you and others.</p>
@@ -564,9 +688,26 @@ Sammi Rosser
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section><section id="documentation-." class="slide level2">
-<h2>Documentation {.}</h2>
-<p><img data-src="assets/Documentation.svg" height="600"></p>
+</section>
+<section id="docstrings-bring-the-information-about-a-function-or-class-to-where-you-need-it" class="slide level2">
+<h2>Docstrings bring the information about a function or class to where you need it</h2>
+
+<img data-src="assets/numpy_docstring_demo.gif" class="r-stretch"></section>
+<section id="and-you-write-them-like-this" class="slide level2">
+<h2>And you write them like this</h2>
+
+<img data-src="assets/2025-11-05-12-09-00.png" class="r-stretch"><div class="fragment">
+<p>Allowed to use AI? Rope it in!</p>
+</div>
+</section>
+<section id="section-12" class="slide level2" data-menu-title="documentation">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><img data-src="assets/tor_documentation.svg"></p>
+</div><div class="column" style="width:67%;">
+
+</div></div>
 <aside class="notes">
 <p>The next step on from</p>
 <style type="text/css">
@@ -580,10 +721,12 @@ Sammi Rosser
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section><section id="quartodoc-generates-a-function-dictionary" class="slide level2">
+</section>
+<section id="quartodoc-generates-a-function-dictionary" class="slide level2">
 <h2>Quartodoc generates a function dictionary</h2>
 
-<img data-src="assets/2025-11-03-17-16-11.png" class="r-stretch"></section><section id="quartodoc-also-breaks-down-your-functions-nicely" class="slide level2">
+<img data-src="assets/2025-11-03-17-16-11.png" class="r-stretch"></section>
+<section id="quartodoc-also-breaks-down-your-functions-nicely" class="slide level2">
 <h2>Quartodoc also breaks down your functions nicely</h2>
 
 <img data-src="assets/2025-11-03-17-17-34.png" class="r-stretch"><aside class="notes">
@@ -599,17 +742,56 @@ Sammi Rosser
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section><section id="free-hosting" class="slide level2">
-<h2>Free hosting</h2>
-</section><section id="free-hosting-side-note-personal-site" class="slide level2">
-<h2>Free hosting side note: personal site</h2>
-<iframe width="1200" height="500" src="https://sammirosser.com/" title="Personal Site Example"></iframe>
-</section><section id="automatic-linting" class="slide level2">
-<h2>Automatic Linting</h2>
+</section>
+<section id="you-can-host-your-documentation-for-free-with-just-a-few-clicks" class="slide level2">
+<h2>You can host your documentation for free with just a few clicks</h2>
+</section>
+<section id="a-plea" class="slide level2">
+<h2>A plea…</h2>
 <ul>
 <li>I will not be reading your code if it’s written like this…</li>
 </ul>
-<p>TODO: Add gif of a very long line</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a>df<span class="op">=</span>pd.read_csv(<span class="st">"sales.csv"</span>).dropna(subset<span class="op">=</span>[<span class="st">"price"</span>,<span class="st">"quantity"</span>]).assign(total<span class="op">=</span><span class="kw">lambda</span> d:d[<span class="st">"price"</span>]<span class="op">*</span>d[<span class="st">"quantity"</span>]).query(<span class="st">"total&gt;1000"</span>).groupby([<span class="st">"region"</span>,<span class="st">"category"</span>],as_index<span class="op">=</span><span class="va">False</span>).agg({<span class="st">"total"</span>:<span class="st">"sum"</span>,<span class="st">"quantity"</span>:<span class="st">"mean"</span>}).sort_values(<span class="st">"total"</span>,ascending<span class="op">=</span><span class="va">False</span>).rename(columns<span class="op">=</span>{<span class="st">"total"</span>:<span class="st">"total_sales"</span>,<span class="st">"quantity"</span>:<span class="st">"avg_quantity"</span>}).reset_index(drop<span class="op">=</span><span class="va">True</span>).head(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br><br></p>
+<div class="fragment fade-in-then-semi-out">
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href=""></a>df <span class="op">=</span> (</span>
+<span id="cb2-2"><a href=""></a>    pd.read_csv(<span class="st">"sales.csv"</span>)</span>
+<span id="cb2-3"><a href=""></a>    .dropna(subset<span class="op">=</span>[<span class="st">"price"</span>, <span class="st">"quantity"</span>])</span>
+<span id="cb2-4"><a href=""></a>    .assign(total<span class="op">=</span><span class="kw">lambda</span> d: d[<span class="st">"price"</span>] <span class="op">*</span> d[<span class="st">"quantity"</span>])</span>
+<span id="cb2-5"><a href=""></a>    .query(<span class="st">"total&gt;1000"</span>)</span>
+<span id="cb2-6"><a href=""></a>    .groupby([<span class="st">"region"</span>, <span class="st">"category"</span>], as_index<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb2-7"><a href=""></a>    .agg({<span class="st">"total"</span>: <span class="st">"sum"</span>, <span class="st">"quantity"</span>: <span class="st">"mean"</span>})</span>
+<span id="cb2-8"><a href=""></a>    .sort_values(<span class="st">"total"</span>, ascending<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb2-9"><a href=""></a>    .rename(columns<span class="op">=</span>{<span class="st">"total"</span>: <span class="st">"total_sales"</span>, <span class="st">"quantity"</span>: <span class="st">"avg_quantity"</span>})</span>
+<span id="cb2-10"><a href=""></a>    .reset_index(drop<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb2-11"><a href=""></a>    .head(<span class="dv">10</span>)</span>
+<span id="cb2-12"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="section-13" class="slide level2" data-menu-title="Auto linting">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><img data-src="assets/tor_auto_linter.svg" height="600"></p>
+</div><div class="column" style="width:67%;">
+<div class="fragment fade-in-then-semi-out">
+<ul>
+<li>Install a linter like <a href="https://docs.astral.sh/ruff/">ruff</a> for python</li>
+</ul>
+</div>
+<div class="fragment fade-in-then-semi-out">
+<ul>
+<li>R equivalents exist in <a href="https://styler.r-lib.org/index.html">RStudio</a> and <a href="https://positron.posit.co/migrate-rstudio-code.html">Positron</a></li>
+</ul>
+</div>
+<div class="fragment fade-in-then-semi-out">
+<ul>
+<li>Set it to format on save = <strong>never faff with formatting again!</strong></li>
+</ul>
+</div>
+</div></div>
+<aside class="notes">
+<p>And it just helps save time - which you can use on other parts of this list!</p>
 <ul>
 <li>Safe linters are available for all good languages and IDEs
 <ul>
@@ -620,8 +802,7 @@ Sammi Rosser
 </ul></li>
 <li>Format on save = never deal with this again</li>
 </ul>
-<aside class="notes">
-<p>And it just helps save time - which you can use on other parts of this list!</p>
+<p>This is one thing I wish I’d done years ago</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -633,11 +814,40 @@ Sammi Rosser
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section><section id="folder-structure" class="slide level2">
-<h2>Folder structure</h2>
+</section>
+<section id="section-14" class="slide level2" data-menu-title="Folder Structure">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><img data-src="assets/tor_folder_structure.svg"></p>
+</div><div class="column" style="width:67%;">
+<div class="fragment fade-in-then-semi-out">
 <ul>
-<li>Changing the way you structure your code in your repo makes automated documentation and packaging just work more easily</li>
+<li>Choosing a future-proof folder structure from the start saves effort down the line</li>
 </ul>
+</div>
+<div class="fragment fade-in-then-semi-out">
+<ul>
+<li>Avoid putting your script files in the repository root</li>
+</ul>
+</div>
+<div class="fragment fade-in-then-semi-out">
+<ul>
+<li>It costs very little once you get used to it</li>
+</ul>
+</div>
+<div class="fragment fade-in-then-semi-out">
+<ul>
+<li>Auto documentation and packaging <strong>will just work</strong></li>
+</ul>
+</div>
+<div class="fragment fade-in-then-semi-out">
+<ul>
+<li>Pros and cons of python options <a href="packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/">here</a></li>
+<li>Consider structuring resuable parts of analysis scripts within an <a href="https://r-pkgs.org/whole-game.html">R package structure</a></li>
+</ul>
+</div>
+</div></div>
 <aside class="notes">
 <p>I had to completely restructure something recently and it was a colossal pain</p>
 <style type="text/css">
@@ -651,8 +861,37 @@ Sammi Rosser
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section><section id="a-mindset-shift---packaging-your-code" class="title-slide slide level1 center">
-<h1>A mindset shift - packaging your code</h1>
+</section>
+<section id="section-15" class="slide level2" data-menu-title="Tests">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><img data-src="assets/tor_tests.svg"></p>
+</div><div class="column" style="width:67%;">
+
+</div></div>
+</section>
+<section id="section-16" class="slide level2" data-menu-title="Issues &amp; Projects">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><img data-src="assets/tor_issues_and_projects.svg"></p>
+</div><div class="column" style="width:67%;">
+<div class="fragment fade-in-then-semi-out">
+<ul>
+<li>GitHub has fantastic <strong>free</strong> project tracking tools built in</li>
+</ul>
+</div>
+<div class="fragment fade-in-then-semi-out">
+<ul>
+<li>Helps <strong>you</strong> to keep track - helps others understand what’s left to happen</li>
+</ul>
+</div>
+</div></div>
+</section></section>
+<section>
+<section id="a-mindset-shift" class="title-slide slide level1 center">
+<h1>A mindset shift</h1>
 
 </section>
 <section id="last-chance" class="slide level2">
@@ -663,26 +902,30 @@ Sammi Rosser
 <section id="the-utopia" class="slide level2">
 <h2>The utopia</h2>
 <div class="r-stack">
-<p><img data-src="assets/2025-11-03-14-55-33.png" class="absolute" style="top: 25.6955px; left: 708.543px; width: 496.167px; height: 715.742px; "></p>
-<p><img data-src="assets/2025-11-03-14-56-10.png" class="absolute" style="top: 25.6955px; left: 708.543px; width: 496.167px; height: 715.742px; "></p>
-<p><img data-src="assets/2025-11-03-14-56-37.png" class="absolute" style="top: 25.6955px; left: 708.543px; width: 496.167px; height: 715.742px; "></p>
+<p><img data-src="assets/2025-11-03-14-55-33.png" class="fragment absolute" style="top: 25.6955px; left: 708.543px; width: 496.167px; height: 715.742px; "></p>
+<p><img data-src="assets/2025-11-03-14-56-10.png" class="fragment absolute" style="top: 25.6955px; left: 708.543px; width: 496.167px; height: 715.742px; "></p>
+<p><img data-src="assets/2025-11-03-14-56-37.png" class="fragment absolute" style="top: 25.6955px; left: 708.543px; width: 496.167px; height: 715.742px; "></p>
 </div>
 </section>
 <section id="what-do-you-do-every-time-you-start-a-new-script" class="slide level2">
 <h2>What do you do every time you start a new script?</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href=""></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb3-2"><a href=""></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:50%;">
-
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb4-2"><a href=""></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
 </section>
 <section id="or-maybe" class="slide level2">
 <h2>Or maybe…</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a><span class="fu">library</span>(NHSRPlotTheDots)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <aside class="notes">
 <p>I think it’s easy to see packages as something for ‘other people’</p>
 <p>For ‘advanced coders’</p>
 <p>But it’s like any other coding task</p>
+<p>And the things we’ve talked about mean you’re basically there!</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -695,38 +938,105 @@ Sammi Rosser
           display:block!important;
       }</style></aside>
 </section>
+<section id="section-17" class="slide level2" data-menu-title="Package Mindset">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><img data-src="assets/tor_package_mindset.svg"></p>
+</div><div class="column" style="width:67%;">
+
+</div></div>
+</section>
+<section id="an-animation-of-a-model-for-a-workshop" class="slide level2">
+<h2>An animation of a model for a workshop…</h2>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:30%;">
+<p>Became <code>vidigi</code></p>
+</div><div class="column" style="width:67%;">
+<p><img data-src="assets/vidigi.gif"></p>
+</div></div>
+</div>
+</section>
+<section id="an-annoying-task" class="slide level2">
+<h2>An annoying task…</h2>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:20%;">
+<p>Became the stlitepack package</p>
+</div><div class="column" style="width:70%;">
+
+</div></div>
+</div>
+</section>
+<section id="a-desire-to-better-visualise-patient-journeys-internally" class="slide level2">
+<h2>A desire to better visualise patient journeys internally…</h2>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:30%;">
+<p>Became an R-powered PowerBI Theograph Visual</p>
+</div><div class="column" style="width:65%;">
+<p><img data-src="assets/2025-11-05-13-48-29.png"></p>
+</div></div>
+</div>
+</section>
+<section id="a-need-for-limit-recalculation-in-powerbi-spc-charts" class="slide level2">
+<h2>A need for limit recalculation in PowerBI SPC charts…</h2>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:30%;">
+<p>Became another R-powered PowerBI visual that made better reporting possible</p>
+</div><div class="column" style="width:67%;">
+<p><img data-src="assets/2025-11-05-14-07-12.png" height="300"></p>
+<p><img data-src="assets/2025-11-05-14-06-39.png" height="300"></p>
+</div></div>
+</div>
+<div class="fragment">
+<p>And I could only build it because of the nhsrplotthedots team’s package!</p>
+</div>
+</section></section>
+<section>
 <section id="summary" class="title-slide slide level1 center">
 <h1>Summary</h1>
-<p><img data-src="assets/Tapestry%20of%20reusability.svg" class="absolute" style="top: 118px; left: 20px; width: 442.5px; height: 78px; "></p>
-</section>
-<section id="the-final-hurdle" class="title-slide slide level1 center">
-<h1>The Final Hurdle</h1>
 
 </section>
-<section id="those-same-old-questions" class="slide level2">
-<h2>Those same old questions</h2>
+<section id="section-18" class="slide level2">
+<h2></h2>
+<div class="fragment fade-in-then-semi-out">
 <ul>
-<li class="fragment">What will our demand look like next year?</li>
-<li class="fragment">How long will our waiting lists be?</li>
-<li class="fragment">Will we meet target x?</li>
+<li>You don’t always know what will be worth sharing and reusing</li>
 </ul>
+</div>
+<p><br><br></p>
+<div class="fragment fade-in-then-semi-out">
+<p>But these steps</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Make <strong>your</strong> life easier</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>Make your <strong>teams’</strong> life easier</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li><strong>Unlock</strong> possibilities</li>
+</ul>
+</div>
 </section>
-<section id="the-better-questions" class="slide level2">
-<h2>The better questions</h2>
-<ul>
-<li class="fragment">What do we need and where to be able to <strong>meet</strong> the demand?</li>
-<li class="fragment">Who aren’t we serving?</li>
-</ul>
+<section id="these-are-the-steps-that-make-it-possible" class="slide level2 center">
+<h2>These are the steps that make it possible</h2>
+
+<img data-src="assets/Tapestry%20of%20reusability.svg" class="r-stretch"></section></section>
+<section>
+<section id="the-final-hurdle" class="title-slide slide level1 center">
+<h1>The Final Hurdle</h1>
 <aside class="notes">
 <p>I worked in a trust with some brilliant people, but I was still pretty new to all of this.</p>
 <p>One of my biggest frustrations was being asked questions that I just didn’t know the right way to answer… but I was sure someone out there would have thought about this before.</p>
-<p>These generally came under a few categories. - What’s going to happen to our demand? - What’s going to happen to our waiting lists? - Are we going to meet target x?</p>
-<p>And then there were also lots of <em>better</em> questions I wanted to be able to answer.</p>
-<ul>
-<li>What can we do to fix this?</li>
-<li>Who aren’t we serving?</li>
-</ul>
-<p>And you can’t look at that list and tell me we don’t all have these same questions.</p>
 <p>We have different systems, and different pathways, but I’m far from the first person to be standing up here yelling about having the same problems and repeated solutions.</p>
 <p>And it actually makes me a little mad because we shouldn’t, in 2025, be experiencing a postcode lottery of whether our trust has a data science team, and advanced analytics capabilities. I know if I was treated in trust X it’s by a team who are making advanced predictions of demand, and I’m going to be seen in a more timely manner.</p>
 <style type="text/css">
@@ -741,49 +1051,51 @@ Sammi Rosser
           display:block!important;
       }</style></aside>
 </section>
-<section id="the-challenge" class="slide level2">
+<section id="the-challenge" class="slide level2 center">
 <h2>The challenge</h2>
-<div class="fragment">
-<p><img data-src="assets/2025-11-04-16-55-57.png" class="absolute" style="top: 118px; left: 20px; width: 530px; height: 78px; "></p>
+<div class="r-stack">
+<div class="fragment fade-right fade-in-then-out">
+<p><img data-src="assets/2025-11-04-16-55-57.png"></p>
+</div>
+<div class="fragment fade-left fade-in-then-out">
+<p><img data-src="assets/2025-11-04-16-56-54.png"></p>
+</div>
+<div class="fragment fade-up fade-in-then-out">
+<p><img data-src="assets/2025-11-04-16-57-36.png"></p>
+</div>
+<div class="fragment fade-down fade-in-then-out">
+<p><img data-src="assets/2025-11-04-16-59-12.png"></p>
+</div>
+<div class="fragment fade-right fade-in-then-out">
+<p><img data-src="assets/2025-11-04-17-00-25.png"></p>
+</div>
+<div class="fragment fade-up fade-in-then-out">
+<p><img data-src="assets/2025-11-04-16-59-48.png"></p>
+</div>
+<div class="fragment fade-left fade-in-then-out">
+<p><img data-src="assets/2025-11-04-17-02-13.png"></p>
+</div>
+<div class="fragment fade-down fade-in-then-out">
+<p><img data-src="assets/2025-11-04-17-02-13.png"></p>
+</div>
+<div class="fragment fade-right fade-in-then-out">
+<p><img data-src="assets/2025-11-04-17-02-53.png"></p>
+</div>
+<div class="fragment fade-left fade-in-then-out">
+<p><img data-src="assets/2025-11-04-17-05-03.png"></p>
+</div>
+<div class="fragment grow fade-in-then-out">
+<p><img data-src="assets/2025-11-04-17-08-00.png"></p>
 </div>
 <div class="fragment">
-<p><img data-src="assets/2025-11-04-16-56-54.png" class="absolute" style="top: 110px; left: 0px; width: 0px; height: 0px; "></p>
+<p><img data-src="assets/2025-11-04-17-06-44.png"></p>
 </div>
 <div class="fragment">
-<p><img data-src="assets/2025-11-04-16-57-36.png" class="absolute" style="top: 137.37px; left: 40px; width: 287.245px; height: 122.183px; "></p>
+<p><img data-src="assets/2025-11-04-17-08-57.png"></p>
 </div>
 <div class="fragment">
-<p><img data-src="assets/2025-11-04-16-59-12.png" class="absolute" style="top: 22.2182px; left: 1007.65px; width: 199.909px; height: 204.103px; "></p>
+<p><img data-src="assets/2025-11-04-17-10-30.png"></p>
 </div>
-<div class="fragment">
-<p><img data-src="assets/2025-11-04-17-00-25.png" class="absolute" style="top: 46.6067px; left: 748.107px; width: 163.009px; height: 96.5184px; "></p>
-</div>
-<div class="fragment">
-<p><img data-src="assets/2025-11-04-16-59-48.png" class="absolute" style="top: 226px; left: 370px; width: 484.75px; height: 185.691px; "></p>
-</div>
-<div class="fragment">
-<p><img data-src="assets/2025-11-04-17-02-13.png" class="absolute" style="top: 118px; left: 40px; width: 0px; height: 0px; "></p>
-</div>
-<div class="fragment">
-<p><img data-src="assets/2025-11-04-17-02-13.png" class="absolute" style="top: 118px; left: 40px; width: 0px; height: 0px; "></p>
-</div>
-<div class="fragment">
-<p><img data-src="assets/2025-11-04-17-02-53.png" class="absolute" style="top: 118px; left: 40px; width: 0px; height: 0px; "></p>
-</div>
-<div class="fragment">
-<p><img data-src="assets/2025-11-04-17-05-03.png" class="absolute" style="top: 118px; left: 40px; width: 0px; height: 0px; "></p>
-</div>
-<div class="fragment">
-<p><img data-src="assets/2025-11-04-17-08-00.png" class="absolute" style="top: 118px; left: 40px; width: 0px; height: 0px; "></p>
-</div>
-<div class="fragment">
-<p><img data-src="assets/2025-11-04-17-06-44.png" class="absolute" style="top: 118px; left: 40px; width: 0px; height: 0px; "></p>
-</div>
-<div class="fragment">
-<p><img data-src="assets/2025-11-04-17-08-57.png" class="absolute" style="top: 118px; left: 40px; width: 0px; height: 0px; "></p>
-</div>
-<div class="fragment">
-<p><img data-src="assets/2025-11-04-17-10-30.png" class="absolute" style="top: 118px; left: 40px; width: 0px; height: 0px; "></p>
 </div>
 <aside class="notes">
 <p>Since I joined the NHS, I’ve been trying to find all the good stuff</p>
@@ -800,10 +1112,10 @@ Sammi Rosser
           display:block!important;
       }</style></aside>
 </section>
-<section id="its-just-not-sustainable" class="slide level2">
-<h2>It’s just not sustainable!</h2>
-<p><img data-src="assets/2025-11-03-18-10-29.png" class="absolute" style="top: 118px; left: 40px; width: 0px; height: 0px; "></p>
-<aside class="notes">
+<section id="section-19" class="slide level2" data-menu-title="It's just not sustainable!">
+<h2></h2>
+
+<img data-src="assets/2025-11-03-18-10-29.png" class="quarto-figure quarto-figure-center r-stretch"><aside class="notes">
 <p>There just isn’t enough time (and brainspace) for us all to be constantly trying to do this.</p>
 <p>And that’s just locked in my head.</p>
 <p>How many of us are trying to do the same thing and build up knowledge that would be better externalised?</p>
@@ -827,7 +1139,7 @@ Sammi Rosser
 </section>
 <section id="the-healthcare-services-analytics-decision-science-atlas" class="slide level2">
 <h2>The Healthcare Services Analytics &amp; Decision Science Atlas</h2>
-<iframe width="1200" height="500" src="https://atlas.hsma.co.uk/packages_projects_tools/packages_projects_tools" title="HSMA Decision Support Atlas"></iframe>
+<iframe width="1200" height="600" src="https://atlas.hsma.co.uk/packages_projects_tools/packages_projects_tools" title="HSMA Decision Support Atlas"></iframe>
 <aside class="notes">
 
 <style type="text/css">
@@ -842,10 +1154,16 @@ Sammi Rosser
           display:block!important;
       }</style></aside>
 </section>
-<section id="whats-next" class="slide level2">
-<h2>What’s next</h2>
-
-<img data-src="assets/2025-11-04-21-23-31.png" class="r-stretch"><aside class="notes">
+<section id="what-next" class="slide level2 center">
+<h2>What next?</h2>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="assets/2025-11-04-21-23-31.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+<aside class="notes">
 <p>I can’t do this alone!</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -858,13 +1176,9 @@ Sammi Rosser
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section>
-<section id="the-end" class="title-slide slide level1 center">
-<h1>The end</h1>
-
-</section>
-<section id="get-in-touch" class="slide level2">
-<h2>Get in touch</h2>
+</section></section>
+<section id="get-in-touch" class="title-slide slide level1 center">
+<h1>Get in touch</h1>
 <p><br></p>
 <p><a href="https://www.linkedin.com/in/sammijaderosser/"><i class="fa-brands fa-linkedin"></i> Add Me On LinkedIn - Sammi Rosser</a></p>
 <p><br></p>
@@ -874,27 +1188,13 @@ Sammi Rosser
 <p><br></p>
 <p><a href="mailto:hi@sammirosser.com"><i class="fa-solid fa-envelope"></i> Email me - hi@sammirosser.com</a></p>
 </section>
-<section id="acknowledgements" class="slide level2">
-<h2>Acknowledgements</h2>
+
+<section id="acknowledgements" class="title-slide slide level1 center">
+<h1>Acknowledgements</h1>
 <p><a href="https://chatmockup.com/">Slack chat mockups generated from chatmockup.com</a></p>
-<p>All images and icons generated with DALL-E3 or ChatGPT-5</p>
-<aside class="notes">
-<p>Shared = on GitHub Licenced = an appropriate licence so people can reuse it without getting into trouble Documented = clear documentation on how to use it Tested = Actual tests with a framework Versioned = Make actual versions so you know what you’re getting into with updates Maintained = You Collaborative = designed for collaboration, with issues and a code of conduct Advertised = let people know it exists Packaged or parameterisable = installable code OR code that is designed to allow people to input their own data in some way</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+<p>Images generated with DALL-E3 or ChatGPT-5</p>
+<p>Hex stickers built on Canva (all images used via Canva Pro subscription)</p>
 
-</section>
-
-</div>
 <div class="reveal-header">
 <div class="header-logo" data-footer-logo-link="https://hsma.co.uk">
 <img data-src="">
@@ -909,9 +1209,9 @@ Sammi Rosser
 <p> </p>
 </div>
 </div>
-<script> window._input_file = "---\n" + "title: \"Reusable by Default\"\n" + "subtitle: \"<br>Reflections on Building Sustainable Open Tools<br>and Knowledge for Healthcare<br><br><br><br>\"\n" + "author:\n" + "    name: Sammi Rosser\n" + "    affiliation: Health Service Modelling Associates Programme, NIHR PenARC, University of Exeter\n" + "execute:\n" + "  eval: true\n" + "  echo: false\n" + "format:\n" + "  revealjs:\n" + "    css: styles.css\n" + "    embed-resources: false # necessary for stlite-quarto embedding to work\n" + "    output-file: index.html\n" + "    view-distance: 100\n" + "    height: 800\n" + "    width: 1250\n" + "    preview-links: true\n" + "    controls: false\n" + "    controls-layout: edges\n" + "    transition: fade\n" + "    plotly-connected: true\n" + "    background-transition: fade\n" + "    preload-iframes: true\n" + "    logo: \"assets/Chalky HSMA-07-wide white logo.png\"\n" + "    footer-logo-link: \"https://hsma.co.uk\"\n" + "    # background-image: \"assets/hsma_bg_1.png\"\n" + "    background-image: \"banner_hq.png\"\n" + "    # background-size: cover\n" + "    theme: [default, custom.scss]\n" + "    title-slide-attributes:\n" + "        data-background-image: banner.png\n" + "    include-in-header:\n" + "      - text: |\n" + "          <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css\"><link href='https://fonts.googleapis.com/css?family=Lexend' rel='stylesheet'>\n" + "    verticator:\n" + "      themetag: 'h1'\n" + "      color: ''\n" + "      inversecolor: ''\n" + "      skipuncounted: false\n" + "      clickable: true\n" + "      position: 'auto'\n" + "      offset: '3vmin'\n" + "      autogenerate: true\n" + "      tooltip: false\n" + "      scale: 1\n" + "    revealjs-plugins:\n" + "      - verticator\n" + "      - fullscreen\n" + "      - editable\n" + "filters:\n" + "  # - autofade.lua\n" + "  - reveal-header\n" + "  - editable\n" + "---\n" + "\n" + "# Picture a Scene\n" + "\n" + "::: notes\n" + "\n" + "I want you to picture a scene.\n" + "\n" + ":::\n" + "\n" + "## {.slide data-menu-title=\"The usual ask\"}\n" + "\n" + "![](assets/2025-11-03-13-49-13.png){.absolute width=489.401px height=734.102px left=393.848px top=14.7716px}\n" + "\n" + "::: notes\n" + "\n" + "You've been asked to do something pretty complex, pretty quickly. It also sounds like something someone else will have worked on before. It's got that sense of 'this isn't just an \"us\" problem'.\n" + "\n" + "So you go out and ask around on - say, the NHS-R Slack - if this is something someone else has worked on.\n" + "\n" + ":::\n" + "\n" + "## {.slide data-menu-title=\"It starts well...\"}\n" + "\n" + "::: {.r-stack}\n" + "\n" + "![](assets/2025-11-03-13-48-19.png){.fragment .editable}\n" + "\n" + "![](assets/2025-11-03-13-59-38.png){.fragment .absolute width=405.877px height=736.718px left=793.123px top=17px}\n" + "\n" + "![](assets/2025-11-03-14-02-47.png){.fragment .absolute width=405.877px height=736.718px left=793.123px top=17px}\n" + "\n" + "![](assets/2025-11-03-14-03-22.png){.fragment .absolute width=405.877px height=736.718px left=793.123px top=17px}\n" + "\n" + ":::\n" + "\n" + "::: notes\n" + "\n" + "And you get the response - \"yes!\".\n" + "\n" + "(but it was at my previous job and I wasn't allowed to share the code, so I don't have it anymore. But you could try asking so-and-so, and here's a bit of a rough guide of what we did. )\n" + "\n" + "\n" + ":::\n" + "\n" + "## {.slide data-menu-title=\"But wait! Another reply.\"}\n" + "\n" + "![](assets/2025-11-03-14-22-37.png){.fragment .absolute width=405.877px height=736.718px left=793.123px top=17px}\n" + "\n" + "::: notes\n" + "\n" + "And then someone else chimes in...\n" + "\n" + "\"yes! I've got a repository. Here's the link. It's been a while since I've used it, though.\"\n" + "\n" + ":::\n" + "\n" + "## {.slide data-menu-title=\"It looks promising...\"}\n" + "\n" + "![](assets/2025-11-03-14-15-43a.png){.absolute width=1213.64px height=656.942px left=20.8477px top=46.467px}\n" + "\n" + "\n" + "::: notes\n" + "\n" + "[open repo image. The repository has loads of folders and files with no obvious naming convention. It's not clear where you should go. There are no tests. The readme just says 'coming soon'. The last commit was 2 years ago.]\n" + "\n" + ":::\n" + "\n" + "## {.slide data-menu-title=\"... or not.\"}\n" + "\n" + "\n" + "![](assets/2025-11-03-14-50-21.png){.absolute width=1218.51px height=230.779px left=24.3045px top=134.142px}\n" + "\n" + "## {.slide data-menu-title=\"But you can just ask them, right?\"}\n" + "\n" + "::: {.r-stack}\n" + "\n" + "![](assets/2025-11-03-14-45-01.png){.fragment .absolute width=405.877px height=736.718px left=793.123px top=17px}\n" + "\n" + "![](assets/2025-11-03-14-46-46.png){.fragment .absolute width=405.877px height=736.718px left=793.123px top=17px}\n" + ":::\n" + "\n" + "::: notes\n" + "\n" + "And I will fully admit I've been the people on both sides of this conversation. Where I've done something I think will be of use, but life's then got in the way, and I can't spare the time to go back into a project to polish it up properly - because I was too busy.\n" + "\n" + ":::\n" + "\n" + "# {.slide data-menu-title=\"Who am I to come here and talk about this?\"}\n" + "\n" + "::: {.r-stack}\n" + "\n" + "![](assets/2025-11-04-16-09-49.png){.fragment .fade-in-then-out height=\"350px\"}\n" + "\n" + "![](assets/2025-11-04-15-52-09.png){.fragment .fade-in-then-out height=\"700px\"}\n" + "\n" + "![](assets/2025-11-04-16-03-59.png){.fragment .fade-in-then-out height=\"700px\"}\n" + "\n" + "![](assets/2025-11-05-09-55-03.png){.fragment .fade-in-then-out height=\"650px\"}\n" + "\n" + "::: {.fragment}\n" + "\n" + "![](assets/2025-11-04-16-09-49.png){height=\"350px\"}\n" + "\n" + "![](assets/2025-11-04-16-10-31.png){height=\"350px\"}\n" + "\n" + ":::\n" + "\n" + ":::\n" + "\n" + "::: notes\n" + "\n" + "Now that we've established that hopefully familiar narrative, who am I to try and propose a solution?\n" + "\n" + "So, I'm Sammi Rosser. I had my first taste of \"proper\" coding about 14 years ago, in the deep dark ages of base R, but I've been coding in earnest for about 10 years now. These days it's mostly Python, but I'm astill  big fan of R too.\n" + "\n" + "I have an MSc in health data science, and spent two years working as a data analyst and then data scientist in a mental health trust where some people from this community had really laid some amazing R foundations in the team. And I came to my first NHS-R conference in 2022, I was just completely in awe of all the amazing things people were doing. So I spent my time at the coal face of data, automating reports, writing a script to automate the upload of 80,000 documents after an EPR outage. What I'm trying to say is, as we go through this talk - I know the realities, and the time pressures, and the priorities of data work in the NHS.\n" + "\n" + "But my passion is sharing the joy of code with other people - so I joined the Health Service Modelling Associates programme in 2023. So now I get to teach people all the really fun, interesting and impactful things they can do with code, and I get to do a lot of coding, including recently on a big complex cross-organisation modelling projects to keep my skills sharp.\n" + "\n" + ":::\n" + "\n" + "# The Problem\n" + "\n" + "::: notes\n" + "\n" + "And I get to meet loads of amazing people across different organisations. 9 months of the programme, people work on projects. People have been doing amazing things with their projects, and this has been true of HSMA for years.\n" + "\n" + ":::\n" + "\n" + "## {.slide data-menu-title=\"What's not happening?\"}\n" + "\n" + "![](assets/2025-11-05-10-16-53.png){height=\"600px\"}\n" + "\n" + "::: aside\n" + "<https://hsma.co.uk/previous_projects/projects_with_code>\n" + ":::\n" + "\n" + "::: notes\n" + "And last year, I was revamping our website to try and help our students come up with ideas around 'what sorts of projects can I do?'. And I was looking at all this code that's been written by our community and shared over the years\n" + "\n" + "But even where the code was shared, we just weren't getting people reusing it as much as I would have liked. Now, maybe it's partly an awareness thing.\n" + "\n" + "But even people within the HSMA community, even when they had the same problem, even when we could direct them to a previous repo - they would end up starting from scratch each time.\n" + "\n" + ":::\n" + "\n" + "## Same few things - same quick(ish) solutions\n" + "\n" + ":::\n" + "\n" + "And looking at them, I kept seeing the same things that trip up a lot of people newer to coding and open source\n" + "\n" + "These are issues not unique to our projects and students - these are things you see time and time again in open source projects, but they're resolvable if you get into some good habits.\n" + "\n" + "And they're the things that can really help level up your projects. Many of them aren't that time consuming - and they will save you time in the future.\n" + "\n" + "And that's the main thing I want to talk you through today - if we're going to reach the utopia that people in previous years have talked about - like Rhian Davies's fantastic talk from last year - what are some of the practical things we can all start doing by default?\n" + "\n" + ":::\n" + "\n" + "\n" + "# The Tapestry of 'Reusable by Default'\n" + "\n" + "![](assets/Tapestry%20of%20reusability%20Blank.svg)\n" + "\n" + "::: notes\n" + "So I want to take you through my tapestry of 'reusable by default'\n" + ":::\n" + "\n" + "## The aim\n" + "\n" + "::: {.fragment .fade-in-then-semi-out}\n" + "- Let's make these as natural as breathing\n" + ":::\n" + "\n" + "::: {.fragment .fade-in-then-semi-out}\n" + "- Need to become non-negotiable parts of your projects - not 'nice to have'\n" + ":::\n" + "\n" + "::: {.fragment .fade-in-then-semi-out}\n" + "- Arguably as important as the code you're writing!\n" + ":::\n" + "\n" + "::: {.fragment .fade-in-then-semi-out}\n" + "- But they don't all need to happen at once\n" + ":::\n" + "\n" + "::: notes\n" + "And I want these things to start becoming as natural as breathing in each of your projects. To become the non-negotiables, not the\n" + ":::\n" + "\n" + "## This is the 'why' - find the 'how' on my website {.center}\n" + "\n" + "```{=html}\n" + "<iframe width=\"1000\" height=\"600\" src=\"https://sammirosser.com/talks/2511_nhsrpycom/2511_nhsrpycom.html\" title=\"Talk Page\"></iframe>\n" + "```\n" + "\n" + "::: aside\n" + "\n" + "[sammirosser.com](https://sammirosser.com/talks/2511_nhsrpycom/2511_nhsrpycom.html)\n" + "\n" + ":::\n" + "\n" + "::: notes\n" + "\n" + "In this talk, I want to convince you of why you should bother with each of these things.\n" + "\n" + "I don't have time to take you through all the details of the how - but head to my website and you can find a blog post with all of the juicy details.\n" + "\n" + ":::\n" + "\n" + "## {.slide data-menu-title=\"GitHub\"}\n" + "\n" + ":::: {.columns}\n" + "\n" + "::: {.column width='30%'}\n" + "\n" + "![](assets/tor_github.svg)\n" + "\n" + "(or any online repository hosting)\n" + "\n" + ":::\n" + "\n" + "::: {.column width='70%'}\n" + "\n" + ":::{.fragment .fade-in-then-semi-out}\n" + "- On GitHub > emailed/Slacked\n" + ":::\n" + "\n" + ":::{.fragment .fade-in-then-semi-out}\n" + "- Point your managers to\n" + "    - the [NHS-R Statement on Tools](https://tools.nhsrcommunity.com/statement-on-using-tools-git.html) - 17 NHS orgs, but I know there are more!\n" + "    - the [NHS England Open Code Statistics](https://nhsengland.github.io/open-health-statistics/) - over 2000 open repos\n" + "\n" + ":::{.fragment .fade-in-then-semi-out}\n" + "- Not ready to use it in full? Drag and Drop.\n" + ":::\n" + "\n" + ":::{.fragment .fade-in-then-semi-out}\n" + "- Borrow repo templates from other people!\n" + ":::\n" + "\n" + ":::\n" + "\n" + "::::\n" + "\n" + "::: notes\n" + "\n" + "Other services exist, but the party is happening over on GitHub\n" + "\n" + ":::\n" + "\n" + "## LICENCE\n" + "\n" + ":::{.fragment .editable}\n" + "If you don't have a Licence, I can't reuse your code!\n" + ":::\n" + "\n" + "## {.slide data-menu-title=\"The usual ask\"}\n" + "\n" + "::: {.rstack}\n" + "\n" + "![](assets/2025-11-04-16-16-57.png){.fragment}\n" + "\n" + ":::\n" + "\n" + "::: notes\n" + "- A licence is the first and most fundamental step towards reusability.\n" + "- Once you know a few of them, you can chuck one in there from the start.\n" + "- LICENCE or LICENCE.md = special file that will be displayed by github\n" + "- If you don't have one, I **cannot** reuse your code\n" + "  - [default law = no rights to use, modify, etc.](https://choosealicense.com/no-permission/)\n" + "- If you create it via Github, it helps you choose one and make the file!\n" + "- MIT is a pretty decent option\n" + "- [ChooseALicence](https://choosealicense.com/) helps if you're unsure\n" + "\n" + ":::\n" + "\n" + "\n" + "\n" + "## README\n" + "\n" + ":::{.fragment .editable}\n" + "If you don't have a README, your code will be left on the shelf\n" + ":::\n" + "\n" + "\n" + "::: notes\n" + "README.md is a special file because Github will display it.\n" + "\n" + "Use it to tell me how to run your code, what inputs I need, etc. - all the key important stuff I need to know if I want to run it myself. What's in all those folders?\n" + "\n" + ":::\n" + "\n" + "## Bonus - README of me\n" + "\n" + "::: {.incremental}\n" + "\n" + "- make a repo with a name that's your GitHub username\n" + "- just make a README.md file in there and commit it\n" + "- use it to tell me all the cool stuff you're working on and why I should care\n" + "\n" + ":::\n" + "\n" + "![](assets/2025-11-03-16-40-25.png)\n" + "\n" + "\n" + "::: notes\n" + "\n" + "As someone trying to employ coders, I won't penalise you for not having one, but it'll certainly help me understand your work above and beyond pinned repositories\n" + "\n" + ":::\n" + "\n" + "## Docstrings\n" + "\n" + ":::: {.columns}\n" + "\n" + "::: {.column width='50%'}\n" + "\n" + "![](assets/2025-11-03-17-23-32.png)\n" + "\n" + ":::\n" + "\n" + "::: {.column width='50%'}\n" + "\n" + "- for Python, [numpydoc](https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard) = best (IMO)\n" + "- for R, [roxygen]() and [docstring]()\n" + "- If you're allowed, AI tools can do great first drafts\n" + "- Also IDE extensions for setting up a template\n" + "\n" + "\n" + ":::\n" + "\n" + "::::\n" + "\n" + "\n" + "::: notes\n" + "\n" + "Docstrings are the easiest way to level up your code - for you and others.\n" + "\n" + "They're basically super-comments that the tools you write your code in - your IDE, like RStudio or VSCode, will display.\n" + "\n" + "In python, lots of formats - choose one you like and stay consistent\n" + "\n" + "In R, roxygen2 and the 'docstring' package\n" + "\n" + ":::\n" + "\n" + "\n" + "## Documentation {.}\n" + "\n" + "![](assets/Documentation.svg){height=\"600px\"}\n" + "\n" + "\n" + "::: notes\n" + "The next step on from\n" + ":::\n" + "\n" + "## Quartodoc generates a function dictionary\n" + "\n" + "![](assets/2025-11-03-17-16-11.png)\n" + "\n" + "## Quartodoc also breaks down your functions nicely\n" + "\n" + "![](assets/2025-11-03-17-17-34.png)\n" + "\n" + "::: notes\n" + "\n" + ":::\n" + "\n" + "## Free hosting\n" + "\n" + "\n" + "\n" + "## Free hosting side note: personal site\n" + "\n" + "```{=html}\n" + "<iframe width=\"1200\" height=\"500\" src=\"https://sammirosser.com/\" title=\"Personal Site Example\"></iframe>\n" + "```\n" + "\n" + "## Automatic Linting\n" + "\n" + "- I will not be reading your code if it's written like this...\n" + "\n" + "TODO: Add gif of a very long line\n" + "\n" + "- Safe linters are available for all good languages and IDEs\n" + "  - Install [Ruff](https://docs.astral.sh/ruff/) for Python\n" + "  - Install [styler](https://styler.r-lib.org/index.html) for R in RStudio\n" + "  - Activate [air](https://positron.posit.co/migrate-rstudio-code.html) for R code in Positron\n" + "  - Use [lintquarto](https://github.com/lintquarto/lintquarto) for Python code in Quarto docs\n" + "- Format on save = never deal with this again\n" + "\n" + "::: notes\n" + "\n" + "And it just helps save time - which you can use on other parts of this list!\n" + "\n" + ":::\n" + "\n" + "\n" + "## Folder structure\n" + "\n" + "- Changing the way you structure your code in your repo makes automated documentation and packaging just work more easily\n" + "\n" + "\n" + "::: notes\n" + "I had to completely restructure something recently and it was a colossal pain\n" + ":::\n" + "\n" + "\n" + "\n" + "# A mindset shift - packaging your code\n" + "\n" + "## Last chance...\n" + "\n" + "Remember our plea from the start?\n" + "\n" + "![](assets/2025-11-03-13-49-13.png){.absolute width=496.167px height=715.742px left=708.543px top=25.6955px}\n" + "\n" + "\n" + "## The utopia\n" + "\n" + "::: {.r-stack}\n" + "\n" + "![](assets/2025-11-03-14-55-33.png){.absolute width=496.167px height=715.742px left=708.543px top=25.6955px}\n" + "\n" + "![](assets/2025-11-03-14-56-10.png){.absolute width=496.167px height=715.742px left=708.543px top=25.6955px}\n" + "\n" + "![](assets/2025-11-03-14-56-37.png){.absolute width=496.167px height=715.742px left=708.543px top=25.6955px}\n" + "\n" + ":::\n" + "\n" + "\n" + "## What do you do every time you start a new script?\n" + "\n" + ":::: {.columns}\n" + "\n" + "::: {.column width='50%'}\n" + "\n" + "\n" + "```{=python}\n" + "#| echo: true\n" + "import pandas as pd\n" + "import plotly.express as px\n" + "```\n" + "\n" + ":::\n" + "\n" + "::: {.column width='50%'}\n" + "\n" + "\n" + "```{=r}\n" + "#| echo: true\n" + "library(tidyr)\n" + "library(ggplot2)\n" + "```\n" + "\n" + ":::\n" + "\n" + "::::\n" + "\n" + "## Or maybe...\n" + "\n" + "```{=r}\n" + "#| echo: true\n" + "library(NHSRPlotTheDots)\n" + "```\n" + "\n" + "\n" + "\n" + "::: notes\n" + "\n" + "I think it's easy to see packages as something for 'other people'\n" + "\n" + "For 'advanced coders'\n" + "\n" + "But it's like any other coding task\n" + "\n" + ":::\n" + "\n" + "\n" + "\n" + "\n" + "# Summary\n" + "\n" + "![](assets/Tapestry%20of%20reusability.svg){.absolute width=442.5px height=78px left=20px top=118px}\n" + "\n" + "\n" + "# The Final Hurdle\n" + "\n" + "## Those same old questions\n" + "\n" + ":::{.incremental}\n" + "- What will our demand look like next year?\n" + "- How long will our waiting lists be?\n" + "- Will we meet target x?\n" + ":::\n" + "\n" + "## The better questions\n" + "\n" + ":::{.incremental}\n" + "- What do we need and where to be able to **meet** the demand?\n" + "- Who aren't we serving?\n" + ":::\n" + "\n" + "\n" + "\n" + "::: notes\n" + "\n" + "I worked in a trust with some brilliant people, but I was still pretty new to all of this.\n" + "\n" + "One of my biggest frustrations was being asked questions that I just didn't know the right way to answer... but I was sure someone out there would have thought about this before.\n" + "\n" + "These generally came under a few categories.\n" + "- What's going to happen to our demand?\n" + "- What's going to happen to our waiting lists?\n" + "- Are we going to meet target x?\n" + "\n" + "And then there were also lots of *better* questions I wanted to be able to answer.\n" + "\n" + "- What can we do to fix this?\n" + "- Who aren't we serving?\n" + "\n" + "And you can't look at that list and tell me we don't all have these same questions.\n" + "\n" + "We have different systems, and different pathways, but I'm far from the first person to be standing up here yelling about having the same problems and repeated solutions.\n" + "\n" + "And it actually makes me a little mad because we shouldn't, in 2025, be experiencing a postcode lottery of whether our trust has a data science team, and advanced analytics capabilities. I know if I was treated in trust X it's by a team who are making advanced predictions of demand, and I'm going to be seen in a more timely manner.\n" + "\n" + ":::\n" + "\n" + "## The challenge\n" + "\n" + "::: {.fragment}\n" + "![](assets/2025-11-04-16-55-57.png){.absolute width=530px height=78px left=20px top=118px}\n" + ":::\n" + "\n" + "::: {.fragment}\n" + "![](assets/2025-11-04-16-56-54.png){.absolute width=0px height=0px left=0px top=110px}\n" + ":::\n" + "\n" + "::: {.fragment}\n" + "![](assets/2025-11-04-16-57-36.png){.absolute width=287.245px height=122.183px left=40px top=137.37px}\n" + ":::\n" + "\n" + "::: {.fragment}\n" + "![](assets/2025-11-04-16-59-12.png){.absolute width=199.909px height=204.103px left=1007.65px top=22.2182px}\n" + ":::\n" + "\n" + ":::{.fragment}\n" + "![](assets/2025-11-04-17-00-25.png){.absolute width=163.009px height=96.5184px left=748.107px top=46.6067px}\n" + ":::\n" + "\n" + ":::{.fragment}\n" + "![](assets/2025-11-04-16-59-48.png){.absolute width=484.75px height=185.691px left=370px top=226px}\n" + ":::\n" + "\n" + ":::{.fragment}\n" + "![](assets/2025-11-04-17-02-13.png){.absolute width=0px height=0px left=40px top=118px}\n" + ":::\n" + "\n" + ":::{.fragment}\n" + "![](assets/2025-11-04-17-02-13.png){.absolute width=0px height=0px left=40px top=118px}\n" + ":::\n" + "\n" + ":::{.fragment}\n" + "![](assets/2025-11-04-17-02-53.png){.absolute width=0px height=0px left=40px top=118px}\n" + ":::\n" + "\n" + ":::{.fragment}\n" + "![](assets/2025-11-04-17-05-03.png){.absolute width=0px height=0px left=40px top=118px}\n" + ":::\n" + "\n" + ":::{.fragment}\n" + "![](assets/2025-11-04-17-08-00.png){.absolute width=0px height=0px left=40px top=118px}\n" + ":::\n" + "\n" + ":::{.fragment}\n" + "![](assets/2025-11-04-17-06-44.png){.absolute width=0px height=0px left=40px top=118px}\n" + ":::\n" + "\n" + ":::{.fragment}\n" + "![](assets/2025-11-04-17-08-57.png){.absolute width=0px height=0px left=40px top=118px}\n" + ":::\n" + "\n" + ":::{.fragment}\n" + "![](assets/2025-11-04-17-10-30.png){.absolute width=0px height=0px left=40px top=118px}\n" + ":::\n" + "\n" + "::: notes\n" + "\n" + "Since I joined the NHS, I've been trying to find all the good stuff\n" + "\n" + "NHS R conference, HACA conference, SWAIH conference, SWAIH South West Hub, LinkedIn, starring over 1300 Github repos, working out which individuals and organisations to follow on GitHub. Attending HaCORN and HaCORN special interest groups and NHS-R webinars and HSMA showcases and ApHA stuff and reading NHS-R and Pycom and subscribing to newsletters and talking to academics and the strategy unit and ...\n" + "\n" + ":::\n" + "\n" + "\n" + "## It's just not sustainable!\n" + "\n" + "![](assets/2025-11-03-18-10-29.png){.absolute width=0px height=0px left=40px top=118px}\n" + "\n" + "::: notes\n" + "\n" + "There just isn't enough time (and brainspace) for us all to be constantly trying to do this.\n" + "\n" + "And that's just locked in my head.\n" + "\n" + "How many of us are trying to do the same thing and build up knowledge that would be better externalised?\n" + "\n" + "And I'm not saying that we get rid of any of these things because each and every one of them is wonderful and a necessary part of this huge puzzle that is modern analytics in the NHS - but\n" + "\n" + "We don't just need to get things into packages.\n" + "\n" + "We need to get them out there into the hands of the people who need them.\n" + "\n" + "And we have pockets of it.\n" + "- the HSMA website, which you can filter down to projects with shard code\n" + "- the fabulous NHS-R website and books\n" + "- bits and pieces on github\n" + "- maybe things I can't see (like AnalystX)\n" + "\n" + "There are so many parts to that puzzle slowly going together, but I still don't feel like I have that 'magic book' that I felt must exist when I started my NHS journey.\n" + "\n" + "So I've begun to write that.\n" + "\n" + ":::\n" + "\n" + "\n" + "## The Healthcare Services Analytics & Decision Science Atlas\n" + "\n" + "```{=html}\n" + "<iframe width=\"1200\" height=\"500\" src=\"https://atlas.hsma.co.uk/packages_projects_tools/packages_projects_tools\" title=\"HSMA Decision Support Atlas\"></iframe>\n" + "```\n" + "\n" + "::: notes\n" + "\n" + "\n" + "\n" + ":::\n" + "\n" + "## What's next\n" + "\n" + "![](assets/2025-11-04-21-23-31.png)\n" + "\n" + "::: notes\n" + "\n" + "I can't do this alone!\n" + "\n" + ":::\n" + "\n" + "\n" + "\n" + "# The end\n" + "\n" + "## Get in touch\n" + "\n" + "<br>\n" + "\n" + "[<i class=\"fa-brands fa-linkedin\"></i> Add Me On LinkedIn - Sammi Rosser](https://www.linkedin.com/in/sammijaderosser/)\n" + "\n" + "<br>\n" + "\n" + "[<i class=\"fa-brands fa-github\"></i> Follow Me On GitHub - Bergam0t](https://github.com/Bergam0t)\n" + "\n" + "<br>\n" + "\n" + "[<i class=\"fa-solid fa-globe\"></i> Check out my other talks @ sammirosser.com](https://sammirosser.com)\n" + "\n" + "<br>\n" + "\n" + "[<i class=\"fa-solid fa-envelope\"></i> Email me - hi@sammirosser.com](mailto:hi@sammirosser.com)\n" + "\n" + "## Acknowledgements\n" + "\n" + "[Slack chat mockups generated from chatmockup.com](https://chatmockup.com/)\n" + "\n" + "All images and icons generated with DALL-E3 or ChatGPT-5\n" + "\n" + "\n" + "\n" + "\n" + "\n" + "\n" + "\n" + "\n" + "\n" + "\n" + "\n" + "\n" + "::: notes\n" + "Shared = on GitHub\n" + "Licenced = an appropriate licence so people can reuse it without getting into trouble\n" + "Documented = clear documentation on how to use it\n" + "Tested = Actual tests with a framework\n" + "Versioned = Make actual versions so you know what you're getting into with updates\n" + "Maintained = You\n" + "Collaborative = designed for collaboration, with issues and a code of conduct\n" + "Advertised = let people know it exists\n" + "Packaged or parameterisable = installable code OR code that is designed to allow people to input their own data in some way\n" + ":::\n" + ""</script>
+<script> window._input_file = "---\n" + "title: \"Reusable by Default\"\n" + "subtitle: \"<br>Reflections on Building Sustainable Open Tools<br>and Knowledge for Healthcare<br><br><br><br>\"\n" + "author:\n" + "    name: Sammi Rosser\n" + "    affiliation: Health Service Modelling Associates Programme, NIHR PenARC, University of Exeter\n" + "format:\n" + "  revealjs:\n" + "    css: styles.css\n" + "    embed-resources: false # necessary for stlite-quarto embedding to work\n" + "    output-file: index.html\n" + "    view-distance: 100\n" + "    height: 800\n" + "    width: 1250\n" + "    preview-links: true\n" + "    controls: false\n" + "    controls-layout: edges\n" + "    transition: fade\n" + "    plotly-connected: true\n" + "    background-transition: fade\n" + "    preload-iframes: true\n" + "    logo: \"assets/Chalky HSMA-07-wide white logo.png\"\n" + "    footer-logo-link: \"https://hsma.co.uk\"\n" + "    # background-image: \"assets/hsma_bg_1.png\"\n" + "    background-image: \"banner_hq.png\"\n" + "    # background-size: cover\n" + "    theme: [default, custom.scss]\n" + "    title-slide-attributes:\n" + "        data-background-image: banner.png\n" + "    include-in-header:\n" + "      - text: |\n" + "          <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css\"><link href='https://fonts.googleapis.com/css?family=Lexend' rel='stylesheet'>\n" + "    verticator:\n" + "      themetag: 'h1'\n" + "      color: ''\n" + "      inversecolor: ''\n" + "      skipuncounted: false\n" + "      clickable: true\n" + "      position: 'auto'\n" + "      offset: '3vmin'\n" + "      autogenerate: true\n" + "      tooltip: false\n" + "      scale: 1\n" + "    revealjs-plugins:\n" + "      - verticator\n" + "      - fullscreen\n" + "      - editable\n" + "filters:\n" + "  # - autofade.lua\n" + "  - reveal-header\n" + "  - editable\n" + "---\n" + "\n" + "# Picture a Scene\n" + "\n" + "::: notes\n" + "\n" + "I want you to picture a scene.\n" + "\n" + ":::\n" + "\n" + "## {.slide data-menu-title=\"The usual ask\"}\n" + "\n" + "![](assets/2025-11-03-13-49-13.png){.absolute width=489.401px height=734.102px left=393.848px top=14.7716px}\n" + "\n" + "::: notes\n" + "\n" + "You've been asked to do something pretty complex, pretty quickly. It also sounds like something someone else will have worked on before. It's got that sense of 'this isn't just an \"us\" problem'.\n" + "\n" + "So you go out and ask around on - say, the NHS-R Slack - if this is something someone else has worked on.\n" + "\n" + ":::\n" + "\n" + "## {.slide data-menu-title=\"It starts well...\"}\n" + "\n" + "::: {.r-stack}\n" + "\n" + "![](assets/2025-11-03-13-48-19.png){.fragment .editable}\n" + "\n" + "![](assets/2025-11-03-13-59-38.png){.fragment .absolute width=405.877px height=736.718px left=793.123px top=17px}\n" + "\n" + "![](assets/2025-11-03-14-02-47.png){.fragment .absolute width=405.877px height=736.718px left=793.123px top=17px}\n" + "\n" + "![](assets/2025-11-03-14-03-22.png){.fragment .absolute width=405.877px height=736.718px left=793.123px top=17px}\n" + "\n" + ":::\n" + "\n" + "::: notes\n" + "\n" + "And you get the response - \"yes!\".\n" + "\n" + "(but it was at my previous job and I wasn't allowed to share the code, so I don't have it anymore. But you could try asking so-and-so, and here's a bit of a rough guide of what we did. )\n" + "\n" + "\n" + ":::\n" + "\n" + "## {.slide data-menu-title=\"But wait! Another reply.\"}\n" + "\n" + "![](assets/2025-11-03-14-22-37.png){.fragment .absolute width=405.877px height=736.718px left=793.123px top=17px}\n" + "\n" + "::: notes\n" + "\n" + "And then someone else chimes in...\n" + "\n" + "\"yes! I've got a repository. Here's the link. It's been a while since I've used it, though.\"\n" + "\n" + ":::\n" + "\n" + "## {.slide data-menu-title=\"It looks promising...\"}\n" + "\n" + "![](assets/2025-11-03-14-15-43a.png){.absolute width=1213.64px height=656.942px left=20.8477px top=46.467px}\n" + "\n" + "::: notes\n" + "\n" + "[open repo image. The repository has loads of folders and files with no obvious naming convention. It's not clear where you should go. There are no tests. The readme just says 'coming soon'. The last commit was 2 years ago.]\n" + "\n" + ":::\n" + "\n" + "## {.slide data-menu-title=\"... or not.\"}\n" + "\n" + "![](assets/2025-11-03-14-50-21.png){.absolute width=1218.51px height=230.779px left=24.3045px top=134.142px}\n" + "\n" + "## {.slide data-menu-title=\"But you can just ask them, right?\"}\n" + "\n" + "::: {.r-stack}\n" + "\n" + "![](assets/2025-11-03-14-45-01.png){.fragment .absolute width=405.877px height=736.718px left=793.123px top=17px}\n" + "\n" + "![](assets/2025-11-03-14-46-46.png){.fragment .absolute width=405.877px height=736.718px left=793.123px top=17px}\n" + ":::\n" + "\n" + "::: notes\n" + "\n" + "And I will fully admit I've been the people on both sides of this conversation. Where I've done something I think will be of use, but life's then got in the way, and I can't spare the time to go back into a project to polish it up properly - because I was too busy.\n" + "\n" + ":::\n" + "\n" + "# {.slide data-menu-title=\"Who am I to come here and talk about this?\"}\n" + "\n" + ":::: {.r-stack}\n" + "\n" + "![](assets/2025-11-04-16-09-49.png){.fragment .fade-in-then-out height=\"350px\"}\n" + "\n" + "![](assets/2025-11-04-15-52-09.png){.fragment .fade-in-then-out height=\"700px\"}\n" + "\n" + "![](assets/2025-11-04-16-03-59.png){.fragment .fade-in-then-out height=\"700px\"}\n" + "\n" + "![](assets/2025-11-05-09-55-03.png){.fragment .fade-in-then-out height=\"650px\"}\n" + "\n" + "::: {.fragment}\n" + "\n" + "![](assets/2025-11-04-16-09-49.png){height=\"350px\"}\n" + "\n" + "![](assets/2025-11-04-16-10-31.png){height=\"350px\"}\n" + "\n" + ":::\n" + "\n" + "::::\n" + "\n" + "::: notes\n" + "\n" + "Now that we've established that hopefully familiar narrative, who am I to try and propose a solution?\n" + "\n" + "So, I'm Sammi Rosser. I had my first taste of \"proper\" coding about 14 years ago, in the deep dark ages of base R, but I've been coding in earnest for about 10 years now. These days it's mostly Python, but I'm astill  big fan of R too.\n" + "\n" + "I have an MSc in health data science, and spent two years working as a data analyst and then data scientist in a mental health trust where some people from this community had really laid some amazing R foundations in the team. And I came to my first NHS-R conference in 2022, I was just completely in awe of all the amazing things people were doing. So I spent my time at the coal face of data, automating reports, writing a script to automate the upload of 80,000 documents after an EPR outage. What I'm trying to say is, as we go through this talk - I know the realities, and the time pressures, and the priorities of data work in the NHS.\n" + "\n" + "But my passion is sharing the joy of code with other people - so I joined the Health Service Modelling Associates programme in 2023. So now I get to teach people all the really fun, interesting and impactful things they can do with code, and I get to do a lot of coding, including recently on a big complex cross-organisation modelling projects to keep my skills sharp.\n" + "\n" + ":::\n" + "\n" + "# The Problem\n" + "\n" + "::: notes\n" + "\n" + "And I get to meet loads of amazing people across different organisations. 9 months of the programme, people work on projects. People have been doing amazing things with their projects, and this has been true of HSMA for years.\n" + "\n" + ":::\n" + "\n" + "## {.slide data-menu-title=\"What's not happening?\"}\n" + "\n" + "![](assets/2025-11-05-10-16-53.png){height=\"600px\"}\n" + "\n" + "::: aside\n" + "<https://hsma.co.uk/previous_projects/projects_with_code>\n" + ":::\n" + "\n" + "::: notes\n" + "And last year, I was revamping our website to try and help our students come up with ideas around 'what sorts of projects can I do?'. And I was looking at all this code that's been written by our community and shared over the years\n" + "\n" + "But even where the code was shared, we just weren't getting people reusing it as much as I would have liked. Now, maybe it's partly an awareness thing.\n" + "\n" + "But even people within the HSMA community, even when they had the same problem, even when we could direct them to a previous repo - they would end up starting from scratch each time.\n" + "\n" + ":::\n" + "\n" + "## Same few things - same quick(ish) solutions {.center}\n" + "\n" + "::: {.fragment .fade-in-then-semi-out .r-fit-text}\n" + "Simple things - big impact\n" + ":::\n" + "\n" + "::: notes\n" + "\n" + "And looking at them, I kept seeing the same things that trip up a lot of people newer to coding and open source\n" + "\n" + "These are issues not unique to our projects and students - these are things you see time and time again in open source projects, but they're resolvable if you get into some good habits.\n" + "\n" + "And they're the things that can really help level up your projects. Many of them aren't that time consuming - and they will save you time in the future.\n" + "\n" + "And that's the main thing I want to talk you through today - if we're going to reach the utopia that people in previous years have talked about - like Rhian Davies's fantastic talk from last year - what are some of the practical things we can all start doing by default?\n" + "\n" + ":::\n" + "\n" + "\n" + "# The Tapestry of 'Reusable by Default'\n" + "\n" + "![](assets/Tapestry%20of%20reusability%20Blank.svg)\n" + "\n" + "::: notes\n" + "So I want to take you through my tapestry of 'reusable by default'\n" + ":::\n" + "\n" + "## The aim\n" + "\n" + "::: {.fragment .fade-in-then-semi-out}\n" + "- Let's make these as natural as breathing\n" + ":::\n" + "\n" + "::: {.fragment .fade-in-then-semi-out}\n" + "- Need to become non-negotiable parts of your projects - not 'nice to have'\n" + ":::\n" + "\n" + "::: {.fragment .fade-in-then-semi-out}\n" + "- Arguably as important as the code you're writing!\n" + ":::\n" + "\n" + "::: {.fragment .fade-in-then-semi-out}\n" + "- But they don't all need to happen at once\n" + ":::\n" + "\n" + "::: notes\n" + "And I want these things to start becoming as natural as breathing in each of your projects. To become the non-negotiables, not the\n" + ":::\n" + "\n" + "## This is the 'why' - find the 'how' on my website {.center}\n" + "\n" + "```{=html}\n" + "<iframe width=\"1000\" height=\"550\" src=\"https://sammirosser.com/talks/2511_nhsrpycom/2511_nhsrpycom.html\" title=\"Talk Page\"></iframe>\n" + "```\n" + "\n" + ":::{.aside}\n" + "\n" + "[sammirosser.com](https://sammirosser.com/talks/2511_nhsrpycom/2511_nhsrpycom.html)\n" + "\n" + ":::\n" + "\n" + "::: notes\n" + "\n" + "In this talk, I want to convince you of why you should bother with each of these things.\n" + "\n" + "I don't have time to take you through all the details of the how - but head to my website and you can find a blog post with all of the juicy details.\n" + "\n" + ":::\n" + "\n" + "## {.slide data-menu-title=\"GitHub\"}\n" + "\n" + "::::: {.columns}\n" + "\n" + ":::: {.column width='30%'}\n" + "\n" + "![](assets/tor_github.svg)\n" + "\n" + "(or any online repository hosting)\n" + "\n" + "::::\n" + "\n" + ":::: {.column width='70%'}\n" + "\n" + ":::{.fragment .fade-in-then-semi-out}\n" + "- On GitHub > emailed/Slacked\n" + ":::\n" + "\n" + ":::{.fragment .fade-in-then-semi-out}\n" + "- Point your managers to\n" + "    - the [NHS-R Statement on Tools](https://tools.nhsrcommunity.com/statement-on-using-tools-git.html) - 17 NHS orgs, but I know there are more!\n" + "    - the [NHS England Open Code Statistics](https://nhsengland.github.io/open-health-statistics/) - over 2000 open repos\n" + ":::\n" + "\n" + ":::{.fragment .fade-in-then-semi-out}\n" + "- Not ready to use it in full? Drag and Drop.\n" + ":::\n" + "\n" + ":::{.fragment .fade-in-then-semi-out}\n" + "- Borrow repo templates from other people!\n" + ":::\n" + "\n" + "::::\n" + "\n" + ":::::\n" + "\n" + "::: notes\n" + "\n" + "Other services exist, but the party is happening over on GitHub\n" + "\n" + ":::\n" + "\n" + "## {.slide data-menu-title=\"LICENCE\"}\n" + "\n" + "::::: {.columns}\n" + "\n" + ":::: {.column width='30%'}\n" + "\n" + "![](assets/tor_licence.svg)\n" + "\n" + "::::\n" + "\n" + ":::: {.column width='70%'}\n" + "\n" + "::: {.fragment .fade-in-then-semi-out}\n" + "- If you don't have a licence, I can't use your code!\n" + ":::\n" + "\n" + "::: {.fragment .fade-in-then-semi-out}\n" + "- Yes, even if you emailed it to me (unless you were clear)\n" + ":::\n" + "\n" + "::: {.fragment .fade-in-then-semi-out}\n" + "- It's one 'special' file (LICENCE or LICENCE.md) GitHub Recognises\n" + ":::\n" + "\n" + "::: {.fragment .fade-in-then-semi-out}\n" + "- Once you settle on one, it's a two second job\n" + ":::\n" + "\n" + "::: {.fragment .fade-in-then-semi-out}\n" + "- Sites exist to help you pick ([choosealicense.com/](https://choosealicense.com/))\n" + "  - MIT & GPL3 are a good place to start\n" + ":::\n" + "\n" + "::::\n" + "\n" + ":::::\n" + "\n" + "::: notes\n" + "- A licence is the first and most fundamental step towards reusability.\n" + "- Once you know a few of them, you can chuck one in there from the start.\n" + "- LICENCE or LICENCE.md = special file that will be displayed by github\n" + "- If you don't have one, I **cannot** reuse your code\n" + "  - [default law = no rights to use, modify, etc.](https://choosealicense.com/no-permission/)\n" + "- If you create it via Github, it helps you choose one and make the file!\n" + "- MIT is a pretty decent option\n" + "- [ChooseALicence](https://choosealicense.com/) helps if you're unsure\n" + "\n" + ":::\n" + "\n" + "## {.slide data-menu-title=\"README.md\"}\n" + "\n" + ":::: {.columns}\n" + "\n" + "::: {.column width='30%'}\n" + "![](assets/tor_readme.svg)\n" + ":::\n" + "\n" + "::: {.column width='67%'}\n" + "\n" + "::: {.fragment .fade-in-then-semi-out}\n" + "If you don't have a readme, you could be taking **hours** of each persons' time\n" + ":::\n" + "\n" + "::: {.fragment .fade-in-then-semi-out}\n" + "README.md is a special file GitHub will display\n" + ":::\n" + "\n" + "::: {.fragment .fade-in-then-semi-out}\n" + "- Tell me **how to use it**\n" + "  - installing environment\n" + "  - what to run and how\n" + "  - data format required\n" + ":::\n" + "\n" + "::: {.fragment .fade-in-then-semi-out}\n" + "- Tell me **why I should bother**\n" + ":::\n" + "\n" + "::: {.fragment .fade-in-then-semi-out}\n" + "- Tell me **how it's doing what it's doing**\n" + ":::\n" + "\n" + ":::\n" + "\n" + "::::\n" + "\n" + "::: notes\n" + "README.md is a special file because Github will display it.\n" + "\n" + "Use it to tell me how to run your code, what inputs I need, etc. - all the key important stuff I need to know if I want to run it myself. What's in all those folders?\n" + "\n" + "You might notice I don't talk about environments today - and that's not because it's not important, but because plenty of other people have spoken on that matter. So here I'm almost assuming you're doing that, and expecting it to be in your readme.\n" + "\n" + "The 'why should I bother' is the bit I actually see being missed out the most. What will I get out of this?\n" + "\n" + "But also the 'what' - is this a simulation? A forecasting library? For long term planning or short term operational use? It's often so unclear and just a couple of sentences clear that up straight away.\n" + "\n" + "So a readme doesn't need to be long - but please don't just leave me with a one liner and 10 folders each with 6 notebooks in (and this is a real scenario I've encountered), because then rea\n" + "\n" + ":::\n" + "\n" + "## {.slide data-menu-title=\"docstrings\"}\n" + "\n" + ":::: {.columns}\n" + "\n" + "::: {.column width='30%'}\n" + "\n" + "![](assets/tor_docstrings.svg)\n" + "\n" + ":::\n" + "\n" + "::: {.column width='67%'}\n" + "\n" + "::: {.fragment .fade-in-then-semi-out}\n" + "- Docstrings are super-comments that power\n" + ":::\n" + "\n" + "::: {.fragment .fade-in-then-semi-out}\n" + "- Docstrings are super-comments\n" + ":::\n" + "\n" + ":::\n" + "\n" + "::::\n" + "\n" + "\n" + "::: notes\n" + "\n" + "Docstrings are the easiest way to level up your code - for you and others.\n" + "\n" + "They're basically super-comments that the tools you write your code in - your IDE, like RStudio or VSCode, will display.\n" + "\n" + "In python, lots of formats - choose one you like and stay consistent\n" + "\n" + "In R, roxygen2 and the 'docstring' package\n" + "\n" + ":::\n" + "\n" + "## Docstrings bring the information about a function or class to where you need it\n" + "\n" + "![](assets/numpy_docstring_demo.gif)\n" + "\n" + "\n" + "## And you write them like this\n" + "\n" + "![](assets/2025-11-05-12-09-00.png)\n" + "\n" + "::: {.fragment}\n" + "Allowed to use AI? Rope it in!\n" + ":::\n" + "\n" + "\n" + "## {.slide data-menu-title=\"documentation\"}\n" + "\n" + ":::: {.columns}\n" + "\n" + "::: {.column width='30%'}\n" + "\n" + "![](assets/tor_documentation.svg)\n" + "\n" + ":::\n" + "\n" + "::: {.column width='67%'}\n" + "\n" + ":::\n" + "\n" + "::::\n" + "\n" + "\n" + "::: notes\n" + "The next step on from\n" + ":::\n" + "\n" + "## Quartodoc generates a function dictionary\n" + "\n" + "![](assets/2025-11-03-17-16-11.png)\n" + "\n" + "## Quartodoc also breaks down your functions nicely\n" + "\n" + "![](assets/2025-11-03-17-17-34.png)\n" + "\n" + "::: notes\n" + "\n" + ":::\n" + "\n" + "## You can host your documentation for free with just a few clicks\n" + "\n" + "## A plea...\n" + "\n" + "- I will not be reading your code if it's written like this...\n" + "\n" + "```python\n" + "df=pd.read_csv(\"sales.csv\").dropna(subset=[\"price\",\"quantity\"]).assign(total=lambda d:d[\"price\"]*d[\"quantity\"]).query(\"total>1000\").groupby([\"region\",\"category\"],as_index=False).agg({\"total\":\"sum\",\"quantity\":\"mean\"}).sort_values(\"total\",ascending=False).rename(columns={\"total\":\"total_sales\",\"quantity\":\"avg_quantity\"}).reset_index(drop=True).head(10)\n" + "\n" + "```\n" + "<br><br>\n" + "\n" + "::: {.fragment .fade-in-then-semi-out}\n" + "\n" + "```python\n" + "df = (\n" + "    pd.read_csv(\"sales.csv\")\n" + "    .dropna(subset=[\"price\", \"quantity\"])\n" + "    .assign(total=lambda d: d[\"price\"] * d[\"quantity\"])\n" + "    .query(\"total>1000\")\n" + "    .groupby([\"region\", \"category\"], as_index=False)\n" + "    .agg({\"total\": \"sum\", \"quantity\": \"mean\"})\n" + "    .sort_values(\"total\", ascending=False)\n" + "    .rename(columns={\"total\": \"total_sales\", \"quantity\": \"avg_quantity\"})\n" + "    .reset_index(drop=True)\n" + "    .head(10)\n" + ")\n" + "```\n" + "\n" + ":::\n" + "\n" + "\n" + "## {.slide data-menu-title=\"Auto linting\"}\n" + "\n" + ":::: {.columns}\n" + "\n" + "::: {.column width='30%'}\n" + "\n" + "![](assets/tor_auto_linter.svg){height=\"600px\"}\n" + "\n" + ":::\n" + "\n" + "::: {.column width='67%'}\n" + "\n" + "::: {.fragment .fade-in-then-semi-out}\n" + "- Install a linter like [ruff](https://docs.astral.sh/ruff/) for python\n" + ":::\n" + "\n" + "::: {.fragment .fade-in-then-semi-out}\n" + "- R equivalents exist in [RStudio](https://styler.r-lib.org/index.html) and [Positron](https://positron.posit.co/migrate-rstudio-code.html)\n" + ":::\n" + "\n" + "::: {.fragment .fade-in-then-semi-out}\n" + "- Set it to format on save = **never faff with formatting again!**\n" + ":::\n" + "\n" + ":::\n" + "\n" + "::::\n" + "\n" + "::: notes\n" + "\n" + "And it just helps save time - which you can use on other parts of this list!\n" + "\n" + "- Safe linters are available for all good languages and IDEs\n" + "  - Install [Ruff](https://docs.astral.sh/ruff/) for Python\n" + "  - Install [styler](https://styler.r-lib.org/index.html) for R in RStudio\n" + "  - Activate [air](https://positron.posit.co/migrate-rstudio-code.html) for R code in Positron\n" + "  - Use [lintquarto](https://github.com/lintquarto/lintquarto) for Python code in Quarto docs\n" + "- Format on save = never deal with this again\n" + "\n" + "This is one thing I wish I'd done years ago\n" + ":::\n" + "\n" + "\n" + "## {.slide data-menu-title=\"Folder Structure\"}\n" + "\n" + ":::: {.columns}\n" + "\n" + "::: {.column width='30%'}\n" + "![](assets/tor_folder_structure.svg)\n" + ":::\n" + "\n" + "::: {.column width='67%'}\n" + "\n" + "::: {.fragment .fade-in-then-semi-out}\n" + "- Choosing a future-proof folder structure from the start saves effort down the line\n" + ":::\n" + "\n" + ":::{.fragment .fade-in-then-semi-out}\n" + "- Avoid putting your script files in the repository root\n" + ":::\n" + "\n" + "::: {.fragment .fade-in-then-semi-out}\n" + "- It costs very little once you get used to it\n" + ":::\n" + "\n" + "::: {.fragment .fade-in-then-semi-out}\n" + "- Auto documentation and packaging **will just work**\n" + ":::\n" + "\n" + "::: {.fragment .fade-in-then-semi-out}\n" + "- Pros and cons of python options [here](packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/)\n" + "- Consider structuring resuable parts of analysis scripts within an [R package structure](https://r-pkgs.org/whole-game.html)\n" + ":::\n" + "\n" + ":::\n" + "\n" + "::::\n" + "\n" + "::: notes\n" + "I had to completely restructure something recently and it was a colossal pain\n" + ":::\n" + "\n" + "\n" + "## {.slide data-menu-title=\"Tests\"}\n" + "\n" + ":::: {.columns}\n" + "\n" + "::: {.column width='30%'}\n" + "\n" + "![](assets/tor_tests.svg)\n" + "\n" + ":::\n" + "\n" + "::: {.column width='67%'}\n" + "\n" + ":::\n" + "\n" + "::::\n" + "\n" + "\n" + "## {.slide data-menu-title=\"Issues & Projects\"}\n" + "\n" + "::::: {.columns}\n" + "\n" + ":::: {.column width='30%'}\n" + "\n" + "![](assets/tor_issues_and_projects.svg)\n" + "\n" + "::::\n" + "\n" + ":::: {.column width='67%'}\n" + "\n" + "::: {.fragment .fade-in-then-semi-out}\n" + "- GitHub has fantastic **free** project tracking tools built in\n" + ":::\n" + "\n" + "::: {.fragment .fade-in-then-semi-out}\n" + "- Helps **you** to keep track - helps others understand what's left to happen\n" + ":::\n" + "\n" + "::::\n" + "\n" + ":::::\n" + "\n" + "\n" + "\n" + "# A mindset shift\n" + "\n" + "## Last chance...\n" + "\n" + "Remember our plea from the start?\n" + "\n" + "![](assets/2025-11-03-13-49-13.png){.absolute width=496.167px height=715.742px left=708.543px top=25.6955px}\n" + "\n" + "\n" + "## The utopia\n" + "\n" + "::: {.r-stack}\n" + "\n" + "![](assets/2025-11-03-14-55-33.png){.fragment .absolute width=496.167px height=715.742px left=708.543px top=25.6955px}\n" + "\n" + "![](assets/2025-11-03-14-56-10.png){.fragment .absolute width=496.167px height=715.742px left=708.543px top=25.6955px}\n" + "\n" + "![](assets/2025-11-03-14-56-37.png){.fragment .absolute width=496.167px height=715.742px left=708.543px top=25.6955px}\n" + "\n" + ":::\n" + "\n" + "\n" + "## What do you do every time you start a new script?\n" + "\n" + ":::: {.columns}\n" + "\n" + "::: {.column width='50%'}\n" + "\n" + "\n" + "```python\n" + "import pandas as pd\n" + "import plotly.express as px\n" + "```\n" + "\n" + ":::\n" + "\n" + "::: {.column width='50%'}\n" + "\n" + "\n" + "```r\n" + "library(tidyr)\n" + "library(ggplot2)\n" + "```\n" + "\n" + ":::\n" + "\n" + "::::\n" + "\n" + "## Or maybe...\n" + "\n" + "```r\n" + "library(NHSRPlotTheDots)\n" + "```\n" + "\n" + "\n" + "\n" + "::: notes\n" + "\n" + "I think it's easy to see packages as something for 'other people'\n" + "\n" + "For 'advanced coders'\n" + "\n" + "But it's like any other coding task\n" + "\n" + "And the things we've talked about mean you're basically there!\n" + "\n" + ":::\n" + "\n" + "## {.slide data-menu-title=\"Package Mindset\"}\n" + "\n" + ":::: {.columns}\n" + "\n" + "::: {.column width='30%'}\n" + "\n" + "![](assets/tor_package_mindset.svg)\n" + "\n" + ":::\n" + "\n" + "::: {.column width='67%'}\n" + "\n" + ":::\n" + "\n" + "::::\n" + "\n" + "\n" + "## An animation of a model for a workshop...\n" + "\n" + "::::: {.fragment}\n" + "\n" + ":::: {.columns}\n" + "\n" + "::: {.column width='30%'}\n" + "\n" + "Became `vidigi`\n" + "\n" + ":::\n" + "\n" + "::: {.column width='67%'}\n" + "\n" + "![](assets/vidigi.gif)\n" + "\n" + ":::\n" + "\n" + "::::\n" + ":::::\n" + "\n" + "## An annoying task...\n" + "\n" + "::::: {.fragment}\n" + "\n" + ":::: {.columns}\n" + "\n" + "::: {.column width='20%'}\n" + "\n" + "Became the stlitepack package\n" + "\n" + ":::\n" + "\n" + "::: {.column width='70%'}\n" + "\n" + ":::\n" + "\n" + "::::\n" + "\n" + ":::::\n" + "\n" + "## A desire to better visualise patient journeys internally...\n" + "\n" + ":::::{.fragment}\n" + "\n" + ":::: {.columns}\n" + "\n" + "::: {.column width='30%'}\n" + "Became an R-powered PowerBI Theograph Visual\n" + ":::\n" + "\n" + "::: {.column width='65%'}\n" + "\n" + "![](assets/2025-11-05-13-48-29.png)\n" + "\n" + ":::\n" + "\n" + "::::\n" + "\n" + ":::::\n" + "\n" + "\n" + "## A need for limit recalculation in PowerBI SPC charts...\n" + "\n" + ":::::{.fragment}\n" + "\n" + ":::: {.columns}\n" + "\n" + "::: {.column width='30%'}\n" + "Became another R-powered PowerBI visual that made better reporting possible\n" + ":::\n" + "\n" + "::: {.column width='67%'}\n" + "\n" + "![](assets/2025-11-05-14-07-12.png){height=\"300px\"}\n" + "\n" + "![](assets/2025-11-05-14-06-39.png){height=\"300px\"}\n" + "\n" + ":::\n" + "\n" + "::::\n" + "\n" + ":::::\n" + "\n" + ":::{.fragment}\n" + "\n" + "And I could only build it because of the nhsrplotthedots team's package!\n" + "\n" + ":::\n" + "\n" + "\n" + "# Summary\n" + "\n" + "##\n" + "\n" + "::: {.fragment .fade-in-then-semi-out}\n" + "- You don't always know what will be worth sharing and reusing\n" + ":::\n" + "\n" + "<br><br>\n" + "\n" + "::: {.fragment .fade-in-then-semi-out}\n" + "But these steps\n" + ":::\n" + "\n" + "::: {.fragment}\n" + "- Make **your** life easier\n" + ":::\n" + "\n" + "::: {.fragment}\n" + "- Make your **teams'** life easier\n" + ":::\n" + "\n" + "::: {.fragment}\n" + "- **Unlock** possibilities\n" + ":::\n" + "\n" + "## These are the steps that make it possible {.center}\n" + "\n" + "![](assets/Tapestry%20of%20reusability.svg)\n" + "\n" + "# The Final Hurdle\n" + "\n" + "::: notes\n" + "\n" + "I worked in a trust with some brilliant people, but I was still pretty new to all of this.\n" + "\n" + "One of my biggest frustrations was being asked questions that I just didn't know the right way to answer... but I was sure someone out there would have thought about this before.\n" + "\n" + "We have different systems, and different pathways, but I'm far from the first person to be standing up here yelling about having the same problems and repeated solutions.\n" + "\n" + "And it actually makes me a little mad because we shouldn't, in 2025, be experiencing a postcode lottery of whether our trust has a data science team, and advanced analytics capabilities. I know if I was treated in trust X it's by a team who are making advanced predictions of demand, and I'm going to be seen in a more timely manner.\n" + "\n" + ":::\n" + "\n" + "## The challenge {.center}\n" + "\n" + ":::: {.r-stack}\n" + "\n" + "::: {.fragment .fade-right .fade-in-then-out}\n" + "![](assets/2025-11-04-16-55-57.png)\n" + ":::\n" + "\n" + "::: {.fragment .fade-left .fade-in-then-out}\n" + "![](assets/2025-11-04-16-56-54.png)\n" + ":::\n" + "\n" + "::: {.fragment .fade-up .fade-in-then-out}\n" + "![](assets/2025-11-04-16-57-36.png)\n" + ":::\n" + "\n" + "::: {.fragment .fade-down .fade-in-then-out}\n" + "![](assets/2025-11-04-16-59-12.png)\n" + ":::\n" + "\n" + "::: {.fragment .fade-right .fade-in-then-out}\n" + "![](assets/2025-11-04-17-00-25.png)\n" + ":::\n" + "\n" + "::: {.fragment .fade-up .fade-in-then-out}\n" + "![](assets/2025-11-04-16-59-48.png)\n" + ":::\n" + "\n" + "::: {.fragment .fade-left .fade-in-then-out}\n" + "![](assets/2025-11-04-17-02-13.png)\n" + ":::\n" + "\n" + ":::{.fragment .fade-down .fade-in-then-out}\n" + "![](assets/2025-11-04-17-02-13.png)\n" + ":::\n" + "\n" + ":::{.fragment .fade-right .fade-in-then-out}\n" + "![](assets/2025-11-04-17-02-53.png)\n" + ":::\n" + "\n" + ":::{.fragment .fade-left .fade-in-then-out}\n" + "![](assets/2025-11-04-17-05-03.png)\n" + ":::\n" + "\n" + ":::{.fragment .grow .fade-in-then-out}\n" + "![](assets/2025-11-04-17-08-00.png)\n" + ":::\n" + "\n" + ":::{.fragment}\n" + "![](assets/2025-11-04-17-06-44.png)\n" + ":::\n" + "\n" + ":::{.fragment}\n" + "![](assets/2025-11-04-17-08-57.png)\n" + ":::\n" + "\n" + ":::{.fragment}\n" + "![](assets/2025-11-04-17-10-30.png)\n" + ":::\n" + "\n" + "::::\n" + "\n" + "\n" + "::: notes\n" + "\n" + "Since I joined the NHS, I've been trying to find all the good stuff\n" + "\n" + "NHS R conference, HACA conference, SWAIH conference, SWAIH South West Hub, LinkedIn, starring over 1300 Github repos, working out which individuals and organisations to follow on GitHub. Attending HaCORN and HaCORN special interest groups and NHS-R webinars and HSMA showcases and ApHA stuff and reading NHS-R and Pycom and subscribing to newsletters and talking to academics and the strategy unit and ...\n" + "\n" + ":::\n" + "\n" + "\n" + "## {.slide data-menu-title=\"It's just not sustainable!\"}\n" + "\n" + "![](assets/2025-11-03-18-10-29.png){fig-align=\"center\"}\n" + "\n" + "::: notes\n" + "\n" + "There just isn't enough time (and brainspace) for us all to be constantly trying to do this.\n" + "\n" + "And that's just locked in my head.\n" + "\n" + "How many of us are trying to do the same thing and build up knowledge that would be better externalised?\n" + "\n" + "And I'm not saying that we get rid of any of these things because each and every one of them is wonderful and a necessary part of this huge puzzle that is modern analytics in the NHS - but\n" + "\n" + "We don't just need to get things into packages.\n" + "\n" + "We need to get them out there into the hands of the people who need them.\n" + "\n" + "And we have pockets of it.\n" + "- the HSMA website, which you can filter down to projects with shard code\n" + "- the fabulous NHS-R website and books\n" + "- bits and pieces on github\n" + "- maybe things I can't see (like AnalystX)\n" + "\n" + "There are so many parts to that puzzle slowly going together, but I still don't feel like I have that 'magic book' that I felt must exist when I started my NHS journey.\n" + "\n" + "So I've begun to write that.\n" + "\n" + ":::\n" + "\n" + "\n" + "## The Healthcare Services Analytics & Decision Science Atlas\n" + "\n" + "```{=html}\n" + "<iframe width=\"1200\" height=\"600\" src=\"https://atlas.hsma.co.uk/packages_projects_tools/packages_projects_tools\" title=\"HSMA Decision Support Atlas\"></iframe>\n" + "```\n" + "\n" + "::: notes\n" + "\n" + "\n" + "\n" + ":::\n" + "\n" + "## What next? {.center}\n" + "\n" + ":::{.fragment}\n" + "\n" + "![](assets/2025-11-04-21-23-31.png){fig-align=\"center\"}\n" + "\n" + ":::\n" + "\n" + "::: notes\n" + "\n" + "I can't do this alone!\n" + "\n" + ":::\n" + "\n" + "\n" + "\n" + "# Get in touch\n" + "\n" + "<br>\n" + "\n" + "[<i class=\"fa-brands fa-linkedin\"></i> Add Me On LinkedIn - Sammi Rosser](https://www.linkedin.com/in/sammijaderosser/)\n" + "\n" + "<br>\n" + "\n" + "[<i class=\"fa-brands fa-github\"></i> Follow Me On GitHub - Bergam0t](https://github.com/Bergam0t)\n" + "\n" + "<br>\n" + "\n" + "[<i class=\"fa-solid fa-globe\"></i> Check out my other talks @ sammirosser.com](https://sammirosser.com)\n" + "\n" + "<br>\n" + "\n" + "[<i class=\"fa-solid fa-envelope\"></i> Email me - hi@sammirosser.com](mailto:hi@sammirosser.com)\n" + "\n" + "# Acknowledgements\n" + "\n" + "[Slack chat mockups generated from chatmockup.com](https://chatmockup.com/)\n" + "\n" + "Images generated with DALL-E3 or ChatGPT-5\n" + "\n" + "Hex stickers built on Canva (all images used via Canva Pro subscription)\n" + ""</script>
 <script> window._input_filename = 'C:\RPySOC-2025-keynote\RPySOC-2025-keynote.qmd'</script>
-</section></section>
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="assets/Chalky HSMA-07-wide white logo.png" class="slide-logo"></p>
