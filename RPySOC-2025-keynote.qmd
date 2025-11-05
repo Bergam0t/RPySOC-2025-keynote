@@ -1,5 +1,6 @@
 ---
-title: "Reusable by Default: Reflections on Building Sustainable Open Tools and Knowledge for Healthcare"
+title: "Reusable by Default"
+subtitle: "<br>Reflections on Building Sustainable Open Tools<br>and Knowledge for Healthcare<br><br><br><br>"
 author:
     name: Sammi Rosser
     affiliation: Health Service Modelling Associates Programme, NIHR PenARC, University of Exeter
@@ -61,9 +62,9 @@ I want you to picture a scene.
 
 :::
 
-## The usual ask {.slide-title-hidden}
+## {.slide data-menu-title="The usual ask"}
 
-![](assets/2025-11-03-13-49-13.png){.editable}
+![](assets/2025-11-03-13-49-13.png){.absolute width=489.401px height=734.102px left=393.848px top=14.7716px}
 
 ::: notes
 
@@ -73,19 +74,17 @@ So you go out and ask around on - say, the NHS-R Slack - if this is something so
 
 :::
 
-## It starts well... {.slide-title-hidden}
+## {.slide data-menu-title="It starts well..."}
 
 ::: {.r-stack}
 
-![](assets/2025-11-03-13-48-19.png){.fragment .absolute width=405.877px height=736.718px left=793.123px top=17px}
+![](assets/2025-11-03-13-48-19.png){.fragment .editable}
 
 ![](assets/2025-11-03-13-59-38.png){.fragment .absolute width=405.877px height=736.718px left=793.123px top=17px}
 
 ![](assets/2025-11-03-14-02-47.png){.fragment .absolute width=405.877px height=736.718px left=793.123px top=17px}
 
 ![](assets/2025-11-03-14-03-22.png){.fragment .absolute width=405.877px height=736.718px left=793.123px top=17px}
-
-![](assets/2025-11-03-14-04-19.png){.fragment .absolute width=405.877px height=736.718px left=793.123px top=17px}
 
 :::
 
@@ -98,7 +97,7 @@ And you get the response - "yes!".
 
 :::
 
-## But it's not your only hope {.slide-title-hidden}
+## {.slide data-menu-title="But wait! Another reply."}
 
 ![](assets/2025-11-03-14-22-37.png){.fragment .absolute width=405.877px height=736.718px left=793.123px top=17px}
 
@@ -110,9 +109,9 @@ And then someone else chimes in...
 
 :::
 
-## Or maybe it is {.slide-title-hidden}
+## {.slide data-menu-title="It looks promising..."}
 
-![](assets/2025-11-03-14-15-43a.png){.editable}
+![](assets/2025-11-03-14-15-43a.png){.absolute width=1213.64px height=656.942px left=20.8477px top=46.467px}
 
 
 ::: notes
@@ -121,11 +120,12 @@ And then someone else chimes in...
 
 :::
 
-## ... or not. {.slide-title-hidden}
+## {.slide data-menu-title="... or not."}
 
-![](assets/2025-11-03-14-50-21.png){.editable}
 
-## Any hope? {.slide-title-hidden}
+![](assets/2025-11-03-14-50-21.png){.absolute width=1218.51px height=230.779px left=24.3045px top=134.142px}
+
+## {.slide data-menu-title="But you can just ask them, right?"}
 
 ::: {.r-stack}
 
@@ -134,73 +134,74 @@ And then someone else chimes in...
 ![](assets/2025-11-03-14-46-46.png){.fragment .absolute width=405.877px height=736.718px left=793.123px top=17px}
 :::
 
-# A step back...
+::: notes
 
-:::: {.columns}
+And I will fully admit I've been the people on both sides of this conversation. Where I've done something I think will be of use, but life's then got in the way, and I can't spare the time to go back into a project to polish it up properly - because I was too busy.
 
-::: {.column width='50%'}
+:::
 
-:::{.fragment}
+# {.slide data-menu-title="Who am I to come here and talk about this?"}
 
-![](assets/2025-11-04-15-59-01.png){.editable}
+::: {.r-stack}
+
+![](assets/2025-11-04-16-09-49.png){.fragment .fade-in-then-out height="350px"}
+
+![](assets/2025-11-04-15-52-09.png){.fragment .fade-in-then-out height="700px"}
+
+![](assets/2025-11-04-16-03-59.png){.fragment .fade-in-then-out height="700px"}
+
+![](assets/2025-11-05-09-55-03.png){.fragment .fade-in-then-out height="650px"}
+
+::: {.fragment}
+
+![](assets/2025-11-04-16-09-49.png){height="350px"}
+
+![](assets/2025-11-04-16-10-31.png){height="350px"}
 
 :::
 
 :::
-
-::: {.column width='50%'}
-
-:::{.fragment}
-
-![](assets/2025-11-04-15-52-09.png){.editable}
-
-:::
-
-:::
-
-::::
-
-:::: {.columns}
-
-::: {.column width='50%'}
-
-![](assets/2025-11-04-16-03-59.png){.editable}
-
-:::
-
-::: {.column width='50%'}
-
-![](assets/2025-11-04-15-53-22.png){.editable}
-
-:::
-
-::::
-
-
 
 ::: notes
 
-Who the hell am I?
+Now that we've established that hopefully familiar narrative, who am I to try and propose a solution?
 
-Sammi Rosser. I had my first taste of coding about 14 years ago, simulating the population dynamics of side blotched lizards in base R, but I've been coding in earnest for about 10 years now. These days it's mostly Python, but I'm a big fan of R too.
+So, I'm Sammi Rosser. I had my first taste of "proper" coding about 14 years ago, in the deep dark ages of base R, but I've been coding in earnest for about 10 years now. These days it's mostly Python, but I'm astill  big fan of R too.
 
-I have an MSc in health data science, and spent two years working as a data analyst and then data scientist in a mental health trust, coming to my first NHS-R conference in 2022 and just being completely in awe of all the amazing things people were doing.
+I have an MSc in health data science, and spent two years working as a data analyst and then data scientist in a mental health trust where some people from this community had really laid some amazing R foundations in the team. And I came to my first NHS-R conference in 2022, I was just completely in awe of all the amazing things people were doing. So I spent my time at the coal face of data, automating reports, writing a script to automate the upload of 80,000 documents after an EPR outage. What I'm trying to say is, as we go through this talk - I know the realities, and the time pressures, and the priorities of data work in the NHS.
 
-But my passion is sharing the joy of code with other people - so I joined the Health Service Modelling Associates programme in 2023. So now I get to teach people all the really fun, interesting and impactful things they can do with code, and I get to meet loads of amazing people across different organisations. 9 months of the programme, people work on projects.
-
-People have been doing amazing things with their projects, and this has been true of HSMA for years. And last year, I was revamping our website to try and help our students come up with ideas around 'what sorts of projects can I do?'. And I was looking at all this code that's been written by our community and shared over the years
-
-But even where the code was shared, we just weren't getting people reusing it as much as I would have liked. Even when they had the same problem, people would end up starting from scratch each time.
+But my passion is sharing the joy of code with other people - so I joined the Health Service Modelling Associates programme in 2023. So now I get to teach people all the really fun, interesting and impactful things they can do with code, and I get to do a lot of coding, including recently on a big complex cross-organisation modelling projects to keep my skills sharp.
 
 :::
 
-## My own github journey
-
-![](assets/2025-11-04-16-09-49.png)
-
-![](assets/2025-11-04-16-10-31.png)
+# The Problem
 
 ::: notes
+
+And I get to meet loads of amazing people across different organisations. 9 months of the programme, people work on projects. People have been doing amazing things with their projects, and this has been true of HSMA for years.
+
+:::
+
+## {.slide data-menu-title="What's not happening?"}
+
+![](assets/2025-11-05-10-16-53.png){height="600px"}
+
+::: aside
+<https://hsma.co.uk/previous_projects/projects_with_code>
+:::
+
+::: notes
+And last year, I was revamping our website to try and help our students come up with ideas around 'what sorts of projects can I do?'. And I was looking at all this code that's been written by our community and shared over the years
+
+But even where the code was shared, we just weren't getting people reusing it as much as I would have liked. Now, maybe it's partly an awareness thing.
+
+But even people within the HSMA community, even when they had the same problem, even when we could direct them to a previous repo - they would end up starting from scratch each time.
+
+:::
+
+## Same few things - same quick(ish) solutions
+
+:::
 
 And looking at them, I kept seeing the same things that trip up a lot of people newer to coding and open source
 
@@ -208,16 +209,38 @@ These are issues not unique to our projects and students - these are things you 
 
 And they're the things that can really help level up your projects. Many of them aren't that time consuming - and they will save you time in the future.
 
+And that's the main thing I want to talk you through today - if we're going to reach the utopia that people in previous years have talked about - like Rhian Davies's fantastic talk from last year - what are some of the practical things we can all start doing by default?
+
 :::
 
 
 # The Tapestry of 'Reusable by Default'
 
+![](assets/Tapestry%20of%20reusability%20Blank.svg)
+
 ::: notes
 So I want to take you through my tapestry of 'reusable by default'
 :::
 
-## This is the why - find the 'how' on my website
+## The aim
+
+- Let's make these as natural as breathing
+
+- They need to become non-negotiable parts of your projects - not 'nice to have'
+
+- These are arguably as important as the code you're writing!
+
+::: notes
+And I want these things to start becoming as natural as breathing in each of your projects. To become the non-negotiables, not the
+:::
+
+## This is the 'why' - find the 'how' on my website {.center}
+
+```{=html}
+<iframe width="1000" height="300" src="https://sammirosser.com/talks/2511_nhsrpycom/2511_nhsrpycom.html" title="Talk Page"></iframe>
+```
+
+[sammirosser.com](https://sammirosser.com/talks/2511_nhsrpycom/2511_nhsrpycom.html)
 
 ::: notes
 
@@ -233,6 +256,14 @@ I don't have time to take you through all the details of the how - but head to m
 If you don't have a Licence, I can't reuse your code!
 :::
 
+## {.slide data-menu-title="The usual ask"}
+
+::: {.rstack}
+
+![](assets/2025-11-04-16-16-57.png){.fragment}
+
+:::
+
 ::: notes
 - A licence is the first and most fundamental step towards reusability.
 - Once you know a few of them, you can chuck one in there from the start.
@@ -245,21 +276,7 @@ If you don't have a Licence, I can't reuse your code!
 
 :::
 
-:::{.rstack}
 
-![](assets/2025-11-04-16-16-57.png){.fragment}
-
-![](assets/2025-11-03-16-23-21.png){.fragment}
-
-![](assets/2025-11-03-16-23-56.png){.fragment}
-
-![](assets/2025-11-03-16-24-44.png){.fragment}
-
-![](assets/2025-11-03-16-25-11.png){.fragment}
-
-![](assets/2025-11-03-16-38-21.png){.fragment}
-
-:::
 
 ## README
 
@@ -330,17 +347,20 @@ In R, roxygen2 and the 'docstring' package
 :::
 
 
-## Documentation
+## Documentation {.}
 
-- [pdoc](https://pdoc.dev/), [sphinx](), or [quartodoc]()
-- quartodoc is my favourite because it plays nicely with all of Quarto's other features
-  - see some examples of how I've set it up: example 1, example 2, example 3
+![](assets/Documentation.svg){height="600px"}
 
-## Documentation - quartodoc auto-generated function dictionary
+
+::: notes
+The next step on from
+:::
+
+## Quartodoc generates a function dictionary
 
 ![](assets/2025-11-03-17-16-11.png)
 
-## Documentation - quartodoc function breakdown
+## Quartodoc also breaks down your functions nicely
 
 ![](assets/2025-11-03-17-17-34.png)
 
@@ -350,17 +370,9 @@ In R, roxygen2 and the 'docstring' package
 
 ## Free hosting
 
-- Free quick and easy hosting with
-  - [Github Pages](https://docs.github.com/en/pages) - for any site
-  - [Quartopub](https://quartopub.com/) - for Quarto sites
 
 
 ## Free hosting side note: personal site
-
-- Make a repository called `yourusername.github.io`
-- Use one of Quarto's [about page templates](https://quarto.org/docs/websites/website-about.html)
-- Make yourself a quick and easy personal site and host for free
-  - if you feel like it, spend about a tenner for a custom URL
 
 ```{=html}
 <iframe width="1200" height="500" src="https://sammirosser.com/" title="Personal Site Example"></iframe>
@@ -397,10 +409,6 @@ I had to completely restructure something recently and it was a colossal pain
 
 
 
-
-
-
-
 # A mindset shift - packaging your code
 
 ## Last chance...
@@ -423,15 +431,6 @@ Remember our plea from the start?
 :::
 
 
-## DRY, parameterise and functionise your code
-
-
-::: notes
-
-:::
-
-
-
 ## What do you do every time you start a new script?
 
 :::: {.columns}
@@ -440,6 +439,7 @@ Remember our plea from the start?
 
 
 ```{=python}
+#| echo: true
 import pandas as pd
 import plotly.express as px
 ```
@@ -450,6 +450,7 @@ import plotly.express as px
 
 
 ```{=r}
+#| echo: true
 library(tidyr)
 library(ggplot2)
 ```
@@ -461,6 +462,7 @@ library(ggplot2)
 ## Or maybe...
 
 ```{=r}
+#| echo: true
 library(NHSRPlotTheDots)
 ```
 
@@ -479,9 +481,9 @@ But it's like any other coding task
 
 
 
-# Summary - The Tapestry of Reusable by Default
+# Summary
 
-
+![](assets/Tapestry%20of%20reusability.svg){.absolute width=442.5px height=78px left=20px top=118px}
 
 
 # The Final Hurdle
@@ -530,59 +532,59 @@ And it actually makes me a little mad because we shouldn't, in 2025, be experien
 ## The challenge
 
 ::: {.fragment}
-![](assets/2025-11-04-16-55-57.png){.editable}
+![](assets/2025-11-04-16-55-57.png){.absolute width=530px height=78px left=20px top=118px}
 :::
 
 ::: {.fragment}
-![](assets/2025-11-04-16-56-54.png){.editable}
+![](assets/2025-11-04-16-56-54.png){.absolute width=0px height=0px left=0px top=110px}
 :::
 
 ::: {.fragment}
-![](assets/2025-11-04-16-57-36.png){.editable}
+![](assets/2025-11-04-16-57-36.png){.absolute width=287.245px height=122.183px left=40px top=137.37px}
 :::
 
 ::: {.fragment}
-![](assets/2025-11-04-16-59-12.png){.editable}
+![](assets/2025-11-04-16-59-12.png){.absolute width=199.909px height=204.103px left=1007.65px top=22.2182px}
 :::
 
 :::{.fragment}
-![](assets/2025-11-04-17-00-25.png){.editable}
+![](assets/2025-11-04-17-00-25.png){.absolute width=163.009px height=96.5184px left=748.107px top=46.6067px}
 :::
 
 :::{.fragment}
-![](assets/2025-11-04-16-59-48.png){.editable}
+![](assets/2025-11-04-16-59-48.png){.absolute width=484.75px height=185.691px left=370px top=226px}
 :::
 
 :::{.fragment}
-![](assets/2025-11-04-17-02-13.png){.editable}
+![](assets/2025-11-04-17-02-13.png){.absolute width=0px height=0px left=40px top=118px}
 :::
 
 :::{.fragment}
-![](assets/2025-11-04-17-02-13.png){.editable}
+![](assets/2025-11-04-17-02-13.png){.absolute width=0px height=0px left=40px top=118px}
 :::
 
 :::{.fragment}
-![](assets/2025-11-04-17-02-53.png){.editable}
+![](assets/2025-11-04-17-02-53.png){.absolute width=0px height=0px left=40px top=118px}
 :::
 
 :::{.fragment}
-![](assets/2025-11-04-17-05-03.png){.editable}
+![](assets/2025-11-04-17-05-03.png){.absolute width=0px height=0px left=40px top=118px}
 :::
 
 :::{.fragment}
-![](assets/2025-11-04-17-08-00.png){.editable}
+![](assets/2025-11-04-17-08-00.png){.absolute width=0px height=0px left=40px top=118px}
 :::
 
 :::{.fragment}
-![](assets/2025-11-04-17-06-44.png){.editable}
+![](assets/2025-11-04-17-06-44.png){.absolute width=0px height=0px left=40px top=118px}
 :::
 
 :::{.fragment}
-![](assets/2025-11-04-17-08-57.png){.editable}
+![](assets/2025-11-04-17-08-57.png){.absolute width=0px height=0px left=40px top=118px}
 :::
 
 :::{.fragment}
-![](assets/2025-11-04-17-10-30.png){.editable}
+![](assets/2025-11-04-17-10-30.png){.absolute width=0px height=0px left=40px top=118px}
 :::
 
 ::: notes
@@ -596,7 +598,7 @@ NHS R conference, HACA conference, SWAIH conference, SWAIH South West Hub, Linke
 
 ## It's just not sustainable!
 
-![](assets/2025-11-03-18-10-29.png){.editable}
+![](assets/2025-11-03-18-10-29.png){.absolute width=0px height=0px left=40px top=118px}
 
 ::: notes
 
@@ -639,6 +641,7 @@ So I've begun to write that.
 
 ## What's next
 
+![](assets/2025-11-04-21-23-31.png)
 
 ::: notes
 
@@ -652,10 +655,21 @@ I can't do this alone!
 
 ## Get in touch
 
-[{{< fa brands linkedin >}} Add Me On LinkedIn](https://www.linkedin.com/in/sammijaderosser/)
+<br>
 
-[{{< fa brands github >}} Follow Me On GitHub](https://github.com/Bergam0t)
+[<i class="fa-brands fa-linkedin"></i> Add Me On LinkedIn - Sammi Rosser](https://www.linkedin.com/in/sammijaderosser/)
 
+<br>
+
+[<i class="fa-brands fa-github"></i> Follow Me On GitHub - Bergam0t](https://github.com/Bergam0t)
+
+<br>
+
+[<i class="fa-solid fa-globe"></i> Check out my other talks @ sammirosser.com](https://sammirosser.com)
+
+<br>
+
+[<i class="fa-solid fa-envelope"></i> Email me - hi@sammirosser.com](mailto:hi@sammirosser.com)
 
 ## Acknowledgements
 
