@@ -49,7 +49,7 @@ format:
       - fullscreen
       - editable
 filters:
-  - autofade.lua
+  # - autofade.lua
   - reveal-header
   - editable
 ---
@@ -224,11 +224,21 @@ So I want to take you through my tapestry of 'reusable by default'
 
 ## The aim
 
+::: {.fragment .fade-in-then-semi-out}
 - Let's make these as natural as breathing
+:::
 
-- They need to become non-negotiable parts of your projects - not 'nice to have'
+::: {.fragment .fade-in-then-semi-out}
+- Need to become non-negotiable parts of your projects - not 'nice to have'
+:::
 
-- These are arguably as important as the code you're writing!
+::: {.fragment .fade-in-then-semi-out}
+- Arguably as important as the code you're writing!
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+- But they don't all need to happen at once
+:::
 
 ::: notes
 And I want these things to start becoming as natural as breathing in each of your projects. To become the non-negotiables, not the
@@ -237,16 +247,61 @@ And I want these things to start becoming as natural as breathing in each of you
 ## This is the 'why' - find the 'how' on my website {.center}
 
 ```{=html}
-<iframe width="1000" height="300" src="https://sammirosser.com/talks/2511_nhsrpycom/2511_nhsrpycom.html" title="Talk Page"></iframe>
+<iframe width="1000" height="550" src="https://sammirosser.com/talks/2511_nhsrpycom/2511_nhsrpycom.html" title="Talk Page"></iframe>
 ```
 
+::: aside
+
 [sammirosser.com](https://sammirosser.com/talks/2511_nhsrpycom/2511_nhsrpycom.html)
+
+:::
 
 ::: notes
 
 In this talk, I want to convince you of why you should bother with each of these things.
 
 I don't have time to take you through all the details of the how - but head to my website and you can find a blog post with all of the juicy details.
+
+:::
+
+## {.slide data-menu-title="GitHub"}
+
+:::: {.columns}
+
+::: {.column width='30%'}
+
+![](assets/tor_github.svg)
+
+(or any online repository hosting)
+
+:::
+
+::: {.column width='70%'}
+
+:::{.fragment .fade-in-then-semi-out}
+- On GitHub > emailed/Slacked
+:::
+
+:::{.fragment .fade-in-then-semi-out}
+- Point your managers to
+    - the [NHS-R Statement on Tools](https://tools.nhsrcommunity.com/statement-on-using-tools-git.html) - 17 NHS orgs, but I know there are more!
+    - the [NHS England Open Code Statistics](https://nhsengland.github.io/open-health-statistics/) - over 2000 open repos
+
+:::{.fragment .fade-in-then-semi-out}
+- Not ready to use it in full? Drag and Drop.
+:::
+
+:::{.fragment .fade-in-then-semi-out}
+- Borrow repo templates from other people!
+:::
+
+:::
+
+::::
+
+::: notes
+
+Other services exist, but the party is happening over on GitHub
 
 :::
 
