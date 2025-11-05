@@ -1,5 +1,4 @@
 project:
   title: "RPySOC-2025-keynote"
-
-
-
+  render:
+    - RPySOC-2025-keynote.qmd

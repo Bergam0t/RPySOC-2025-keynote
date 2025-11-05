@@ -1,3 +1,0 @@
-- Quartodoc
-- Repository Templates
-- Github readmes for personal and org
