@@ -1,0 +1,12 @@
+df = (
+    pd.read_csv("sales.csv")
+    .dropna(subset=["price", "quantity"])
+    .assign(total=lambda d: d["price"] * d["quantity"])
+    .query("total>1000")
+    .groupby(["region", "category"], as_index=False)
+    .agg({"total": "sum", "quantity": "mean"})
+    .sort_values("total", ascending=False)
+    .rename(columns={"total": "total_sales", "quantity": "avg_quantity"})
+    .reset_index(drop=True)
+    .head(10)
+)
