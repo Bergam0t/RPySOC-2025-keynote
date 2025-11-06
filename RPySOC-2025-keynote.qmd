@@ -270,7 +270,7 @@ But I want to focus on some of the practical things we can all start doing by de
 
 ::: {.column width='50%'}
 
-[![](assets/2025-11-06-10-33-04a.png){fig-alt="The logo of the Sharing Tools and Artefacts for reproducible simulatins in healthcare' project (STARS)}](https://des.hsma.co.uk/stars.html){.fragment}
+[![](assets/2025-11-06-10-33-04a.png){fig-alt="The logo of the Sharing Tools and Artefacts for Reproducible Simulations in Healthcare' project (STARS)}](https://des.hsma.co.uk/stars.html){.fragment}
 
 :::
 
@@ -279,7 +279,7 @@ But I want to focus on some of the practical things we can all start doing by de
 
 # The Tapestry of 'Reusable by Default'
 
-![](assets/tor_blank.svg){fig-align="center" height="700px"}
+![](assets/tor_blank.svg){fig-align="center" height="700px" fig-alt="10 colourful tesselated hexagons, each containing a question mark"}
 
 ::: notes
 So I want to take you through my tapestry of 'reusable by default'. Or it might be a quilt.
@@ -558,13 +558,13 @@ You can host your documentation for free with just a few clicks
 
 ## They generate a dictionary
 
-![](assets/2025-11-03-17-16-11.png)
+![](assets/2025-11-03-17-16-11.png){fig-alt="A screenshot of a documentation webpage, listing 5 hyperlinked functions in tables, separated by headers"}
 
 (this is Quartodoc)
 
 ## And display your docstrings
 
-![](assets/2025-11-03-17-17-34.png)
+![](assets/2025-11-03-17-17-34.png){fig-alt="A screenshot of a documentation webpage, breaking down a single function. All function parameters are listed with heir defaults, along with a detailed table of parameter details and type, and a brief description of what the function does."}
 
 (this is Quartodoc)
 
@@ -761,17 +761,17 @@ I had to completely restructure something recently and it was a colossal pain
 
 ## Issues {.center}
 
-![](assets/2025-11-05-15-18-24.png)
+![](assets/2025-11-05-15-18-24.png){fig-alt="An image of a github issue. Text explains a limitation of the code. Colourful tags categorise it as relating to the anmation functions, ease of use, and prep functions. It is assigned to the milestone 1.2.0."}
 
 ## Projects {.center}
 
-![](assets/2025-11-05-15-19-34.png){height="300px"}
+![](assets/2025-11-05-15-19-34.png){height="300px" fig-alt="An image of a github project. Issues are sorted into the headers backlog, monitoring or investigating, up next, in progress, and awaiting release."}
 
 # A mindset shift
 
 ## Where are we now?
 
-![](assets/tor_all_except.svg){fig-align="center" height="800px"}
+![](assets/tor_all_except.svg){fig-align="center" height="800px" fig-alt="Ten colourful tesselated hexagons with the following text: GitHub; Readme.md; LICENCE; docstrings; documentation, folder structure, auto-linter, issues and projects, tests. The final hexagon is shinier and more special looking than the rest, and contains a question mark."}
 
 ## Last chance...
 
@@ -1055,7 +1055,7 @@ But these steps
 
 ## These pieces set the stage
 
-![](assets/tor.svg){fig-align="center" height="800px"}
+![](assets/tor.svg){fig-align="center" height="800px" fig-alt="Ten colourful tesselated hexagons with the following text: GitHub; Readme.md; LICENCE; docstrings; documentation, folder structure, auto-linter, issues and projects, tests, package mindset."}
 
 # The Final Hurdle
 
