@@ -1,9 +1,12 @@
 ---
 title: "Reusable by Default"
-subtitle: "<br>Reflections on Building Sustainable Open Tools<br>and Knowledge for Healthcare<br><br><br><br>"
+subtitle: "<br>Reflections on Building Sustainable Open Tools<br>and Knowledge for Healthcare<br><br><br>"
 author:
     name: Sammi Rosser
-    affiliation: Health Service Modelling Associates Programme, NIHR PenARC, University of Exeter
+    affiliation: <br>
+      [![](/assets/hsma_logo.png){fig-alt="HSMA" height=80px style="vertical-align:middle;"}](https://hsma.co.uk)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      [![](/assets/penarc_logo.png){fig-alt="PenARC" height=35px style="vertical-align:middle;"}](https://arc-swp.nihr.ac.uk/)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      [![](/assets/uoe-logo.svg){fig-alt="University of Exeter" height=80px style="vertical-align:middle;"}](https://exeter.ac.uk)
 format:
   revealjs:
     css: styles.css
@@ -61,7 +64,7 @@ I want you to picture a scene.
 
 ## {.slide data-menu-title="The usual ask"}
 
-![](assets/2025-11-03-13-49-13.png){.absolute width=489.401px height=734.102px left=393.848px top=14.7716px}
+![](assets/2025-11-03-13-49-13.png){.absolute width=489.401px height=734.102px left=393.848px top=14.7716px fig-alt="A pixellated cartoon representation of the speaker sitting at a computer and looking stressed. In the background, a robot is saying 'we need this tomorrow'."}
 
 ::: notes
 
@@ -75,11 +78,11 @@ So you go out and ask around on - say, the NHS-R Slack - if this is something so
 
 ::: {.r-stack}
 
-![](assets/2025-11-03-13-48-19.png){.fragment fig-align="center" height="700px"}
+![](assets/2025-11-03-13-48-19.png){.fragment fig-align="center" height="700px" fig-alt="A mockup of a Slack chat. The speaker is asking 'Hey, has anyone done something previously on forecasting ED arrivals for operational planning?'"}
 
-![](assets/2025-11-03-13-59-38.png){.fragment  fig-align="center" height="700px"}
+![](assets/2025-11-03-13-59-38.png){.fragment  fig-align="center" height="700px" fig-alt="A mockup of a Slack chat. A man named Alan Lyst has replied 'Yes!'"}
 
-![](assets/2025-11-03-14-02-47.png){.fragment  fig-align="center" height="700px"}
+![](assets/2025-11-03-14-02-47.png){.fragment  fig-align="center" height="700px" fig-alt="A mockup of a Slack chat. A man named Alan Lyst has replied 'Yes!'. He has then added 'But it was at my last job and I don't have the code'."}
 
 :::
 
@@ -94,7 +97,7 @@ And you get the response - "yes!".
 
 ## {.slide data-menu-title="But wait! Another reply."}
 
-![](assets/2025-11-03-14-22-37.png){fig-align="center" height="700px"}
+![](assets/2025-11-03-14-22-37.png){fig-align="center" height="700px" fig-alt="A mockup of a Slack chat. A woman named Dee Cision has replied with a repository link."}
 
 ::: notes
 
@@ -106,31 +109,22 @@ And then someone else chimes in...
 
 ## {.slide data-menu-title="It looks promising..."}
 
-![](assets/2025-11-03-14-15-43a.png){.absolute width=1213.64px height=656.942px left=20.8477px top=46.467px}
+![](assets/2025-11-03-14-15-43a.png){.absolute width=1213.64px height=656.942px left=20.8477px top=46.467px fig-alt="A screenshot of a github repository. There are a large number of folders."}
 
 ::: notes
 
-[open repo image. The repository has loads of folders and files with no obvious naming convention. It's not clear where you should go. There are no tests. The readme just says 'coming soon'. The last commit was 2 years ago.]
+The repository has loads of folders and files with no obvious naming convention. It's not clear where you should go. There are no tests. The last commit was 2 years ago.
 
 :::
 
 ## {.slide data-menu-title="... or not."}
 
-![](assets/2025-11-03-14-50-21.png){.absolute width=1218.51px height=230.779px left=24.3045px top=134.142px}
-
-## {.slide data-menu-title="But you can just ask them, right?"}
-
-::: {.r-stack}
-
-![](assets/2025-11-03-14-45-01.png){.fragment fig-align="center" height="700px" .fade-in-then-out}
-
-![](assets/anyone-here-tumbleweed.gif){.fragment fig-align="center"}
-
-:::
+![](assets/2025-11-03-14-50-21.png){.absolute width=1218.51px height=230.779px left=24.3045px top=134.142px fig-alt="A screnshot of a readme for a repository. It simply says 'this repository predicts ED attendances'"}
 
 ::: notes
+And then you see the readme and your heart sinks. And they're probably busy and don't have time to go back - if they can even remember. So you poke around a bit but you don't know what the data is meant to look like, and
 
-And I will fully admit I've been the people on both sides of this conversation. Where I've done something I think will be of use, but life's then got in the way, and I can't spare the time to go back into a project to polish it up properly - because I was too busy.
+And I will fully admit I've been the people on both sides of this conversation. Where I've done something I think will be of use and shared it in a sort-of-usable state, but life's then got in the way, and I can't spare the time to go back into a project to polish it up properly - because I was too busy and the next thing was on fire.
 
 :::
 
@@ -142,37 +136,39 @@ And I will fully admit I've been the people on both sides of this conversation. 
 <h1>Who am I to come here and talk about this?</h1>
 :::
 
-![](assets/2025-11-04-16-09-49.png){.fragment .fade-in-then-out height="350px" fig-align="center"}
+![](assets/2025-11-04-16-09-49.png){.fragment .fade-in-then-out height="350px" fig-align="center" fig-alt="An image of the speaker's GitHub contributions from 2017. There are 53."}
 
-![](assets/2025-11-04-15-52-09.png){.fragment .fade-in-then-out height="700px" fig-align="center"}
+![](assets/2025-11-04-15-52-09.png){.fragment .fade-in-then-out height="700px" fig-align="center" fig-alt="An image of the speaker in graduation attire, wearing two layers of mask."}
 
-![](assets/2025-11-04-16-03-59.png){.fragment .fade-in-then-out height="700px" fig-align="center"}
+![](assets/2025-11-06-11-18-32.png){.fragment .fade-in-then-out height="700px" fig-align="center" fig-alt="An image of the speaker with colleagues from her role in the trust. They are all wearing smart attire and smiling on a stage. One of them is holding a certificate saying 'pride of DPT - winner - data architecture team'."}
 
-![](assets/Chalky%20HSMA-04-wide.png){.fragment .fade-in-then-out height="400px" fig-align="center"}
+![](assets/2025-11-04-16-03-59.png){.fragment .fade-in-then-out height="700px" fig-align="center" fig-alt="A photo of a previous NHS R conference. There is a heatmap of the number of patients in a department shown on a large screen."}
+
+![](assets/Chalky%20HSMA-04-wide.png){.fragment .fade-in-then-out height="400px" fig-align="center" fig-alt="A logo comprising of a chunk red computer and the letters HSMA. It says 'find the future in you'."}
 
 :::::{.fragment .fade-in-then-out}
 
 :::: {.columns}
 
 ::: {.column width='50%'}
-![](assets/dan_muppet_profile.png){height="400px" fig-align="center"}
+![](assets/dan_muppet_profile.png){height="400px" fig-align="center" fig-alt="An image of Dr Daniel Chalk represented as a puppet, a la the muppets"}
 :::
 
 ::: {.column width='50%'}
-![](assets/sammi_muppet_profile.png){height="500px" fig-align="center"}
+![](assets/sammi_muppet_profile.png){height="500px" fig-align="center" fig-alt="An image of the spaker represented as a puppet, a la the muppets"}
 :::
 
 ::::
 
 :::::
 
-![](assets/2025-11-05-09-55-03.png){.fragment .fade-in-then-out height="650px" fig-align="center"}
+![](assets/2025-11-05-09-55-03.png){.fragment .fade-in-then-out height="650px" fig-align="center" fig-alt="An image of the speaker in a HSMA t-shirt, talking to a room full of people about a simulation model of a hospital ward"}
 
 ::: {.fragment}
 
-![](assets/2025-11-04-16-09-49.png){height="350px"}
+![](assets/2025-11-04-16-09-49.png){height="350px" fig-alt="An image of the speaker's github contributions in 2017. There are 53."}
 
-![](assets/2025-11-04-16-10-31.png){height="350px"}
+![](assets/2025-11-04-16-10-31.png){height="350px" fig-alt="An image of the speaker's github contributions in 2024. Ther are 2008."}
 
 :::
 
@@ -194,22 +190,21 @@ But my passion is sharing the joy of code with other people - so I joined the He
 
 ::: notes
 
-And I get to meet loads of amazing people across different organisations. 9 months of the programme, people work on projects. People have been doing amazing things with their projects, and this has been true of HSMA for years.
+I get to meet loads of amazing people across different organisations. 9 months of the programme, people work on projects. People have been doing amazing things with their projects, and this has been true of HSMA for years.
 
 :::
 
 ## {.slide data-menu-title="What's not happening?"}
 
-![](assets/2025-11-05-10-16-53.png){height="600px" fig-align="center"}
+![](assets/2025-11-05-10-16-53.png){height="600px" fig-align="center" fig-alt="An image of the HSMA website, showing three previous projects: Developing a service planning decision support tool to tackl inequalitis and minimise carbon output; using discrete event simulation to model the bottlenecks in the acute medical unit pathway; discrete event simulation to model elective surgery pathways"}
 
 <https://hsma.co.uk/previous_projects/projects_with_code>
 
 ::: notes
+
 And last year, I was revamping our website to try and help our students come up with ideas around 'what sorts of projects can I do?'. And I was looking at all this code that's been written by our community and shared over the years
 
-But even where the code was shared, we just weren't getting people reusing it as much as I would have liked. Now, maybe it's partly an awareness thing.
-
-But even people within the HSMA community, even when they had the same problem, even when we could direct them to a previous repo - they would end up starting from scratch each time.
+But even where the code was shared, we just weren't getting people reusing it. Even people within the HSMA community, even when they had the same problem, even when we could direct them to a previous repo - they would end up starting from scratch each time.
 
 :::
 
@@ -217,28 +212,21 @@ But even people within the HSMA community, even when they had the same problem, 
 
 <br>
 
-::: {.fragment .fade-in-then-semi-out}
-I keep seeing the same few simple(ish) things holding great repositories back
+:::: {.columns}
+
+::: {.column width='70%'}
+
+::: {.fragment}
+I keep seeing the<br>**same few simple(ish) things**<br>holding otherwise great repositories back
 :::
+
+:::
+
+::::
+
+
 
 <br>
-
-::: {.fragment .fade-in-then-semi-out}
-Not that time consuming to fix if you build a few habit
-:::
-
-<br>
-
-::: {.fragment .fade-in-then-semi-out}
-Big impact on reusability
-:::
-
-<br>
-
-::: {.fragment .fade-in-then-semi-out}
-On balance - a time saving
-:::
-
 
 ::: notes
 
@@ -246,9 +234,7 @@ And looking at them, I kept seeing the same things that trip up a lot of people 
 
 These are issues not unique to our projects and students - these are things you see time and time again in open source projects, but they're resolvable if you get into some good habits.
 
-And they're the things that can really help level up your projects. Many of them aren't that time consuming - and they will save you time in the future.
-
-And that's the main thing I want to talk you through today - if we're going to reach the utopia that people in previous years have talked about - like Rhian Davies's fantastic talk from last year - what are some of the practical things we can all start doing by default?
+And they're the things that can really help level up your projects. Many of them aren't that time consuming - and they might even save you time in the future.
 
 :::
 
@@ -256,15 +242,40 @@ And that's the main thing I want to talk you through today - if we're going to r
 
 :::{.r-stack}
 
-![](assets/2025-11-05-15-07-08.png){height="550px"}
+![](assets/2025-11-05-15-07-08.png){height="550px" fig-alt="A screenshot of Rhian Davies' talk from the 2024 RPySOC conference, titled 'from reproducible to reusable'"}
 
-![](assets/2025-11-05-16-25-21.png){.fragment height="550px"}
-
-![](assets/2025-11-05-16-26-11.png){.fragment height="550px"}
+![](assets/2025-11-05-16-25-21.png){.fragment height="550px" fig-alt="A screenshot of a slide from Rhian Davies' talk from the 2024 RPySOC conference, titled 'my code utopia' and saying 'work on great open source code, together, publicly, across the system'"}
 
 :::
 
 <https://statsrhian.github.io/nhsrpysoc-reusable/>
+
+::: notes
+
+And that's the main thing I want to talk you through today - how are we going to reach the utopia that people in previous years have talked about - like Rhian Davies's fantastic talk from last year?
+
+But I want to focus on some of the practical things we can all start doing by default.
+
+:::
+
+## I'm not the first (or the best)...
+
+:::: {.columns}
+
+::: {.column width='50%'}
+
+[![](assets/2025-11-06-10-31-17.png){fig-alt="A screenshot of the NHS England RAP community of practice playbook website"}](https://nhsdigital.github.io/rap-community-of-practice/introduction_to_RAP/levels_of_RAP/){.fragment}
+
+:::
+
+::: {.column width='50%'}
+
+[![](assets/2025-11-06-10-33-04a.png){fig-alt="The logo of the Sharing Tools and Artefacts for reproducible simulatins in healthcare' project (STARS)}](https://des.hsma.co.uk/stars.html){.fragment}
+
+:::
+
+::::
+
 
 # The Tapestry of 'Reusable by Default'
 
@@ -299,14 +310,10 @@ And I want these things to start becoming as natural as breathing in each of you
 ## This is the 'why' - find the 'how' on my website {.center}
 
 ```{=html}
-<iframe width="1000" height="550" src="https://sammirosser.com/talks/2511_nhsrpycom/2511_nhsrpycom.html" title="Talk Page"></iframe>
+<iframe width="1000" height="500" src="https://sammirosser.com/talks/2511_nhsrpycom/2511_nhsrpycom.html" title="Talk Page"></iframe>
 ```
 
-:::{.aside}
-
 [sammirosser.com](https://sammirosser.com/talks/2511_nhsrpycom/2511_nhsrpycom.html)
-
-:::
 
 ::: notes
 
@@ -370,10 +377,10 @@ Other services exist, but the party is happening over on GitHub
 
 ::::
 
-:::: {.column width='70%'}
+:::: {.column width='66%'}
 
 ::: {.fragment .fade-in-then-semi-out}
-- If you don't have a licence, I can't use your code!
+- If you don't add a licence, I can't use your code!
 :::
 
 ::: {.fragment .fade-in-then-semi-out}
@@ -385,7 +392,7 @@ Other services exist, but the party is happening over on GitHub
 :::
 
 ::: {.fragment .fade-in-then-semi-out}
-- Once you settle on one, it's a two second job
+- Once you settle on one, it's a 1 minute job
 :::
 
 ::: {.fragment .fade-in-then-semi-out}
@@ -1012,11 +1019,15 @@ But, in a way, writing your own is less scary
 
 ## {.slide data-menu-title="Key Points"}
 
+::::{.columns}
+
+:::{.column width="90%"}
+
 ::: {.fragment .fade-in-then-semi-out}
-- You don't always know what will be worth sharing and reusing when you start
+You don't always know what will be worth sharing and reusing when you start
 :::
 
-<br><br>
+<br>
 
 ::: {.fragment .fade-in-then-semi-out}
 But these steps
@@ -1037,6 +1048,10 @@ But these steps
 ::: {.fragment}
 - **Accelerate your learning**
 :::
+
+:::
+
+::::
 
 ## These pieces set the stage
 
@@ -1061,55 +1076,55 @@ And it actually makes me a little mad because we shouldn't, in 2025, be experien
 :::: {.r-stack}
 
 ::: {.fragment .fade-right .fade-in-then-out}
-![](assets/2025-11-04-16-55-57.png){height="300px" fig-align="center"}
+![](assets/2025-11-04-16-55-57.png){height="300px" fig-align="center" fig-alt="The NHS-R logo"}
 :::
 
 ::: {.fragment .fade-left .fade-in-then-out}
-![](assets/2025-11-04-16-56-54.png){height="300px" fig-align="center"}
+![](assets/HACA.png){height="300px" fig-align="center" fig-alt="The HACA logo"}
 :::
 
 ::: {.fragment .fade-up .fade-in-then-out}
-![](assets/2025-11-04-16-57-36.png){height="300px" fig-align="center"}
+![](assets/2025-11-04-16-57-36.png){height="300px" fig-align="center" fig-alt="The SW.AIH logo"}
 :::
 
 ::: {.fragment .fade-down .fade-in-then-out}
-![](assets/2025-11-04-16-59-12.png){height="300px" fig-align="center"}
+![](assets/2025-11-04-16-59-12.png){height="300px" fig-align="center" fig-alt="An image of the speaker's LinkedIn network, showing 193 people being followed out of network"}
 :::
 
 ::: {.fragment .fade-right .fade-in-then-out}
-![](assets/2025-11-04-17-00-25.png){height="250px" fig-align="center"}
+![](assets/2025-11-04-17-00-25.png){height="250px" fig-align="center" fig-alt="An image of the speaker's starred repositories on github, numbering 1.3k"}
 :::
 
 ::: {.fragment .fade-up .fade-in-then-out}
-![](assets/2025-11-04-16-59-48.png){height="250px" fig-align="center"}
+![](assets/2025-11-04-16-59-48.png){height="250px" fig-align="center" fig-alt="An image of the speaker's github profile, showing 82 followers and 314 people being followed by the speaker"}
 :::
 
 ::: {.fragment .fade-left .fade-in-then-out}
-![](assets/2025-11-04-17-02-13.png){height=600px" fig-align="center"}
+![](assets/2025-11-04-17-02-13.png){height=600px" fig-align="center" fig-alt="A screenshot of the Health and Care Operational Research Network - HaCORN - webpage. It says 'creating a network to cllaborate and share operational research expertise to improve health and social care'"}
 :::
 
 :::{.fragment .fade-right .fade-in-then-out}
-![](assets/2025-11-04-17-02-53.png){height="600px" fig-align="center"}
+![](assets/2025-11-04-17-02-53.png){height="600px" fig-align="center" fig-alt="A screenshot of the NHS-R youtube channel, showing 4 coffee and coding videos."}
 :::
 
 :::{.fragment .fade-left .fade-in-then-out}
-![](assets/2025-11-04-17-05-03.png){height="500px" fig-align="center"}
+![](assets/2025-11-04-17-05-03.png){height="500px" fig-align="center" fig-alt="A screenshot of the HSMA 6 showcase playlist"}
 :::
 
 :::{.fragment .grow .fade-in-then-out}
-![](assets/2025-11-04-17-08-00.png){height="300px" fig-align="center"}
+![](assets/2025-11-04-17-08-00.png){height="300px" fig-align="center" fig-alt="The AphA logo"}
 :::
 
 :::{.fragment .fade-right .fade-in-then-out}
-![](assets/2025-11-04-17-06-44.png){height="300px" fig-align="center"}
+![](assets/2025-11-04-17-06-44.png){height="300px" fig-align="center" fig-alt="A screenshot of the header of the 80th issue of the AphA analysts magazine"}
 :::
 
 :::{.fragment .fade-left .fade-in-then-out}
-![](assets/2025-11-04-17-08-57.png){height="600px" fig-align="center"}
+![](assets/2025-11-04-17-08-57.png){height="600px" fig-align="center" fig-alt="A screenshot of the NHS-R Slack, showing the finds channel"}
 :::
 
 :::{.fragment .fade-down .fade-in-then-out}
-![](assets/2025-11-04-17-10-30.png){height="600px" fig-align="center"}
+![](assets/2025-11-04-17-10-30.png){height="600px" fig-align="center" fig-alt="A screenshot of the monthly data science professinal development newsletter from the NHS England Data Science Team"}
 :::
 
 ::::
@@ -1126,7 +1141,7 @@ NHS R conference, HACA conference, SWAIH conference, SWAIH South West Hub, Linke
 
 ## {.slide data-menu-title="It's just not sustainable!"}
 
-![](assets/2025-11-03-18-10-29.png){fig-align="center"}
+![](assets/2025-11-03-18-10-29.png){fig-align="center" fig-alt="A meme image with two large red buttons. One says 'remember this cool project'. The other says 'remember how to tie your shoelaces'. Below this is an mage of a man perspiring and wiping his brow with a white cloth."}
 
 ::: notes
 
@@ -1173,7 +1188,7 @@ So I've begun to write that.
 
 :::{.fragment}
 
-![](assets/2025-11-04-21-23-31.png){fig-align="center" height="600px"}
+![](assets/2025-11-04-21-23-31.png){fig-align="center" height="600px" fig-alt="A poster of the speaker represented as a puppet character like the muppets. She is pointing at the viewer with the words 'I need you' below it."}
 
 :::
 
@@ -1191,7 +1206,7 @@ I can't do this alone!
 
 ::: {.column width='35%'}
 
-![](assets/sammi_muppet_profile.png)
+![](assets/sammi_muppet_profile.png){fig-alt="A representation of the speaker as a puppet character"}
 
 :::
 

@@ -1,9 +1,12 @@
 ---
 title: "Reusable by Default"
-subtitle: "<br>Reflections on Building Sustainable Open Tools<br>and Knowledge for Healthcare<br><br><br><br>"
+subtitle: "<br>Reflections on Building Sustainable Open Tools<br>and Knowledge for Healthcare<br><br><br>"
 author:
     name: Sammi Rosser
-    affiliation: Health Service Modelling Associates Programme, NIHR PenARC, University of Exeter
+    affiliation: <br>
+      [![](/assets/hsma_logo.png){fig-alt="HSMA" height=80px style="vertical-align:middle;"}](https://hsma.co.uk)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      [![](/assets/penarc_logo.png){fig-alt="PenARC" height=35px style="vertical-align:middle;"}](https://arc-swp.nihr.ac.uk/)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      [![](/assets/uoe-logo.svg){fig-alt="University of Exeter" height=80px style="vertical-align:middle;"}](https://exeter.ac.uk)
 format:
   revealjs:
     css: styles.css
@@ -110,7 +113,7 @@ And then someone else chimes in...
 
 ::: notes
 
-[open repo image. The repository has loads of folders and files with no obvious naming convention. It's not clear where you should go. There are no tests. The readme just says 'coming soon'. The last commit was 2 years ago.]
+The repository has loads of folders and files with no obvious naming convention. It's not clear where you should go. There are no tests. The last commit was 2 years ago.
 
 :::
 
@@ -118,19 +121,10 @@ And then someone else chimes in...
 
 ![](assets/2025-11-03-14-50-21.png){.absolute width=1218.51px height=230.779px left=24.3045px top=134.142px}
 
-## {.slide data-menu-title="But you can just ask them, right?"}
-
-::: {.r-stack}
-
-![](assets/2025-11-03-14-45-01.png){.fragment fig-align="center" height="700px" .fade-in-then-out}
-
-![](assets/anyone-here-tumbleweed.gif){.fragment fig-align="center"}
-
-:::
-
 ::: notes
+And then you see the readme and your heart sinks. And they're probably busy and don't have time to go back - if they can even remember. So you poke around a bit but you don't know what the data is meant to look like, and
 
-And I will fully admit I've been the people on both sides of this conversation. Where I've done something I think will be of use, but life's then got in the way, and I can't spare the time to go back into a project to polish it up properly - because I was too busy.
+And I will fully admit I've been the people on both sides of this conversation. Where I've done something I think will be of use and shared it in a sort-of-usable state, but life's then got in the way, and I can't spare the time to go back into a project to polish it up properly - because I was too busy and the next thing was on fire.
 
 :::
 
@@ -145,6 +139,8 @@ And I will fully admit I've been the people on both sides of this conversation. 
 ![](assets/2025-11-04-16-09-49.png){.fragment .fade-in-then-out height="350px" fig-align="center"}
 
 ![](assets/2025-11-04-15-52-09.png){.fragment .fade-in-then-out height="700px" fig-align="center"}
+
+![](assets/2025-11-06-11-18-32.png){.fragment .fade-in-then-out height="700px" fig-align="center"}
 
 ![](assets/2025-11-04-16-03-59.png){.fragment .fade-in-then-out height="700px" fig-align="center"}
 
@@ -194,7 +190,7 @@ But my passion is sharing the joy of code with other people - so I joined the He
 
 ::: notes
 
-And I get to meet loads of amazing people across different organisations. 9 months of the programme, people work on projects. People have been doing amazing things with their projects, and this has been true of HSMA for years.
+I get to meet loads of amazing people across different organisations. 9 months of the programme, people work on projects. People have been doing amazing things with their projects, and this has been true of HSMA for years.
 
 :::
 
@@ -205,11 +201,10 @@ And I get to meet loads of amazing people across different organisations. 9 mont
 <https://hsma.co.uk/previous_projects/projects_with_code>
 
 ::: notes
+
 And last year, I was revamping our website to try and help our students come up with ideas around 'what sorts of projects can I do?'. And I was looking at all this code that's been written by our community and shared over the years
 
-But even where the code was shared, we just weren't getting people reusing it as much as I would have liked. Now, maybe it's partly an awareness thing.
-
-But even people within the HSMA community, even when they had the same problem, even when we could direct them to a previous repo - they would end up starting from scratch each time.
+But even where the code was shared, we just weren't getting people reusing it. Even people within the HSMA community, even when they had the same problem, even when we could direct them to a previous repo - they would end up starting from scratch each time.
 
 :::
 
@@ -217,28 +212,21 @@ But even people within the HSMA community, even when they had the same problem, 
 
 <br>
 
-::: {.fragment .fade-in-then-semi-out}
-I keep seeing the same few simple(ish) things holding great repositories back
+:::: {.columns}
+
+::: {.column width='70%'}
+
+::: {.fragment}
+I keep seeing the<br>**same few simple(ish) things**<br>holding otherwise great repositories back
 :::
+
+:::
+
+::::
+
+
 
 <br>
-
-::: {.fragment .fade-in-then-semi-out}
-Not that time consuming to fix if you build a few habit
-:::
-
-<br>
-
-::: {.fragment .fade-in-then-semi-out}
-Big impact on reusability
-:::
-
-<br>
-
-::: {.fragment .fade-in-then-semi-out}
-On balance - a time saving
-:::
-
 
 ::: notes
 
@@ -246,9 +234,7 @@ And looking at them, I kept seeing the same things that trip up a lot of people 
 
 These are issues not unique to our projects and students - these are things you see time and time again in open source projects, but they're resolvable if you get into some good habits.
 
-And they're the things that can really help level up your projects. Many of them aren't that time consuming - and they will save you time in the future.
-
-And that's the main thing I want to talk you through today - if we're going to reach the utopia that people in previous years have talked about - like Rhian Davies's fantastic talk from last year - what are some of the practical things we can all start doing by default?
+And they're the things that can really help level up your projects. Many of them aren't that time consuming - and they might even save you time in the future.
 
 :::
 
@@ -260,11 +246,34 @@ And that's the main thing I want to talk you through today - if we're going to r
 
 ![](assets/2025-11-05-16-25-21.png){.fragment height="550px"}
 
-![](assets/2025-11-05-16-26-11.png){.fragment height="550px"}
-
 :::
 
 <https://statsrhian.github.io/nhsrpysoc-reusable/>
+
+::: notes
+
+And that's the main thing I want to talk you through today - if we're going to reach the utopia that people in previous years have talked about - like Rhian Davies's fantastic talk from last year - what are some of the practical things we can all start doing by default?
+
+:::
+
+## I'm not the first (or the best)...
+
+:::: {.columns}
+
+::: {.column width='50%'}
+
+[![](assets/2025-11-06-10-31-17.png)](https://nhsdigital.github.io/rap-community-of-practice/introduction_to_RAP/levels_of_RAP/){.fragment}
+
+:::
+
+::: {.column width='50%'}
+
+[![](assets/2025-11-06-10-33-04a.png)](https://des.hsma.co.uk/stars.html){.fragment}
+
+:::
+
+::::
+
 
 # The Tapestry of 'Reusable by Default'
 
@@ -299,14 +308,10 @@ And I want these things to start becoming as natural as breathing in each of you
 ## This is the 'why' - find the 'how' on my website {.center}
 
 ```{=html}
-<iframe width="1000" height="550" src="https://sammirosser.com/talks/2511_nhsrpycom/2511_nhsrpycom.html" title="Talk Page"></iframe>
+<iframe width="1000" height="500" src="https://sammirosser.com/talks/2511_nhsrpycom/2511_nhsrpycom.html" title="Talk Page"></iframe>
 ```
 
-:::{.aside}
-
 [sammirosser.com](https://sammirosser.com/talks/2511_nhsrpycom/2511_nhsrpycom.html)
-
-:::
 
 ::: notes
 
@@ -370,10 +375,10 @@ Other services exist, but the party is happening over on GitHub
 
 ::::
 
-:::: {.column width='70%'}
+:::: {.column width='66%'}
 
 ::: {.fragment .fade-in-then-semi-out}
-- If you don't have a licence, I can't use your code!
+- If you don't add a licence, I can't use your code!
 :::
 
 ::: {.fragment .fade-in-then-semi-out}
@@ -385,7 +390,7 @@ Other services exist, but the party is happening over on GitHub
 :::
 
 ::: {.fragment .fade-in-then-semi-out}
-- Once you settle on one, it's a two second job
+- Once you settle on one, it's a 1 minute job
 :::
 
 ::: {.fragment .fade-in-then-semi-out}
@@ -1012,11 +1017,15 @@ But, in a way, writing your own is less scary
 
 ## {.slide data-menu-title="Key Points"}
 
+::::{.columns}
+
+:::{.column width="90%"}
+
 ::: {.fragment .fade-in-then-semi-out}
-- You don't always know what will be worth sharing and reusing when you start
+You don't always know what will be worth sharing and reusing when you start
 :::
 
-<br><br>
+<br>
 
 ::: {.fragment .fade-in-then-semi-out}
 But these steps
@@ -1037,6 +1046,10 @@ But these steps
 ::: {.fragment}
 - **Accelerate your learning**
 :::
+
+:::
+
+::::
 
 ## These pieces set the stage
 
