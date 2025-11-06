@@ -270,7 +270,7 @@ But I want to focus on some of the practical things we can all start doing by de
 
 ::: {.column width='50%'}
 
-[![](assets/2025-11-06-10-33-04a.png){fig-alt="The logo of the Sharing Tools and Artefacts for Reproducible Simulations in Healthcare' project (STARS)}](https://des.hsma.co.uk/stars.html){.fragment}
+[![](assets/2025-11-06-10-33-04a.png){fig-alt="The logo of the Sharing Tools and Artefacts for Reproducible Simulations in Healthcare' project (STARS)"}](https://des.hsma.co.uk/stars.html){.fragment}
 
 :::
 
