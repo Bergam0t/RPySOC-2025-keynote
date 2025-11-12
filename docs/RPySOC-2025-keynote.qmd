@@ -208,7 +208,7 @@ But even where the code was shared, we just weren't getting people reusing it. E
 
 :::
 
-## What am I advocating?{.center}
+## {.slide data-menu-title="What am I advocating?"}
 
 <br>
 
@@ -244,8 +244,6 @@ And they're the things that can really help level up your projects. Many of them
 
 ![](assets/2025-11-05-15-07-08.png){height="550px" fig-alt="A screenshot of Rhian Davies' talk from the 2024 RPySOC conference, titled 'from reproducible to reusable'"}
 
-![](assets/2025-11-05-16-25-21.png){.fragment height="550px" fig-alt="A screenshot of a slide from Rhian Davies' talk from the 2024 RPySOC conference, titled 'my code utopia' and saying 'work on great open source code, together, publicly, across the system'"}
-
 :::
 
 <https://statsrhian.github.io/nhsrpysoc-reusable/>
@@ -258,7 +256,7 @@ But I want to focus on some of the practical things we can all start doing by de
 
 :::
 
-## I'm not the first (or the best)...
+## Reproducible PLUS Reusable
 
 :::: {.columns}
 
@@ -276,6 +274,11 @@ But I want to focus on some of the practical things we can all start doing by de
 
 ::::
 
+## {.slide data-menu-title="Time to RRRAP"}
+
+![](assets/2025-11-12-17-00-42.png){height="550px"}
+
+<https://statsrhian.github.io/nhsrpysoc-reusable/>
 
 # The Tapestry of 'Reusable by Default'
 
@@ -288,11 +291,7 @@ So I want to take you through my tapestry of 'reusable by default'. Or it might 
 ## My Proposals
 
 ::: {.fragment .fade-in-then-semi-out}
-- Let's make these as natural as breathing
-:::
-
-::: {.fragment .fade-in-then-semi-out}
-- Need to become non-negotiable parts of your projects - not 'nice to have'
+- Steps towards reusablity need to become non-negotiable parts of your projects - not 'nice to have'
 :::
 
 ::: {.fragment .fade-in-then-semi-out}
@@ -300,18 +299,24 @@ So I want to take you through my tapestry of 'reusable by default'. Or it might 
 :::
 
 ::: {.fragment .fade-in-then-semi-out}
-- But they don't all need to happen at once
+- Some take almost no time - and those that take time often *save* time in the long run
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+- But they don't all need to happen at once (or all of them always)
 :::
 
 ::: notes
-And I want these things to start becoming as natural as breathing in each of your projects. To become the non-negotiables, not the
+And I want these things to start becoming as natural as breathing in each of your projects. To become the non-negotiables, not the things that always get left to 'one day'
 :::
 
 ## This is the 'why' - find the 'how' on my website {.center}
 
-```{=html}
+<!-- ```{=html}
 <iframe width="1000" height="500" src="https://sammirosser.com/talks/2511_nhsrpycom/2511_nhsrpycom.html" title="Talk Page"></iframe>
-```
+``` -->
+
+![](assets/2025-11-12-17-21-20.png){height="600px"}
 
 [sammirosser.com](https://sammirosser.com/talks/2511_nhsrpycom/2511_nhsrpycom.html)
 
@@ -677,7 +682,7 @@ This is one thing I wish I'd done years ago
 :::
 
 ::: {.fragment .fade-in-then-semi-out}
-- Auto documentation and packaging **will just work**
+- auto documentation and packaging **will just work**
 :::
 
 :::
@@ -692,6 +697,53 @@ I had to completely restructure something recently and it was a colossal pain
 - Consider structuring resuable parts of analysis scripts within an [R package structure](https://r-pkgs.org/whole-game.html)
 :::
 
+
+## {.slide data-menu-title="Folder Structure - Python Example"}
+
+:::: {.columns}
+
+::: {.column width='45%'}
+
+:::{.fragment}
+
+![](assets/2025-11-12-17-32-19.png){height="300px"}
+
+```{.text code-line-numbers="1,3,4"}
+myproject/
+├── analysis.ipynb
+├── main.py
+├── utils.py
+├── README.md
+├── requirements.txt
+```
+
+:::
+
+:::
+
+::: {.column width='45%'}
+
+:::{.fragment}
+
+![](assets/2025-11-12-17-33-01.png){height="300px"}
+
+```{.text code-line-numbers="1,6,7,8,9,10"}
+myproject/
+├── analysis.ipynb
+├── pyproject.toml
+├── README.md
+├── requirements.txt
+└── src/
+    └── myproject/
+        ├── __init__.py
+        ├── main.py
+        └── utils.py
+```
+:::
+
+:::
+
+::::
 
 ## {.slide data-menu-title="Tests"}
 
@@ -728,6 +780,39 @@ I had to completely restructure something recently and it was a colossal pain
 :::
 
 ::::
+
+## {.slide data-menu-title="Tests - an example"}
+
+:::: {.columns}
+
+::: {.column width='45%'}
+
+```python
+def add(a, b):
+    return a + b
+```
+
+:::
+
+::: {.column width='45%'}
+
+:::{.fragment}
+
+```python
+def test_add():
+    assert add(2, 3) == 5
+```
+
+:::
+
+:::
+
+::::
+
+::: {.fragment .fade-in-then-semi-out}
+- Or a certain thing **never** happens in a simulation
+- Or you have the same number of rows after a join
+:::
 
 
 ## {.slide data-menu-title="Issues & Projects"}
@@ -1198,6 +1283,17 @@ I can't do this alone!
 
 :::
 
+## Contribute
+
+:::{.r-stack}
+![](assets/2025-11-12-16-36-51.png){.fragment .fade-in-then-out}
+
+![](assets/2025-11-12-16-37-16.png){.fragment .fade-in-then-out height="500px"}
+
+![](assets/2025-11-12-16-37-56.png){.fragment height="300px"}
+:::
+
+[Submit a project code-free via the form](https://github.com/hsma-programme/decision_intelligence_atlas/issues/new/choose) or [read advanced instructions in the README](https://github.com/hsma-programme/decision_intelligence_atlas?tab=readme-ov-file#contributing)
 
 
 # Get in touch
