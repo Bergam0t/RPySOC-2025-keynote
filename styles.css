@@ -1,3 +1,9 @@
 .reveal section h2.slide-title-hidden {
   display: none;
 }
+
+.big-center {
+  text-align: center;
+  font-size: 180%;
+  line-height: 1.3;
+}

@@ -140,11 +140,11 @@ And I will fully admit I've been the people on both sides of this conversation. 
 
 ![](assets/2025-11-04-15-52-09.png){.fragment .fade-in-then-out height="700px" fig-align="center" fig-alt="An image of the speaker in graduation attire, wearing two layers of mask."}
 
-![](assets/2025-11-12-22-27-02.png){.fragment .fade-in-then-out height="700px" fig-align="center" fig-alt="The NHS Logo"}
+![](assets/2025-11-13-19-48-22.png){.fragment .fade-in-then-out height="700px" fig-align="center" fig-alt="A meme of Buzz Lightyear and Woody from toy story. Woody looks worried. Buzz - with his head replaced by the NHS logo - is saying 'Excel. Excel everywhere.'"}
 
 ![](assets/2025-11-04-16-03-59.png){.fragment .fade-in-then-out height="700px" fig-align="center" fig-alt="A photo of a previous NHS R conference. There is a heatmap of the number of patients in a department shown on a large screen."}
 
-![](assets/Chalky%20HSMA-04-wide.png){.fragment .fade-in-then-out height="400px" fig-align="center" fig-alt="A logo comprising of a chunk red computer and the letters HSMA. It says 'find the future in you'."}
+![](assets/Chalky%20HSMA-04-wide.png){.fragment .fade-in-then-out height="400px" fig-align="center" fig-alt="A logo comprising of a chunky red computer and the letters HSMA. It says 'find the future in you'."}
 
 :::::{.fragment .fade-in-then-out}
 
@@ -208,15 +208,15 @@ But even where the code was shared, we just weren't getting people reusing it. E
 
 :::
 
-## {.slide data-menu-title="What am I advocating?"}
+## {.slide data-menu-title="What have I noticed?"}
 
 <br>
 
 :::: {.columns}
 
-::: {.column width='70%'}
+::: {.column width='95%'}
 
-::: {.fragment}
+::: {.fragment .big-center}
 I keep seeing the<br>**same few simple(ish) things**<br>holding otherwise great repositories back
 :::
 
@@ -273,12 +273,6 @@ But I want to focus on some of the practical things we can all start doing by de
 :::
 
 ::::
-
-## {.slide data-menu-title="Time to RRRAP"}
-
-![](assets/2025-11-12-17-00-42.png){height="550px"}
-
-<https://statsrhian.github.io/nhsrpysoc-reusable/>
 
 # The Tapestry of 'Reusable by Default'
 
@@ -424,6 +418,17 @@ When I say 'write like it will be open'
 
 :::
 
+## {.slide data-menu-title="LICENCE to code"}
+
+:::{.r-stack}
+
+![](assets/2025-11-13-20-27-25.png)
+
+![](assets/2025-11-13-20-27-25_copy.png){.fragment}
+
+:::
+
+
 ## {.slide data-menu-title="README.md"}
 
 :::: {.columns}
@@ -550,7 +555,7 @@ Those docstrings you just wrote?
 :::
 
 ::: {.fragment .fade-in-then-semi-out}
-Combine them with [pdoc](https://pdoc.dev/), [sphinx](https://www.sphinx-doc.org/en/master/), [quartodoc](https://machow.github.io/quartodoc/get-started/overview.html) (for <i class="fa-brands fa-python"></i>)
+Combine them with [pdoc](https://pdoc.dev/), [sphinx](https://www.sphinx-doc.org/en/master/), [quartodoc](https://machow.github.io/quartodoc/get-started/overview.html), or [mkdocs](https://www.mkdocs.org/) (for <i class="fa-brands fa-python"></i>)
 
 Or [pkgdown](https://r-pkgs.org/website.html) (for <i class="fa-brands fa-r-project"></i>)
 :::
@@ -699,6 +704,51 @@ I had to completely restructure something recently and it was a colossal pain
 - Consider structuring resuable parts of analysis scripts within an [R package structure](https://r-pkgs.org/whole-game.html)
 :::
 
+
+## {.slide data-menu-title="Folder Structure - Python Example"}
+
+:::: {.columns}
+
+::: {.column width='45%'}
+
+![](assets/2025-11-12-17-32-19.png){height="300px"}
+
+```{.text code-line-numbers="1,3,4"}
+myproject/
+├── analysis.ipynb
+├── main.py
+├── utils.py
+├── README.md
+├── requirements.txt
+```
+
+:::
+
+::: {.column width='45%'}
+
+:::{.fragment}
+
+![](assets/2025-11-12-17-33-01.png){height="300px"}
+
+```{.text code-line-numbers="1,6,7,8,9,10"}
+myproject/
+├── analysis.ipynb
+├── pyproject.toml
+├── README.md
+├── requirements.txt
+└── src/
+    └── myproject/
+        ├── __init__.py
+        ├── main.py
+        └── utils.py
+```
+:::
+
+:::
+
+::::
+
+
 ## {.slide data-menu-title="Tests"}
 
 :::: {.columns}
@@ -738,6 +788,46 @@ I had to completely restructure something recently and it was a colossal pain
 :::
 
 ::::
+
+
+## {.slide data-menu-title="Tests - an example"}
+
+:::: {.columns}
+
+::: {.column width='45%'}
+
+```python
+def add(a, b):
+    return a + b
+```
+
+:::
+
+::: {.column width='45%'}
+
+:::{.fragment}
+
+```python
+def test_add():
+    assert add(2, 3) == 5
+```
+
+:::
+
+:::
+
+::::
+
+<br>
+
+::: {.fragment .fade-in-then-semi-out}
+- Or a certain thing **never** happens in a simulation
+<br>
+- Or you have the same number of rows after a join
+<br>
+- etc.
+:::
+
 
 ## {.slide data-menu-title="Issues & Projects"}
 
@@ -804,6 +894,8 @@ Remember our plea from the start?
 
 ## What do you do every time you start a new script? {.center}
 
+<br><br>
+
 :::: {.columns}
 
 ::: {.column width='45%'}
@@ -812,7 +904,6 @@ Remember our plea from the start?
 
 ```python
 import pandas as pd
-import plotly.express as px
 ```
 
 :::
@@ -824,7 +915,6 @@ import plotly.express as px
 :::{.fragment}
 
 ```r
-library(tidyr)
 library(ggplot2)
 ```
 
@@ -835,6 +925,8 @@ library(ggplot2)
 ::::
 
 ## Or maybe... {.center}
+
+<br><br>
 
 :::: {.columns}
 
@@ -968,7 +1060,7 @@ This involved copying a load of code and keeping it up to date in multiple place
 
 :::
 
-## A desire to better visualise patient journeys internally...
+## A desire to better visualise patient journeys...
 
 :::::{.fragment}
 
@@ -1007,7 +1099,7 @@ Because the NHSRplotthedots team made a great package in the first place!
 
 ![](assets/2025-11-05-14-07-12.png){height="250px"}
 
-![](assets/2025-11-05-14-06-39.png){height="250px"}
+![](assets/2025-11-05-14-06-39.png){height="200px"}
 
 :::
 
@@ -1043,15 +1135,15 @@ But these steps
 :::
 
 ::: {.fragment}
+- **Unlock** possibilities
+:::
+
+::: {.fragment}
 - Make **your** life easier
 :::
 
 ::: {.fragment}
 - Make your **teams'** life easier
-:::
-
-::: {.fragment}
-- **Unlock** possibilities
 :::
 
 ::: {.fragment}
@@ -1137,7 +1229,7 @@ And it actually makes me a little mad because we shouldn't, in 2025, be experien
 :::
 
 :::{.fragment .fade-down .fade-in-then-out}
-![](assets/2025-11-12-22-25-16.png){height="600px" fig-align="center" fig-alt="Two overflowing beer glasses"}
+![](assets/2025-11-13-20-23-58.png){height="600px" fig-align="center" fig-alt="An image of four people holding pint glasses. The image is from the movie Shaun of the Dead."}
 :::
 
 ::::
@@ -1218,7 +1310,9 @@ I can't do this alone!
 
 ![](assets/2025-11-12-16-37-16.png){.fragment .fade-in-then-out height="500px"}
 
-![](assets/2025-11-12-16-37-56.png){.fragment height="300px"}
+![](assets/2025-11-12-16-37-56.png){.fragment .fade-in-then-out height="300px"}
+
+![](assets/2025-11-13-18-27-31.png){.fragment height="300px"}
 :::
 
 [Submit a project code-free via the form](https://github.com/hsma-programme/decision_intelligence_atlas/issues/new/choose) or [read advanced instructions in the README](https://github.com/hsma-programme/decision_intelligence_atlas?tab=readme-ov-file#contributing)
@@ -1258,10 +1352,6 @@ I can't do this alone!
 
 ::::
 
-::: notes
-Thanks to Dan, all of our HSMAs, and the UKRI funded STARS team for their work on reusability in healthcare simulation models
-:::
-
 # Acknowledgements
 
 [Slack chat mockups generated from chatmockup.com](https://chatmockup.com/)
@@ -1273,6 +1363,8 @@ Images generated with DALL-E3 or ChatGPT-5
 Hex stickers built on Canva (all images used via Canva Pro subscription)
 
 The [STARS](https://www.tandfonline.com/doi/full/10.1080/17477778.2024.2347882) project team for their work on reusability
+
+Pub image from Shaun of the Dead (Universal Pictures).
 
 Huge thanks to Dr Dan Chalk and all of our HSMAs
 
