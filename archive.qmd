@@ -1,81 +1,86 @@
 
-## {.slide data-menu-title="Tests - an example"}
+## An annoying, repetitive, error-prone task...
+
+::::: {.fragment}
 
 :::: {.columns}
 
-::: {.column width='45%'}
+::: {.column width='20%'}
 
-```python
-def add(a, b):
-    return a + b
-```
+<br>
+Became the stlitepack package
 
 :::
 
-::: {.column width='45%'}
-
-:::{.fragment}
+::: {.column width='70%'}
 
 ```python
-def test_add():
-    assert add(2, 3) == 5
-```
+from stlitepack import pack
 
-:::
+pack(
+  "app.py",
+  requirements="requirements.txt",
+  title="My App"
+)
+```
 
 :::
 
 ::::
 
-::: {.fragment .fade-in-then-semi-out}
-- Or a certain thing **never** happens in a simulation
-- Or you have the same number of rows after a join
+:::::
+
+::: notes
+
+This involved copying a load of code and keeping it up to date in multiple places and knowing loads of weird logic... so now it's just a function.
+
 :::
 
 
-## {.slide data-menu-title="Folder Structure - Python Example"}
+
+## A desire to better visualise patient journeys...
+
+:::::{.fragment}
 
 :::: {.columns}
 
-::: {.column width='45%'}
-
-:::{.fragment}
-
-![](assets/2025-11-12-17-32-19.png){height="300px"}
-
-```{.text code-line-numbers="1,3,4"}
-myproject/
-├── analysis.ipynb
-├── main.py
-├── utils.py
-├── README.md
-├── requirements.txt
-```
-
+::: {.column width='30%'}
+<br>
+Became an R-powered PowerBI Theograph Visual
 :::
 
-:::
+::: {.column width='65%'}
 
-::: {.column width='45%'}
-
-:::{.fragment}
-
-![](assets/2025-11-12-17-33-01.png){height="300px"}
-
-```{.text code-line-numbers="1,6,7,8,9,10"}
-myproject/
-├── analysis.ipynb
-├── pyproject.toml
-├── README.md
-├── requirements.txt
-└── src/
-    └── myproject/
-        ├── __init__.py
-        ├── main.py
-        └── utils.py
-```
-:::
+![](assets/2025-11-05-13-48-29.png)
 
 :::
 
 ::::
+
+:::::
+
+
+## A need for limit recalculation in PowerBI SPC charts...
+
+:::::{.fragment}
+
+:::: {.columns}
+
+::: {.column width='30%'}
+<br>
+Became another R-powered PowerBI visual that made better reporting possible...
+
+Because the NHSRplotthedots team made a great package in the first place!
+:::
+
+::: {.column width='67%'}
+
+![](assets/2025-11-05-14-07-12.png){height="250px"}
+
+![](assets/2025-11-05-14-06-39.png){height="200px"}
+
+:::
+
+::::
+
+:::::

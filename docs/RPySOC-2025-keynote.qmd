@@ -481,6 +481,34 @@ So a readme doesn't need to be long - but please don't just leave me with a one 
 
 :::
 
+## {.slide data-menu-title="README.md - Example Output"}
+
+![](assets/2025-11-13-20-47-00.png)
+
+## {.slide data-menu-title="README.md - Example Markdown"}
+
+::::{.columns}
+
+:::{.column width=90%}
+
+```markdown
+# vidigi (Visual Interactive Dynamics and Integrated Graphical Insights)
+
+Welcome to vidigi - a package for visualising real or simulated pathways.
+
+https://github.com/hsma-programme/vidigi/vidigi_video.mp4
+
+## Getting started
+
+Head to the [documentation](https://hsma-tools.github.io/vidigi/vidigi_docs/)
+to find out how to create an animated version of your model.
+
+You can install vidigi from PyPi with the command `pip install vidigi`.
+```
+:::
+
+::::
+
 ## {.slide data-menu-title="docstrings"}
 
 :::: {.columns}
@@ -1020,100 +1048,11 @@ Became `vidigi`
 ::: notes
 This moved away from hard coding the input data and expecting certain column names.
 
-And split it into three separate key functions for tranforming log data into snapshots, adding icons and animation positions, and making the animation, instead of one long script.
-:::
+There's a lot to be said for contributing to other packages
 
-## An annoying, repetitive, error-prone task...
+But I'd say writing your own is less scary - and perhaps the way to start
 
-::::: {.fragment}
-
-:::: {.columns}
-
-::: {.column width='20%'}
-
-<br>
-Became the stlitepack package
-
-:::
-
-::: {.column width='70%'}
-
-```python
-from stlitepack import pack
-
-pack(
-  "app.py",
-  requirements="requirements.txt",
-  title="My App"
-)
-```
-
-:::
-
-::::
-
-:::::
-
-::: notes
-
-This involved copying a load of code and keeping it up to date in multiple places and knowing loads of weird logic... so now it's just a function.
-
-:::
-
-## A desire to better visualise patient journeys...
-
-:::::{.fragment}
-
-:::: {.columns}
-
-::: {.column width='30%'}
-<br>
-Became an R-powered PowerBI Theograph Visual
-:::
-
-::: {.column width='65%'}
-
-![](assets/2025-11-05-13-48-29.png)
-
-:::
-
-::::
-
-:::::
-
-
-## A need for limit recalculation in PowerBI SPC charts...
-
-:::::{.fragment}
-
-:::: {.columns}
-
-::: {.column width='30%'}
-<br>
-Became another R-powered PowerBI visual that made better reporting possible...
-
-Because the NHSRplotthedots team made a great package in the first place!
-:::
-
-::: {.column width='67%'}
-
-![](assets/2025-11-05-14-07-12.png){height="250px"}
-
-![](assets/2025-11-05-14-06-39.png){height="200px"}
-
-:::
-
-::::
-
-:::::
-
-::: notes
-
-And many hands can make light work
-
-Contribute to other packages too!
-
-But, in a way, writing your own is less scary
+But in the long run, many hands can make light work
 :::
 
 # Summary
