@@ -352,7 +352,7 @@ I don't have time to take you through all the details of the how - but head to m
 :::
 
 :::{.fragment .fade-in-then-semi-out}
-- Write like you'll share it = forces better structure
+- Heightens impact of some of the other elements...
 :::
 
 ::::
